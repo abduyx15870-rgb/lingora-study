@@ -5,8 +5,8 @@
 [build.environment]
   NODE_VERSION = "24"
 
-# Next.js adapter is detected automatically.
-# Add GEMINI_API_KEY in Netlify environment variables.
-
 [functions]
+  directory = "netlify/functions"
+
+[[plugins]]
   package = "@netlify/plugin-nextjs"
