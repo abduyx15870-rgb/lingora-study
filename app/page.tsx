@@ -53,7 +53,7 @@ export default function Home(){
  const completed=useMemo(()=>completionIndex(school?.progress||[]),[school?.progress]);
  const [showRegistration,setShowRegistration]=useState(false);
  if(loading)return <main className="loading"><BookOpen size={36}/><p>Loading your books…</p></main>;
- async function signOut(){try{await request('/api/auth',undefined,'DELETE');stopVoice();localStorage.removeItem('owner-center');appearanceAccount.current=null;setShowRegistration(true);setSchool(null);setStudent(null);setUnit(null);setLesson(null);setError('')}catch(e){setError((e as Error).message)}}
+ async function signOut(){try{await request('/api/auth',undefined,'DELETE');stopVoice();localStorage.removeItem('owner-center');appearanceAccount.current=null;setShowRegistration(false);setSchool(null);setStudent(null);setUnit(null);setLesson(null);setError('')}catch(e){setError((e as Error).message)}}
  if(!school)return <Login initialRegister={showRegistration} error={error} onLogin={async()=>{localStorage.removeItem('owner-center');const d=await reload();if(d.user.role==='owner')setView('centers');setError('')}}/>;
  const courses=userTracks(u);const resumeCourse=bookFamily==='essential'?courses.essential:bookFamily==='navigate'?courses.navigate:bookmark&&accessible(bookmark.book,bookmark.unit)?courseFor(u,bookmark.book)||courses.navigate:courses.navigate;
  const mediaBooks=books.filter(b=>view==='books'?(bookFamily==='essential'?isEssential(b.id):!isEssential(b.id)):!isEssential(b.id));
