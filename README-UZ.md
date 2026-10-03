@@ -191,3 +191,7 @@ Teacher, Administrator va Owner kodlari barcha markazlar uchun umumiy. Owner bir
 ## Aniq UNIT tanlash
 
 Teacher, Administrator, Admin va Owner: Students → o‘quvchi profili → Navigate · Choose Unit yoki Essential · Choose Unit. Registerdagi kabi kitob va UNITni tanlab Save bosing. Navigate darsi ham tanlanadi. Faqat tanlangan yo‘nalish yangilanadi; boshqa yo‘nalish, guruh va mavjud natijalar saqlanadi. Hisobni o‘chirish va qayta register qilish shart emas.
+
+## Oldingi kitoblar va takrorlash
+
+Masalan, Navigate Elementary UNIT 4 tanlangan bo‘lsa Beginner barcha UNITlari bilan, Elementary 1–4 UNITlari bilan ochiq. Keyingi kitob va UNITlar yopiq. Essential ham o‘z kitoblar ketma-ketligida shu qoida bilan ishlaydi. Oldingi kitob va UNITlarda dars/so‘z/testni erkin takrorlash mumkin. Joriy UNITda odatdagi bosqichma-bosqich o‘rganish saqlanadi. Ochilgan kitob avtomatik tugallangan deb belgilanmaydi.

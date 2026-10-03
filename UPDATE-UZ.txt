@@ -1,3 +1,7 @@
+LINGORA — OLDINGI KITOBLAR OCHIQ
+
+Har yo‘nalishda tanlangan kitobdan oldingi kitoblar barcha UNITlari bilan ochiq. Joriy kitobda tanlangan UNITgacha ochiq, keyingi UNIT va kitoblar yopiq. Oldingi kitob va UNITlarda barcha dars/so‘zlarni va testni takrorlash mumkin. Navigate va Essential ruxsatlari alohida hisoblanadi. Hisob va progress saqlanadi.
+
 LINGORA — TUGALLANGAN KITOB VA UNIT BELGISI
 
 Darslari va UNIT testi tugatilgan UNIT kartasida ✓ turadi. Kitobdagi barcha UNITlar tugatilgach kitob kartasida ham ✓ chiqadi. Ochiq UNIT yoki qo‘lda tanlangan UNIT avtomatik tugatilgan hisoblanmaydi.
