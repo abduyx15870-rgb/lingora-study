@@ -9,4 +9,4 @@
 # Add GEMINI_API_KEY in Netlify environment variables.
 
 [functions]
-  directory = "netlify/functions"
+  package = "@netlify/plugin-nextjs"
