@@ -71,3 +71,6 @@ Avvalgi o‘qituvchi, Admin yoki Administrator ism/familiya/parol bilan kirib, S
 Kod 12 ta inglizcha harf, raqam, _ yoki - dan tuziladi, katta-kichik harf farq qiladi. Kod almashtirilsa eskisi ishlamaydi. Kod parol kabi maxfiy saqlansin. Serverda kodning faqat xeshi saqlanadi.
 O‘quvchilarda Profil: ism, familiya va parol bor, kirish kodi yo‘q. O‘qituvchi/Admin/Administrator ham shu ma’lumotlarni o‘zgartiradi. Reklamachi ism/familiya/parolini o‘zgartira oladi, uning umumiy ro‘yxatdan o‘tish kodi o‘zgarmaydi. Owner platformadagi avvalgi maxfiy kodi bilan kiradi.
 Profilni o‘zgartirishda hozirgi parol so‘raladi. Owner haqiqiy profilni tanlab tahrirlasa hozirgi parol talab qilinmaydi. Yangi parol yoki kod qo‘yilganda boshqa qurilmalardagi shu hisob sessiyalari yopiladi, joriy sessiya qoladi. Foydalanuvchi IDsi, o‘qish natijalari va guruh saqlanadi. .env.local fayliga shaxsiy kodlarni qo‘shish kerak emas.
+
+PROFILNI TEZ OCHISH
+Yon menyudagi avatar yoki ism-familiya ustiga bosing: profil tahrirlash oynasi darhol ochiladi. Sozlamalar → Profil ham saqlangan. Owner tugmasi Sozlamalarni ochadi.
