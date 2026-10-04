@@ -74,3 +74,18 @@ Profilni o‘zgartirishda hozirgi parol so‘raladi. Owner haqiqiy profilni tanl
 
 PROFILNI TEZ OCHISH
 Yon menyudagi avatar yoki ism-familiya ustiga bosing: profil tahrirlash oynasi darhol ochiladi. Sozlamalar → Profil ham saqlangan. Owner tugmasi Sozlamalarni ochadi.
+
+OWNER KIRISH XABARLARI
+3 qurilma limiti to‘lganda aniq limit xabari chiqadi. Kirishdagi asinxron xatolar endi JSON javobga aylantiriladi. Bo‘sh yoki noto‘liq server javobi texnik JSON xatosi o‘rniga tushunarli xabar bilan ko‘rsatiladi. Limit 3 ta bo‘lib qolgan; hisobdan chiqish joy bo‘shatadi.
+
+OWNER BOSHQARUV KO‘RINISHI VA KIRISHLARNI TOZALASH
+Ownerning o‘z Books sahifasida Next lesson, Homework va Continue yashirilgan. Boshqa rolga o‘tganda o‘sha rolning ko‘rinishi saqlanadi.
+Faol Owner kirishlarini bir marta tozalash uchun loyiha papkasida:
+node --env-file=.env.local scripts/reset-owner-sessions.mjs
+Bu barcha Owner sessiyalarini chiqaradi. Boshqa foydalanuvchilar, parollar, kitoblar va o‘qish natijalari saqlanadi. Buyruq muvaffaqiyat xabari bergach Owner kodi bilan qayta kiring; 3 qurilma limiti saqlanadi.
+
+OWNER VA REKLAMACHI SHAXSIY KODI
+Ownerning standart nomi Abduyx15870. Owner ham avatar → Profil yoki Sozlamalar → Profil ichidan ism va shaxsiy kirish kodini o‘zgartiradi. Owner o‘zgarishni tasdiqlash uchun hozirgi kirish kodini kiritadi; parol talab qilinmaydi. Yangi kod 12 belgi: ingliz harflari, sonlar, - yoki _.
+Owner kodini birinchi marta almashtirgach .env.local/Netlify’dagi eski OWNER_ACCESS_CODE bilan kirish bekor bo‘ladi; yangi kod Firebase’da xesh qilib saqlanadi. OWNER_ACCESS_CODE sozlamasini olib tashlamang: u ro‘yxatdan o‘tish tasdig‘i uchun ham ishlatiladi.
+Reklamachi Profilida hozirgi paroli bilan tasdiqlab shaxsiy kirish kodini o‘zgartiradi. Yangi shaxsiy kod Teacher kirish joyida to‘g‘ridan-to‘g‘ri hisobini ochadi. ADVERTISER_ACCESS_CODE umumiy ro‘yxatdan o‘tish kodi bo‘lib qoladi.
+Kod o‘zgarganda boshqa qurilmalardagi shu hisob sessiyalari chiqariladi, hozirgi qurilma qoladi. Owner uchun 3 qurilma limiti saqlanadi. Shaxsiy kodlar hech kimning o‘quv markazini yoki rolini almashtirmaydi.
