@@ -1,0 +1,13 @@
+'use client';
+import {useEffect,useRef} from 'react';
+export type NavigationState={view:string;book:string;unit:number|null;lesson:string|null;bookFamily:string|null;student:string|null;mediaKind:string;audioTrack:string|null;modal:string;editingId:string|null;popup:boolean};
+export type NavigationEntry={lingoraNavigation:true;scope:string;route:NavigationState;position:number};
+export function isNavigationEntry(value:any,scope:string):value is NavigationEntry{return value?.lingoraNavigation===true&&value.scope===scope&&value.route&&typeof value.route.view==='string'&&typeof value.route.book==='string'&&(value.route.unit===null||Number.isInteger(value.route.unit))}
+// Only navigation is recorded: drafts, passwords, transcripts and school data
+// never enter the browser's history state.
+export function useNavigationHistory(scope:string|null,route:NavigationState,restore:(state:NavigationState)=>void){
+ const saved=useRef<{scope:string;key:string;position:number}|null>(null),restoreRef=useRef(restore),routeRef=useRef(route);restoreRef.current=restore;routeRef.current=route;
+ useEffect(()=>{if(!scope){saved.current=null;return}const key=JSON.stringify(route);const entry:NavigationEntry={lingoraNavigation:true,scope,route,position:saved.current?.scope===scope?saved.current.position+1:0};if(!saved.current||saved.current.scope!==scope){window.history.replaceState(entry,'');saved.current={scope,key,position:0};return}if(saved.current.key===key)return;window.history.pushState(entry,'');saved.current={scope,key,position:entry.position};},[scope,route.view,route.book,route.unit,route.lesson,route.bookFamily,route.student,route.mediaKind,route.audioTrack,route.modal,route.editingId,route.popup]);
+ useEffect(()=>{if(!scope)return;const back=(event:PopStateEvent)=>{if(isNavigationEntry(event.state,scope)){saved.current={scope,key:JSON.stringify(event.state.route),position:event.state.position||0};restoreRef.current(event.state.route)}else if(event.state?.lingoraNavigation){const current=routeRef.current;const root:NavigationState={...current,view:scope.includes('|owner|')?'centers':current.view.startsWith('advertiser-')?'advertiser-home':'books',unit:null,lesson:null,student:null,bookFamily:null,audioTrack:null,modal:'',editingId:null,popup:false};window.history.replaceState({lingoraNavigation:true,scope,route:root,position:0},'');saved.current={scope,key:JSON.stringify(root),position:0};restoreRef.current(root)}};window.addEventListener('popstate',back);return()=>window.removeEventListener('popstate',back)},[scope]);
+ return (fallback:()=>void)=>{if(saved.current?.scope===scope&&saved.current.position>0)window.history.back();else fallback()};
+}

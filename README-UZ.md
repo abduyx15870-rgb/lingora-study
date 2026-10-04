@@ -186,7 +186,7 @@ Profilning book_tracks maydonida har bir yo‘nalishning kitobi, ochilgan UNITi 
 
 ## Umumiy kodlar va Owner kirishi
 
-Teacher, Administrator va Owner kodlari barcha markazlar uchun umumiy. Owner bir vaqtda 3 ta faol brauzer/qurilmada kirishi mumkin; to‘rtinchi qurilma kira olmaydi. Avval boshqa qurilmada hisobdan chiqish kerak. Bir brauzerdan qayta kirish eski sessiyani almashtiradi. Ownerda chiqish tugmasi faqat Settings / Sozlamalarda turadi. Sign out / Hisobdan chiqish shu brauzerdagi sessiyani yopib, ro‘yxatdan o‘tish oynasini ochadi. Boshqa brauzer yoki profil alohida qurilma hisoblanadi.
+Teacher, Administrator va Owner kodlari barcha markazlar uchun umumiy. Owner bir vaqtda 3 ta faol brauzer/qurilmada kirishi mumkin; to‘rtinchi qurilma kira olmaydi. Avval boshqa qurilmada hisobdan chiqish kerak. Bir brauzerdan qayta kirish eski sessiyani almashtiradi. Ownerda chiqish tugmasi faqat Settings / Sozlamalarda turadi. Sign out / Hisobdan chiqish shu brauzerdagi sessiyani yopib, Log in / Kirish oynasini ochadi. Boshqa brauzer yoki profil alohida qurilma hisoblanadi.
 
 ## Aniq UNIT tanlash
 
@@ -195,3 +195,8 @@ Teacher, Administrator, Admin va Owner: Students → o‘quvchi profili → Navi
 ## Oldingi kitoblar va takrorlash
 
 Masalan, Navigate Elementary UNIT 4 tanlangan bo‘lsa Beginner barcha UNITlari bilan, Elementary 1–4 UNITlari bilan ochiq. Keyingi kitob va UNITlar yopiq. Essential ham o‘z kitoblar ketma-ketligida shu qoida bilan ishlaydi. Oldingi kitob va UNITlarda dars/so‘z/testni erkin takrorlash mumkin. Joriy UNITda odatdagi bosqichma-bosqich o‘rganish saqlanadi. Ochilgan kitob avtomatik tugallangan deb belgilanmaydi.
+
+
+## 2026-10-04 yangilash
+
+Yangi rollar, Owner hisob tanlovi, ovozlar, takliflar va mobil Back sozlamalari uchun UPDATE-UZ.txt ni o'qing. Bu faylda yangi ADVERTISER_ACCESS_CODE va ixtiyoriy 6-ovoz sozlamalari berilgan. Eski .env.local va Firebase ma'lumotlarini almashtirmang.

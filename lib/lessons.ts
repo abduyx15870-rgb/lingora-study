@@ -1,3 +1,4 @@
+import {answerMatches} from './answer-check';
 import {isEssential,bookWords} from './essential';
 import practice from './data/navigate-practice.json';
 import {words,sentenceExamples,writtenExamples,makeQuestion,wordLessonStages,similarity,norm} from './engine';
@@ -38,5 +39,5 @@ export function lessonExercises(book:string,unit:number,lesson:string):Exercise[
 
  return result;
 }
-export function evaluate(q:Exercise,a:string){return q.open?a.trim().split(/\s+/).length>=3:q.kind==='speaking'?similarity(q.answer,a)>=75:[q.answer,...q.accepted||[]].some(v=>norm(v)===norm(a))}
+export function evaluate(q:Exercise,a:string){return q.open?a.trim().split(/\s+/).length>=3:q.kind==='speaking'?similarity(q.answer,a)>=75:answerMatches(q,a)}
 export function requiredLessons(book:string,unit:number){return isEssential(book)?bookWords(book).filter(w=>w.unit===unit).map(w=>w.id):bookById(book)?.units.find(u=>u.id===unit)?.sections.map(s=>s.id)||[]}

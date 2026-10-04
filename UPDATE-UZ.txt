@@ -1,76 +1,73 @@
-LINGORA — OLDINGI KITOBLAR OCHIQ
+LINGORA — 2026-10-04 YANGILASH
 
-Har yo‘nalishda tanlangan kitobdan oldingi kitoblar barcha UNITlari bilan ochiq. Joriy kitobda tanlangan UNITgacha ochiq, keyingi UNIT va kitoblar yopiq. Oldingi kitob va UNITlarda barcha dars/so‘zlarni va testni takrorlash mumkin. Navigate va Essential ruxsatlari alohida hisoblanadi. Hisob va progress saqlanadi.
+1. ZIPni oching. essential-mastery ichidagi fayllarni o'zingizdagi Zamon loyiha ildiziga ko'chirib, mavjud fayllarni almashtiring. Boshqa ichki essential-mastery papka yaratmang.
+2. .env.local faylingizni saqlang. .env.example namunadir: uni mavjud .env.local ustiga ko'chirmang. Firebase service-account faylini ham almashtirmang.
+3. .env.local ichiga ADVERTISER_ACCESS_CODE=... qo'shing: o'zingiz tanlagan aynan 12 belgili kod, Owner/Teacher/Administrator kodlaridan boshqa bo'lsin. Netlify'da shu nom bilan yangi environment variable qo'shing. Oldingi kodlar va kalitlar qoladi.
+4. Mahalliy ko'rish: pnpm install, keyin pnpm dev. http://localhost:3000 ni oching. Build tekshirish: pnpm build.
+5. Tayyor bo'lgach Git Bash:
+   git add .
+   git commit -m "Update Lingora roles, exercises, voices and mobile navigation"
+   git push origin main
+   Netlify'dagi yangi deploy tugashini kuting. Bu ZIP o'zi deploy qilmaydi.
 
-LINGORA — TUGALLANGAN KITOB VA UNIT BELGISI
+NIMALAR YANGI
+- Bitta umumiy javob tekshirish qoidasi: oddiy katta-kichik harf farqi qabul qilinadi. Joy/proper name bosh harfi saqlanishi kerak. Tinish belgisi mashqlarida belgilar tekshiriladi. Listening audio matni va javob mosligi tekshiriladi. I want to new adventure kabi boshqa yoki grammatik noto'g'ri gap avtomatik to'g'ri sanalmaydi.
+- Speaking butun tanilgan matnni yig'adi, 1.6 soniya jimlikdan keyin mikrofonni to'xtatib bir marta avtomatik tekshiradi. Eng ko'pi 30 soniya. Bo'sh yoki ishonchliligi past tanish natijasi xato bahoga aylantirilmaydi. Chrome/Edge va mikrofon ruxsati kerak. Bu talaffuz/aksentni fonetik baholash emas.
+- O'qituvchidan so'rash o'quvchi menyusida alohida. Lug'at daftari saqlangan. Dars tagidagi takroriy savol oynasi olib tashlangan.
+- Progress qulflari faqat Books'da. Listening va Videos barcha Navigate kitob/UNITlari ochiq. To'lov sabab hisob bloklangan bo'lsa, avvalgi to'lov cheklovi saqlanadi.
+- Sozlamalarda Listening speed tepasida 5 ovoz: Kore, Aoede, Leda, Puck, Charon. Gemini TTS ishlaganda tanlangan ovoz aytadi. TTS API/kvota ishlamasa qurilma brauzer ovozi ishlatilishi haqida xabar ko'rsatiladi; brauzerdagi ovozlar 5 ta aynan bir xil bo'lishi kafolatlanmaydi.
+- Telefon brauzeri va o'rnatilgan PWA Back tugmasi ichki navigatsiyada oldingi bo'limni ochadi. Mashqdan UNITga, playerdan audiolar ro'yxatiga qaytadi, modalni yopadi. Eng boshida oldingi ichki sahifa bo'lmasa, brauzerning odatiy Back xatti-harakati saqlanadi. Draft va parollar history'ga yozilmaydi.
 
-Darslari va UNIT testi tugatilgan UNIT kartasida ✓ turadi. Kitobdagi barcha UNITlar tugatilgach kitob kartasida ham ✓ chiqadi. Ochiq UNIT yoki qo‘lda tanlangan UNIT avtomatik tugatilgan hisoblanmaydi.
+OWNER VA REKLAMACHI
+- Owner: Sozlamalar → rol → markaz → guruh → aniq hisob. Haqiqiy hisobda qilingan o'zgarishlar saqlanadi. Chap yuqorida Ownerga qaytish turadi.
+- Owner Reklamachi rolini tanlasa bosh sahifaga o'tadi. Keyingi namoyish rollari Sozlamalarda. Namoyishdagi boshqaruv/ta'lim o'zgarishlari haqiqiy Firestore ma'lumotlariga yozilmaydi.
+- Reklamachi: kirishda markaz tanlamaydi. Teacher tugmasi → reklamachining 12 belgili kodi → ism/familiya va o'z paroli. Keyingi safar Teacher → allaqachon ro'yxatdan o'tgan / kirish orqali parol bilan kiradi. Bitta umumiy profil emas.
+- Reklamachi va xuddi shu ismli o'quvchi alohida ID va hisob turi bilan ajratiladi. Reklamachi haqiqiy o'quvchi hisobini ochmaydi.
+- Reklamachi menyusi: Bosh sahifa, Namoyish, Reklama materiallari. Interfeys dastlab o'zbekcha. Sozlamalardan Administrator/O'qituvchi/O'quvchi/Admin namoyishiga o'tadi. Qaytish tugmasi Sozlamalarda. Namuna ma'lumotlari doimiy saqlanmaydi; yangi kirish/server qayta ishga tushishida tiklanishi mumkin.
+- Admin faqat o'z guruhida baho, UNITga ruxsat, event va vazifalar bilan yordam beradi. Rol berish, boshqa markaz, to'lovlar va boshqa guruhlarga umumiy event/vazifani o'zgartirish ruxsati yo'q.
+- Owner Students va Teachers'da Move account orqali markazni o'zgartiradi. Hisob, parol va shaxsiy natijalar saqlanadi; eski guruh biriktiruvi tozalanadi, faol sessiyalar tugatiladi. Eski guruh/o'quvchilar ko'chmaydi. Yangi guruhni alohida biriktiring.
+- Owner Groups'da barcha yoki bir nechta markazga event yuboradi. Takroriy yuborish bir eventni ko'paytirmaydi; muvaffaqiyatsiz yetkazish qayta urinishda davom etadi.
+- Owner Payments'da markazlar to'lovini belgilaydi. Administrator Payments'da o'quvchilar to'lovi qoladi. Markaz to'lanmagan bo'lsa, uning Administratorida qizil ogohlantirish va bildirishnoma chiqadi. Markaz to'lovi uchun alohida kirish blokirovkasi qo'shilmagan.
+- Hammada Bog'lanish → O'z takliflaringizni yozing. Taklif haqiqiy xabar sifatida saqlanadi va Owner + reklamachilarning inbox'iga keladi, hatto namoyishdan yuborilsa ham. Push uchun mavjud VAPID va foydalanuvchi ruxsati kerak. Telefon javobi sekinroq, Telegram tezroq degan matn bor.
 
-LINGORA — ANIQ UNIT TANLASH
+ODINA UCHUN 6-OVOZ — HALI FAOLLASHTIRILMAGAN
+5 soniyalik namunadan ovoz nusxasi yaratilmagan. Gemini talabiga ko'ra ovoz egasi voyaga yetgan bo'lishi, 10–30 soniya toza reference audio va aynan shu odamning alohida rozilik yozuvi kerak. Google AI Studio Voice Replication orqali voice_... ID yaratilgach:
+ODINA_VOICE_USER_ID=Namozova Odinaning aynan Firebase hisob IDsi
+ODINA_VOICE_ID=voice_...
+Bu ikkisini server environment'ga qo'shing. Owner Students profilida hisob ID ko'rsatiladi. Mos IDga ega akkauntgina 6-ovozni ko'radi; boshqa Odinada chiqmaydi. Bu maydonlar bo'sh bo'lsa, hamma 5 ta ovoz bilan ishlaydi. voice_... ID tashqi xizmatda tayyorlanishi va TTS ruxsati/kvotasi ishlashi kerak.
+https://ai.google.dev/gemini-api/docs/voice-replication
 
-Students / O‘quvchilar → profil ichidagi Navigate · Choose Unit va Essential · Choose Unit tugmalaridan registerdagidek kitob, UNIT va Navigate darsini aniq tanlash mumkin. Teacher, Administrator, Admin va Owner uchun ishlaydi. Ikki yo‘nalish alohida saqlanadi. Profilni o‘chirish yoki qayta register qilish shart emas; mavjud natijalar saqlanadi.
+TEKSHIRUVLAR
+node scripts/verify-exercises.cjs
+node scripts/verify-roles.cjs
+node scripts/verify-microphone.cjs
+node scripts/verify-navigation.cjs
+pnpm build
+24 281 mavjud mashq: yopiq savollarning to'g'ri javoblari, choice variantlari va yoziladigan listening audio/javobi tekshirildi. Rollar, namoyishning haqiqiy bazaga yozmasligi, bir xil ismli hisoblar, markaz to'lovi, event, takliflar, 6-ovoz ID ruxsati va navigatsiya testlari bor. Server testlari soxta, alohida bazadan foydalanadi, haqiqiy Firebase ma'lumotini o'zgartirmaydi. Haqiqiy telefon mikrofoni, Gemini ovoz sifati, push ruxsatlari va ishlab turgan Firebase hisoblari bu muhitda jonli sinovdan o'tkazilmagan.
 
-LINGORA — UMUMIY KODLAR VA OWNER QURILMALARI
+OVOZ SOZLAMALARI YANGILANDI
+Ovoz/tezlik tanlovi darhol qo‘llanadi, sozlamalar fonda saqlanadi. Tezlikni o‘zgartirish ijrodagi AI audiosiga ham darhol ta’sir qiladi. Yangi ovozning birinchi audiosi Gemini orqali tayyorlanadi va internetga bog‘liq.
+Alohida Reklamachi kirish tugmasi olib tashlandi. Kod Teacher bo‘limida kiritiladi. ADVERTISER_ACCESS_CODE o‘zgarmaydi.
 
-Teacher, Administrator va Owner kodlari barcha markazlar uchun umumiy. Markaz tanlash faqat profilni qaysi markazga biriktirishni bildiradi. Owner kodi markaz tanlovidan mustaqil ishlaydi. Xato kod yozuvi markazga bog‘lanmagan qilib tuzatildi. Owner uchun ko‘pi bilan 3 faol brauzer/qurilma kirishi saqlanadi. 4-qurilmadan kirish rad etiladi. Avval boshqa qurilmada hisobdan chiqish kerak. Bir brauzerdan qayta kirish yangi qurilma bo‘lib hisoblanmaydi; boshqa brauzer/profil alohida qurilma hisoblanadi. Ownerda chiqish tugmasi faqat Settings / Sozlamalarda turadi. U shu brauzerdagi kirishni yopib, ro‘yxatdan o‘tish oynasini ochadi. Netlifyda OWNER_ACCESS_CODE o‘zgarmaydi: .env.localdagi shu qiymat environment variablega ham kiritilgan bo‘lsin.
+XABAR VA ROL YANGILANISHI
+Owner Guruhlar bo‘limida event yoki Administratorlarga xabarni barcha/yoki tanlangan markazlarga yuboradi. Administrator kirganda yangi xabar va event pop-up chiqadi. Xabarlar bo‘limini yoki shu pop-upni ochish ko‘rsatilgan xabarlarni avtomatik o‘qildi qiladi. Sayt yopiq paytdagi push mavjud VAPID sozlamalari, HTTPS va foydalanuvchi bildirishnoma ruxsatiga bog‘liq. Localhost HTTP telefonda pushni tekshirish uchun mos emas.
+Rol almashtirishda takroriy profil so‘rovlari kamaytirildi. Bir server so‘rovi ichidagi takroriy Firestore o‘qishlar birlashtirildi; turli foydalanuvchi/so‘rovlar orasida shaxsiy ma’lumot keshlanmaydi.
 
-LINGORA — NAVIGATE VA ESSENTIAL PARALLEL
+O‘qituvchi bosh sahifasida Keyingi dars va Uyga vazifa kartalarida Belgilash tugmalari bor. Jadval tugmasi bitta guruh bo‘lsa tahrirlashni, bir nechta bo‘lsa Guruhlarni, hali guruh bo‘lmasa yaratishni ochadi. Uyga vazifa tugmasi vazifa yaratishni ochadi.
 
-Ro‘yxatdan o‘tishda Navigate asosiy kurs va Essential qo‘shimcha lug‘at kitobi alohida tanlanadi. Har birida o‘z kitobi, UNITi va boshlash darsi bor. Essential uchun so‘z tanlanmaydi: yangi tanlangan UNIT birinchi so‘zidan boshlanadi, avval 3 ta so‘z ochiladi. Ikkalasini bir vaqtning o‘zida o‘qish mumkin. O‘qituvchi har birining keyingi UNITini alohida tasdiqlaydi va profil oynasida ikkalasini tahrirlay oladi. Eski hisobdagi mavjud kitob va progress saqlanadi; yetishmagan yo‘nalish 1-kitob/Beginner UNIT 1 dan ochiladi. O‘qituvchi kerakli boshlash joyini o‘zgartirishi mumkin.
+O‘qituvchidan so‘rash bo‘limida xabar yozish maydoni asosiy sarlavha tagida darhol ochiq. Takroriy Ask your teacher ochib-yopish bloki yo‘q. Yuborilgan savol quyidagi ro‘yxatda yangilanadi.
 
-LINGORA — ESSENTIAL MISOLLARI
+Ownerga qaytish tugmasi Owner Sozlamalaridagi hisob va rol tanlash oynasini ochadi. Haqiqiy o‘quvchi/o‘qituvchi profilida Owner hisob tanlash paneli yashiriladi.
 
-Essential 2–6 so‘z ochilganda Gemini 2 ta qisqa listening va 3 ta alohida uzunroq speaking/writing gapini bir marta yaratadi. Misollar Firebasega saqlanadi va keyingi safar qayta ishlatiladi. Har bir so‘z darsi serverda saqlangan mashqlar bilan tekshiriladi; eski progress va boshlash nuqtasi o‘zgarmaydi. Kalit yoki kvota ishlamasa mavjud dars ochiladi va bu haqida yozuv chiqadi. Haqiqiy Gemini/Firebase ulanishini o‘z muhitingizda sinang.
+JADVAL KO‘RINISHI
+O‘quvchi bosh sahifasida guruhning barcha haftalik dars kunlari va vaqti, keyingi dars sanasi va yonida uyga vazifa bor. O‘quvchi aynan jadval qo‘yilgan guruhga O‘quvchilar → profil → Guruh va ruxsat orqali biriktirilishi kerak. Boshqa guruhning vazifasi ko‘rsatilmaydi. Firebase xato bo‘lsa HTTP kodi ko‘rsatiladi; maxfiy kalitni yubormang.
 
-LINGORA — JOYLASHUV, SOZLAMALAR VA BOG‘LANISH
+AUDIO BOSHLANISHI
+Hozirgi topshiriq audiosi va undan keyingi bitta audio oldindan fonda tayyorlanadi; o‘zidan-o‘zi aytilmaydi. Play bosilganda tayyor audio qayta ishlatiladi. Tayyorlash davomida Play bosilsa o‘sha bitta so‘rov kutiladi, takroriy Gemini so‘rovi yuborilmaydi. Birinchi tayyorlanayotgan audio internetga bog‘liq, kechikish mutlaqo yo‘q deb kafolatlanmaydi.
 
-Ovoz tezligi ostiga 5–6-darajada ovoz eng tushunarli eshitilishi haqida inglizcha va o‘zbekcha yozuv qo‘shildi. Markaz qo‘shish maydoni, tugmalar va kartalar orasiga oraliqlar qo‘shildi. Telefon ekranida kartalar bir ustunga joylashadi. Stil faqat hisobga kirishda saqlangan tanlovdan olinadi va Settings orqali o‘zgartiriladi; avtomatik yangilanishlar stilni almashtirmaydi. Settings ichida Contact / Bog‘lanish va @abduyx15870 havolasi, +998 94 331 87 07 qo‘ng‘iroq havolasi bor. Ilovani o‘rnatgach Settings → Enable notifications orqali ruxsat bering. Serverdagi VAPID kalitlari ham sozlangan bo‘lishi kerak. pnpm setup:push buyrug‘i mavjud kalitlarni saqlab, yetishmasa yangi juftlik yaratadi va .env.localga yozadi. NEXT_PUBLIC_VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT qatorlarini Netlify environment variablesga ko‘chiring, keyin redeploy qiling. Maxfiy kalitni GitHubga yubormang.
-
-LINGORA — ESSENTIAL 1–6, NAVIGATE VA MARKAZLAR
-
-Lingora logosi sayt tepasiga, kirish oynasiga va ilova belgisiga qo‘shildi. Essential/Navigate kartalarining asosiy ko‘rinishi komponentning o‘zida bor; eski CSS kartalarni buzmaydi. app/globals.css faylini ham Replace qiling.
-Books bo‘limida Essential va Navigate degan ikki karta bor. Essential ichida 1–6-kitoblar, har birida 30 ta Unit va 600 ta so‘z bor. 2–6-kitoblar yuborilgan PDFlar asosida qo‘shildi; 6-kitobning o‘zbekcha ma’nolari sayt uchun qo‘shildi. Shikastlangan ayrim misollar original yangi gaplar bilan almashtirildi.
-1-kitobning mavjud identifikatorlari o‘zgartirilmagan. Eski progress saqlanadi. Yangi kitoblar alohida identifikator bilan saqlanadi. Har kitobda avval 3 ta so‘z ochiq; tugatilgan so‘zlar soniga qarab navbatdagisi ochiladi. Unit testi va faqat qiynalgan oldingi so‘zlarni qaytarish har kitobning o‘zida ishlaydi.
-Essential Listening/Videos ro‘yxatida yo‘q. Tinglash so‘z mashqlari ichida saytning ovoz xizmati orqali ishlaydi; bu yangilanishda Essential uchun alohida yozib olingan MP3 fayllar kiritilmagan.
-
-
-Markaz faqat dastlabki ro‘yxatdan o‘tishda tanlanadi. Keyingi kirishda ism, familiya va parol yetarli. O‘qituvchi va Administrator uchun mavjud TEACHER_ACCESS_CODE hamda ADMINISTRATOR_ACCESS_CODE barcha markazlarda bir xil qoladi.
-
-Owner kodini o‘zingiz tanlasangiz, .env.local ichida bitta OWNER_ACCESS_CODE=... qatori bo‘lsin. Kamida 12 belgi kerak. Eski OWNER_ACCESS_CODE qatorini yangi kod bilan almashtiring; TEACHER_ACCESS_CODE va ADMINISTRATOR_ACCESS_CODE o‘z holicha qolsin. Serverni qayta ishga tushiring.
-
-Tasodifiy Owner kodi yaratishning ixtiyoriy yo‘li:
-1. Terminalda node scripts/setup-owner.mjs buyrug‘ini bajaring.
-2. Chiqqan OWNER_ACCESS_CODE qatorini .env.local fayliga va deploy qilganda Netlify environment variablesga qo‘shing. Bu maxfiy kod; GitHubga yubormang.
-3. Serverni qayta ishga tushiring. Teacher → Enter code joyiga shu kodni kiriting. Owner profili avtomatik yaratiladi va boshqa ma’lumot so‘ralmaydi. Owner bir vaqtda ko‘pi bilan 3 faol brauzer/qurilmadan kirishi mumkin. Bo‘sh joy bo‘lmasa boshqa qurilmadan hisobdan chiqish kerak.
-4. Learning centres bo‘limidan markaz qo‘shing yoki tanlang. Hamma markazlarni ko‘rish mumkin; guruh va vazifa yaratish uchun bir markazni tanlang.
-5. Faqat Owner o‘quvchi yoki xodim profilidagi markazni almashtira oladi. Uning shaxsiy progressi va qaydlari birga ko‘chadi, eski guruhdan chiqadi, qayta kirishi kerak bo‘ladi.
-
-Eski hisoblar Zamon markazida qoladi. Markazlar ma’lumotlari serverda ajratilgan. Inglizchada Centre Manager, o‘zbekchada Administrator yoziladi.
-
-OLDINGI IMKONIYATLAR
-
-1. ZIP ichidagilarni mavjud Zamon loyiha papkangizga ko‘chiring va Replace bosing.
-.env.local, firebase-service-account.json, .git va media/audio fayllaringizni saqlang.
-2. pnpm build buyrug‘ini bajaring. Keyin o‘zgargan kodlarni GitHubga yuboring.
-3. Netlifyda mavjud GEMINI_API_KEY saqlansin. Kalitni brauzer kodiga yozmang.
-4. Eski guruhlar uchun Administrator → Groups bo‘limida tegishli o‘qituvchini tanlang.
-
-Navigate darslari oldingi oddiy mashqlar ko‘rinishiga qaytarildi. Bosqichli AI dars va avtomatik tushuntirish olib tashlandi. Mashqlar kalitsiz ham ochiladi. Har qismda 16 ta mashq: qisqa listening, uzunroq speaking, gap to‘ldirish, tartiblash, tanlov va erkin yozish. Dars boshida tayyor javoblar ko‘rsatilmaydi.
-Unit testlari: tarjimani tanlash, harflardan so‘z va so‘zlardan gap yig‘ish, dictation, tinish belgilari.
-Essentialda faqat avval qiynalgan so‘zlar qaytadi. Navigateda avvalgi qiyin mashqlar faqat 5, 10, 15… Unit testlarida qaytadi.
-Ovoz sozlamalarida 10 daraja bor: 1 eng sekin (0.5×), 10 eng tez (1.2×). Mashq ovozi tanlangan tezlikda o‘qiladi. Settings → Ovozni sinash orqali eshitib ko‘ring.
-Enter javobni tekshiradi; tekshirilgandan keyin Enter keyingi mashqqa o‘tkazadi. Shift+Enter yangi qator yozadi.
-Lug‘at daftari, o‘qituvchiga savol va oxirgi joydan davom etish saqlangan. Darsdan qaytganda oxirgi joy yangilanadi.
-Lug‘at daftari tepasida tarjimon va Ko‘proq tugmasi bor. O‘quvchi qaydlarini uning guruh o‘qituvchisi va Administrator ko‘radi.
-Dars ostida o‘qituvchiga savol yuborish va javobni ko‘rish mumkin.
-Davom etish oxirgi darsdagi joyni saqlaydi. Keyingi Unitga o‘tishni o‘qituvchi tasdiqlaydi.
-
-Mavjud hisoblar va progress o‘chirilmaydi. Yangi server kolleksiyalari avtomatik yaratiladi; Firestore Rulesni almashtirish shart emas.
-Navigate mashqlari saytning mavjud mavzu va grammatika bankidan olinadi. Unit testidagi qo‘shimcha AI materiallar uchun Gemini kaliti ishlatiladi.
-Tushuntirishlar har topshiriqda o‘zbekcha yozuvda chiqadi. Listen tugmalari qaytarildi. Topshiriqlarda bitta umumiy ovoz xizmati ishlatiladi. Avtomatik o‘zbekcha tushuntirish o‘chirilgan. .env.local ichida GEMINI_MODEL=gemini-3.5-flash-lite yozib, serverni qayta ishga tushiring. Ovoz so‘rovi 8 soniyadan oshsa bekor qilinadi; eski so‘rovlar to‘xtatiladi va tayyor audio qayta ishlatiladi.
-AI ovozi uchun Gemini TTS ishlatiladi. U mavjud bo‘lmasa brauzer ovozi bilan davom etadi va bu ekranda ko‘rsatiladi.
-Mikrofon uchun Chrome/Edge, HTTPS va saytga microphone ruxsati kerak.
-Cloudflare audio manzili: https://zamon-audio.pages.dev/
-
-Tekshiruv: Next.js production build, TypeScript, ruxsatlar, test javoblari va tanlab takrorlash o‘tdi.
-Haqiqiy Gemini kaliti, Firebase serveri va telefon mikrofoni bilan jonli sinov sizning muhitda bajariladi.
+PROFIL VA SHAXSIY KOD
+Yangi o‘qituvchi/Administrator ro‘yxatdan o‘tishda o‘zi 12 belgili shaxsiy kirish kodini tanlaydi. Umumiy TEACHER_ACCESS_CODE va ADMINISTRATOR_ACCESS_CODE ro‘yxatdan o‘tish uchun saqlanadi; ular shaxsiy kod o‘rniga ishlatilmaydi.
+Avvalgi o‘qituvchi, Admin yoki Administrator ism/familiya/parol bilan kirib, Sozlamalar → Profil orqali shaxsiy kodini qo‘yadi. Keyin Teacher → kod maydoniga SHAXSIY kodini kiritganda o‘z hisobiga darhol kiradi, boshqa markaz tanlangan bo‘lsa ham o‘z markazidagi hisob ochiladi. Bir kod ikki hisobga tegishli bo‘la olmaydi.
+Kod 12 ta inglizcha harf, raqam, _ yoki - dan tuziladi, katta-kichik harf farq qiladi. Kod almashtirilsa eskisi ishlamaydi. Kod parol kabi maxfiy saqlansin. Serverda kodning faqat xeshi saqlanadi.
+O‘quvchilarda Profil: ism, familiya va parol bor, kirish kodi yo‘q. O‘qituvchi/Admin/Administrator ham shu ma’lumotlarni o‘zgartiradi. Reklamachi ism/familiya/parolini o‘zgartira oladi, uning umumiy ro‘yxatdan o‘tish kodi o‘zgarmaydi. Owner platformadagi avvalgi maxfiy kodi bilan kiradi.
+Profilni o‘zgartirishda hozirgi parol so‘raladi. Owner haqiqiy profilni tanlab tahrirlasa hozirgi parol talab qilinmaydi. Yangi parol yoki kod qo‘yilganda boshqa qurilmalardagi shu hisob sessiyalari yopiladi, joriy sessiya qoladi. Foydalanuvchi IDsi, o‘qish natijalari va guruh saqlanadi. .env.local fayliga shaxsiy kodlarni qo‘shish kerak emas.
