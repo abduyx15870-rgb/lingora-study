@@ -1,7 +1,7 @@
 export type StudyTrack={book:string;unlockedUnit:number;startUnit:number;startLesson:number};
 export type StudyTracks={navigate:StudyTrack;essential:StudyTrack};
 export type Role='student'|'teacher'|'admin'|'administrator'|'owner'|'advertiser';
-export type User={id:string;centerId:string;firstName:string;lastName:string;role:Role;groupId:string|null;book:string;unlockedUnit:number;startUnit:number;startLesson:number;courses?:StudyTracks;createdAt:string;disabled?:boolean;temporaryAdministrator?:boolean;payment:{status:string;paidAt:string|null;dueAt:string|null;unpaidAt:string|null;blockAt:string|null;blocked:boolean};settings:{language:string;style:string;layout:string;accent:string;audioRate:number;voice?:string}};
+export type User={enrollments?:{centerId:string;subjectId:string;startUnit?:number;groupId?:string}[];subjectIds?:string[];id:string;centerId:string;firstName:string;lastName:string;role:Role;groupId:string|null;book:string;unlockedUnit:number;startUnit:number;startLesson:number;courses?:StudyTracks;createdAt:string;disabled?:boolean;temporaryAdministrator?:boolean;payment:{status:string;paidAt:string|null;dueAt:string|null;unpaidAt:string|null;blockAt:string|null;blocked:boolean};settings:{language:string;style:string;layout:string;accent:string;audioRate:number;voice?:string}};
 export type Group={teacherId?:string;id:string;name:string;days:number[];time:string;reminderTime:string};
 export type Assignment={id:string;title:string;text:string;groups:string[];extra:boolean;createdAt:string};
 export type Event={id:string;title:string;at:string;groups:string[]};

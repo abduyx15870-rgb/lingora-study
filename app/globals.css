@@ -33,3 +33,33 @@
 .learning-workspace.questions-page{max-width:none;margin:0}.questions-page .question-compose{display:grid;gap:12px}.questions-page .question-compose>p{margin:0}.questions-page .question-compose>button{justify-self:start}.questions-page>h2{margin-top:28px}
 
 .sidebar-bottom button.identity{width:100%;text-align:left;white-space:normal;cursor:pointer}.sidebar-bottom button.identity:hover{background:rgba(255,255,255,.08)}.sidebar-bottom button.identity>div{min-width:0}.sidebar-bottom button.identity strong{overflow-wrap:anywhere}
+/* Subject libraries: controls have their own rows on phones. */
+.course-picker {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0 0 24px;padding:18px;border:1px solid var(--border,#dbe2ec);border-radius:16px;}
+.course-picker label,.course-library label,.course-library .editor label {display:grid;gap:8px;min-width:0;}
+.course-picker select,.course-library select,.course-library input,.course-library textarea {max-width:100%;min-width:0;}
+.material-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:18px 0 28px;}
+.material-card {display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:22px;text-align:left;min-height:125px;border:1px solid var(--border,#dbe2ec);border-radius:16px;background:var(--card,transparent);color:inherit;overflow-wrap:anywhere;transition:transform .15s,border-color .15s;}
+.material-card:hover:enabled {transform:translateY(-2px);border-color:var(--primary,#2563eb);}
+.material-card:disabled {opacity:.55;cursor:not-allowed;}
+.material-card small {opacity:.75;}
+.course-library .settings-row,.course-library .section-heading {display:flex;flex-wrap:wrap;gap:20px;margin-bottom:20px;align-items:flex-start;}
+.course-library .settings-row label {flex:1 1 220px;}
+.course-status {padding:14px 18px;border:1px solid var(--border,#dbe2ec);border-radius:12px;overflow-wrap:anywhere;}
+.book-dialog {width:min(900px,95vw)!important;max-width:900px!important;max-height:90dvh;overflow:auto;padding:24px!important;}
+.book-dialog iframe {width:100%;aspect-ratio:16/9;border:0;border-radius:12px;}
+.book-dialog audio {width:100%;margin:20px 0;}
+.book-dialog .actions {display:flex;flex-wrap:wrap;gap:10px;margin:15px 0;}
+.book-dialog details {padding:12px 0;}
+.book-dialog fieldset {display:grid;gap:12px;padding:18px;margin:18px 0;}
+.reading-page {font-size:1.15rem;line-height:1.95;white-space:pre-wrap;padding:24px 10px;overflow-wrap:anywhere;}
+.reading-word {display:inline;border:0;background:transparent;padding:0;color:inherit;font:inherit;cursor:pointer;border-bottom:1px dotted transparent;}
+.reading-word:hover,.reading-word:focus-visible {color:var(--primary,#2563eb);border-bottom-color:currentColor;}
+.answer-options {display:grid;gap:12px;margin:20px 0;}
+.answer-options button {padding:15px;border-radius:12px;text-align:left;border:1px solid var(--border,#dbe2ec);background:transparent;color:inherit;}
+.answer-options button.selected {border:2px solid var(--primary,#2563eb);}
+.check-label {display:flex!important;align-items:center;gap:10px;margin:10px 0;}
+.check-label input {width:18px;height:18px;flex-shrink:0;}
+.preserve {white-space:pre-wrap;overflow-wrap:anywhere;}
+@media(max-width:650px){.course-picker{grid-template-columns:1fr;padding:14px;gap:14px}.material-grid{grid-template-columns:1fr}.book-dialog{padding:16px!important}.book-dialog .actions button{flex:1 1 130px;min-height:44px}.reading-page{font-size:1.05rem;padding:18px 0}.course-library .section-heading{gap:12px}.course-library .editor{grid-template-columns:1fr}}
+
+.translator-panel{margin-bottom:24px}.translator-languages{display:flex;align-items:center;gap:16px;margin-bottom:12px}.translator-columns{display:grid;grid-template-columns:1fr 1fr;gap:16px}.translator-columns textarea{width:100%;min-height:170px}.translation-output{min-height:170px;padding:16px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}.voice-orb{width:110px;height:110px;border-radius:50%;margin:24px auto;background:radial-gradient(circle at 30% 25%,#80eaff,#3465ee 60%,#193bb0);box-shadow:0 0 28px #528cff66}.voice-orb.speaking,.voice-orb.listening{animation:voice-pulse 1.4s ease-in-out infinite}@keyframes voice-pulse{50%{transform:scale(1.06)}}@media(max-width:640px){.translator-columns{grid-template-columns:1fr}.translator-columns textarea,.translation-output{min-height:130px}}@media(prefers-reduced-motion:reduce){.voice-orb{animation:none!important}}

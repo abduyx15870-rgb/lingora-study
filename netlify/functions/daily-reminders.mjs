@@ -5,6 +5,7 @@ export const config={schedule:'*/15 * * * *'};
 export default async function(){
  if(!process.env.FIREBASE_SERVICE_ACCOUNT_JSON&&!process.env.FIREBASE_SERVICE_ACCOUNT_FILE)return new Response('Firebase not configured');
  const now=new Date(),day=tashkentDate(now),time=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Tashkent',hour:'2-digit',minute:'2-digit',hour12:false}).format(now);
+ const expired=await db('school_demo_records','GET',undefined,'expires_at=lt.'+encodeURIComponent(now.toISOString())+'&limit=50');await Promise.all(expired.map(r=>db('school_demo_records','DELETE',undefined,'id=eq.'+encodeURIComponent(r.id))));
  const [groups,users,subs,assignments,events,sent]=await Promise.all([db('school_groups'),db('school_users'),db('school_push'),db('school_assignments','GET',undefined,'order=created_at.desc'),db('school_events'),db('school_notifications','GET',undefined,'day=eq.'+day)]);
  const push=!!(process.env.VAPID_PRIVATE_KEY&&process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY);if(push)webpush.setVapidDetails(process.env.VAPID_SUBJECT||'https://essential-mastery.netlify.app',process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY,process.env.VAPID_PRIVATE_KEY);
  let delivered=0;const deadline=Date.now()+22000;

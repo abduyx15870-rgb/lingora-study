@@ -7,3 +7,21 @@ function seed():Tables{const day=tashkentDate(),settings={language:'uz',style:'c
 function database(key:string){const now=Date.now();for(const [k,v] of stores)if(now-v.at>3600000)stores.delete(k);let s=stores.get(key);if(!s){if(stores.size>=100)stores.delete(stores.keys().next().value!);s={at:now,tables:seed()};stores.set(key,s)}s.at=now;return s.tables}
 function filtered(rows:any[],query:string){const p=new URLSearchParams(query);let out=rows.filter(r=>[...p].every(([k,v])=>{if(k==='order'||k==='limit'||k==='on_conflict')return true;const i=v.indexOf('.'),op=v.slice(0,i),value=v.slice(i+1);return op==='eq'?String(r[k])===value:op==='gt'?String(r[k])>value:op==='lt'?String(r[k])<value:true}));const order=p.get('order');if(order){const [key,direction]=order.split('.');out=out.sort((a,b)=>String(a[key]||'').localeCompare(String(b[key]||''))*(direction==='desc'?-1:1))}const limit=Number(p.get('limit'));return limit>0?out.slice(0,limit):out}
 export function demoDb(key:string,table:string,method='GET',data?:any,query=''){const tables=database(key),rows=tables[table]||(tables[table]=[]);if(table==='rpc/school_student_stats')return [];if(method==='GET')return structuredClone(filtered(rows,query));if(method==='POST'){const id=data.id||(table==='school_progress'?createHash('sha256').update([data.user_id,data.book,data.unit,data.lesson].join('|')).digest('hex'):randomUUID()),existing=rows.find(r=>r.id===id);if(existing){if(table==='school_progress'||table==='school_reads')return[structuredClone(existing)];const e:any=new Error('Record exists.');e.status=409;throw e}const value={...data,id,center_id:'demo',created_at:data.created_at||new Date().toISOString()};rows.push(value);return[structuredClone(value)]}const selected=filtered(rows,query);if(method==='PATCH'){for(const row of selected)Object.assign(row,data);return structuredClone(selected)}if(method==='DELETE'){tables[table]=rows.filter(r=>!selected.includes(r));return[]}throw new Error('Unsupported demo action')}
+
+// Only isolated scratch rows are persisted. Real school tables are never mutated.
+export async function persistentDemoDb(key:string,table:string,method:string,data:any,query:string,raw:(table:string,method?:string,data?:any,query?:string)=>Promise<any>,center='demo'){
+ const scoped=key+'|'+center,tables=database(scoped);
+ const saved=await raw('school_demo_records','GET',undefined,'scope_key=eq.'+encodeURIComponent(scoped)+'&table_name=eq.'+encodeURIComponent(table));
+ let initial=tables[table]||[];
+ if(!saved.length&&table==='school_subjects')initial=(await raw('school_subjects','GET',undefined,'center_id=eq.'+encodeURIComponent(center))).map((r:any)=>({...r}));
+ tables[table]=initial.map((r:any)=>({...r,center_id:center}));
+ for(const record of saved){tables[table]=tables[table].filter((r:any)=>r.id!==record.row_id);if(!record.deleted)tables[table].push(record.value)}
+ const before=structuredClone(tables[table]),out=demoDb(scoped,table,method,data,query);
+ if(method!=='GET'){
+  for(const r of out||[])r.center_id=center;
+  tables[table]=tables[table].map((r:any)=>({...r,center_id:center}));
+  const ids=new Set([...before.map(r=>r.id),...tables[table].map(r=>r.id)]);
+  for(const id of ids){const old=before.find(r=>r.id===id),value=tables[table].find(r=>r.id===id);if(JSON.stringify(old)===JSON.stringify(value))continue;const docId=createHash('sha256').update(scoped+'|'+table+'|'+id).digest('hex');const record={scope_key:scoped,table_name:table,row_id:id,deleted:!value,value:value||null,expires_at:new Date(Date.now()+30*86400000).toISOString()};await raw('school_demo_records',saved.some((r:any)=>r.id===docId)?'PATCH':'POST',{...record,id:docId},'id=eq.'+docId)}
+ }
+ return out;
+}

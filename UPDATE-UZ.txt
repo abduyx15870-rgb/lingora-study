@@ -1,3 +1,8 @@
+2026-10-06 yangi: 100 MB kitob yuklash, Teacher guruhiga ikki tilli tarjima yoqish/o‘chirish, ikki ustunli tezkor tarjimon, bir marta boshlanadigan ovozli suhbat va gapirib AI ovozini to‘xtatish. SINASH-UZ.txt dagi yangi sinovni bajaring.
+2026-10-06: markaz tanlash Sozlamalarda; ovozli AI suhbat; Navigate va shaxsiy listening ajratilgan; Reading PDF katalogi; inglizcha tarjima yuklash; Administrator Profilida English kodi. Batafsil SINASH-UZ.txt.
+
+YANGI: fanlar, markazga bog'langan 4 belgili kod, Reading/Listening kitob yuklash, AI suhbat va o'qituvchi hisobotlari. Avval SINASH-UZ.txt ni o'qing. Dastlab faqat English; boshqa fan faqat Administrator yaratgach chiqadi.
+
 LINGORA — 2026-10-04 YANGILASH
 
 1. ZIPni oching. essential-mastery ichidagi fayllarni o'zingizdagi Zamon loyiha ildiziga ko'chirib, mavjud fayllarni almashtiring. Boshqa ichki essential-mastery papka yaratmang.
@@ -23,7 +28,7 @@ OWNER VA REKLAMACHI
 - Owner Reklamachi rolini tanlasa bosh sahifaga o'tadi. Keyingi namoyish rollari Sozlamalarda. Namoyishdagi boshqaruv/ta'lim o'zgarishlari haqiqiy Firestore ma'lumotlariga yozilmaydi.
 - Reklamachi: kirishda markaz tanlamaydi. Teacher tugmasi → reklamachining 12 belgili kodi → ism/familiya va o'z paroli. Keyingi safar Teacher → allaqachon ro'yxatdan o'tgan / kirish orqali parol bilan kiradi. Bitta umumiy profil emas.
 - Reklamachi va xuddi shu ismli o'quvchi alohida ID va hisob turi bilan ajratiladi. Reklamachi haqiqiy o'quvchi hisobini ochmaydi.
-- Reklamachi menyusi: Bosh sahifa, Namoyish, Reklama materiallari. Interfeys dastlab o'zbekcha. Sozlamalardan Administrator/O'qituvchi/O'quvchi/Admin namoyishiga o'tadi. Qaytish tugmasi Sozlamalarda. Namuna ma'lumotlari doimiy saqlanmaydi; yangi kirish/server qayta ishga tushishida tiklanishi mumkin.
+- Reklamachi menyusi: Bosh sahifa, Rollar, Reklama materiallari. Interfeys dastlab o'zbekcha. Sozlamalardan Administrator/O'qituvchi/O'quvchi/Admin namoyishiga o'tadi. Qaytish tugmasi Sozlamalarda. Qoralama tab ochiq ekan refresh va rol almashganda davom etadi; chiqish/yangi kirish yangi qoralama beradi. Haqiqiy o'quvchi ma'lumotlari o'zgarmaydi.
 - Admin faqat o'z guruhida baho, UNITga ruxsat, event va vazifalar bilan yordam beradi. Rol berish, boshqa markaz, to'lovlar va boshqa guruhlarga umumiy event/vazifani o'zgartirish ruxsati yo'q.
 - Owner Students va Teachers'da Move account orqali markazni o'zgartiradi. Hisob, parol va shaxsiy natijalar saqlanadi; eski guruh biriktiruvi tozalanadi, faol sessiyalar tugatiladi. Eski guruh/o'quvchilar ko'chmaydi. Yangi guruhni alohida biriktiring.
 - Owner Groups'da barcha yoki bir nechta markazga event yuboradi. Takroriy yuborish bir eventni ko'paytirmaydi; muvaffaqiyatsiz yetkazish qayta urinishda davom etadi.

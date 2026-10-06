@@ -1,0 +1,108 @@
+LINGORA — BOSHQA FANLAR VA KITOBLARNI MAHALLIY SINASH
+
+1. Bitta ZIPni oching. essential-mastery ichidagi fayllarni o'zingizdagi loyiha ildiziga ko'chirib almashtiring.
+   .env.local, Firebase service-account, media/audio, .git va mavjud ma'lumotlaringizni o'chirmang.
+   .env.example namunadir; mavjud kalitlar ustiga ko'chirmang. Hisob yaratish/reset skriptlarini qayta ishlatish shart emas.
+
+2. Loyiha papkasida Git Bash:
+   pnpm install
+   pnpm dev
+   http://localhost:3000
+   Bu buyruqlar deploy qilmaydi. Firebase bir xil projectga ulangan bo'lsa, lokalda qilingan haqiqiy hisob o'zgarishlari ham o'sha bazaga yoziladi.
+
+3. Dastlab faqat English chiqadi. Hech qanday Matematika yoki boshqa fan avtomatik yaratilmaydi.
+   Administrator yoki Owner: kerakli markaz -> Fanlar -> English -> 4 belgili fan kodini qo'ying -> Saqlash.
+   Bu kod faqat shu markazdagi shu fan uchun. Teacher/Administrator ro'yxatdan o'tish kodi bilan aralashtirmang.
+   Eski o'quvchilar qayta ro'yxatdan o'tmaydi; mavjud English natijalari qoladi.
+
+4. Boshqa fanni o'zingiz tekshirmoqchi bo'lsangiz:
+   Administrator/Owner -> Fanlar -> + Yangi fan.
+   Masalan Matematika, 4 belgili kod, kerakli menyular: Kitoblar, O'qish, Topshiriqlar, Qaydlar.
+   Saqlang. Endi bu fan aynan shu markazning ro'yxatdan o'tish oynasida chiqadi.
+   Istamasangiz boshqa fan yaratishingiz shart emas: English qoladi.
+
+5. Yangi o'qituvchi yoki Administrator:
+   Teacher -> markazni tanlash -> fanni tanlash -> tegishli ro'yxatdan o'tish kodi.
+   So'ng ism/familiya, parol va 12 belgili shaxsiy kirish kodini yaratadi.
+   Keyingi safar shaxsiy kod orqali kiradi. Markaz va fan saqlanadi; ularni har safar tanlash shart emas.
+   Mavjud o'qituvchini qo'shimcha fanga biriktirish: Fanlar -> o'qituvchini tanlash -> Joriy fanga biriktirish.
+
+6. Yangi fan uchun dars:
+   O'qituvchi -> markaz/fan -> Kitoblar -> Qo'shish -> PDF, DOCX yoki TXT.
+   Sinash uchun ZIPdagi samples/matematika-sinash.txt faylidan foydalanish mumkin. Bu fayl fanni o'zi yaratmaydi.
+   Yoki Kitoblar -> Mavzular ro'yxatidan darslar yaratish: nom, daraja/sinf, har qatorda mavzu -> Qoralama yaratish.
+   Yuklangan kitob kartasi -> Darsni AI bilan tayyorlash va tekshirish.
+   Tushuntirishlar, savollar, javoblar va variantlarni o'zingiz tekshiring/tuzating -> Qoralamani saqlash.
+   Guruhlarni tanlang, tekshirdim belgisini qo'ying -> Ulashish.
+   AI qoralamasi tekshirilmaguncha o'quvchilarning darsi bo'lmaydi.
+
+7. O'quvchini tekshirish:
+   Boshqa brauzer/profil yoki inkognito -> Student -> Yangi hisob.
+   Markaz, fan, shu fanning 4 belgili kodi va boshlang'ich UNITni tanlang.
+   Administrator/o'qituvchi uni mos guruhga biriktirsin.
+   O'quvchiga o'z fanining menyulari va guruhiga ulashilgan materiallar chiqadi.
+   UNIT tugagach keyingi UNIT avtomatik ochilmaydi; o'qituvchi/Admin o'z guruhidagi o'quvchiga ruxsat beradi.
+   English'da Navigate va Essential boshlanishlari va qulflari avvalgidek alohida.
+
+8. Shaxsiy kitobni sinash:
+   Reading/O'qish yoki Listening/Tinglash -> Qo'shish -> kitob yuklash.
+   Bitta yuklashdan kitob O'qish va Tinglashga tushadi, asl fayl ham yuklab olinadi.
+   English fanida o'zbekcha/avtomatik aniqlangan o'zbekcha matn inglizchaga tarjima qilinadi.
+   Matn va audio qism-qism tayyorlanadi: birinchi marta kutish bo'lishi mumkin. Tayyor qismlar saqlanadi.
+   Tayyorlashni to'xtatishingiz mumkin; qolgan matn/audioni kitob kartasidan davom ettiring.
+   Player: play/pause, oldingi/keyingi qism, -10/+10 soniya, seek, tezlik. Uzun audio mayda bo'laklarda ketma-ket aytiladi; matnning oxiri kesilmaydi.
+   Tinglash tepasidagi Kitob ovozi faqat yuklangan kitoblar audiosiga ta'sir qiladi; Coursebook/Workbook ovozi o'zgarmaydi.
+   O'qish: so'z ustiga bosing -> kontekst tarjimasi -> Ko'proq.
+   Sahifa/audio qismi saqlanadi; keyingi safar o'sha yerdan davom etadi.
+   O'qituvchi o'z guruhidagi o'quvchi yuklagan kitobni tekshirib guruhlariga ulashadi.
+   O'qituvchi ulashdi bo'limi asl yuklovchida ham chiqadi. Admin guruhlarga kitob ulasha olmaydi.
+
+9. English: AI bilan suhbat -> mikrofon ruxsati -> Gapirish.
+   Jimlikdan keyin nutq yuboriladi, AI Navigate darajasiga mos javob beradi. Matn bilan ham yozish mumkin.
+   Ovozi va tezligi Sozlamalardan olinadi. Chrome/Edge microphone ruxsatini va Gemini server kalitini tekshiring.
+
+10. Hisobot: o'qituvchi -> O'quvchilar hisoboti.
+    O'z guruhidagi shu fan o'quvchilarining urinishlari, aniqligi, qiynalgan savollari, qaydlari, so'nggi faolligi.
+    Yangi fan natijasini ochib Baho qo'yish orqali 0–100 baho va izoh yuboradi. O'quvchiga bildirishnoma keladi.
+    Bu avtomatik yakuniy baho emas. AI yaratgan savollarning to'g'riligini inson tekshirishi kerak.
+
+11. Owner: markaz/fan tanlab haqiqiy o'zgarishlarni saqlaydi. Fanlar -> Qo'shimcha fan ruxsati orqali o'quvchiga fan qo'shadi.
+    O'quvchi Sozlamalar/Bog'lanishdan qo'shimcha fan yoki markaz so'rashi mumkin; Ownerga bildirishnoma keladi.
+    Reklamachi Sozlamalardan rol almashtiradi. O'zgarishlar haqiqiy o'quvchilarning jadvallariga yozilmaydi.
+    Qoralama tab ochiq ekan refresh va rol almashganda davom etadi. Chiqish/yangi kirish yangi qoralama beradi.
+    Vaqtinchalik yozuvlar alohida school_demo_records jadvalida ajratilgan; muddati o'tganlari mavjud scheduled job bilan tozalanadi.
+
+CHEGARALAR VA TEKSHIRUV
+- Fayl: 100 MBgacha, PDF 1000 sahifagacha, ajratilgan matn 900 000 belgigacha. Katta kitoblarni bo'limlarga ajrating.
+- Skan PDF uchun AI OCR kerak. Matnli PDF/TXT tezroq; OCR noto'g'ri yoki noaniq joylarni o'qituvchi tuzatishi lozim.
+- PDF va DOCX brauzerda matnga ajratiladi. Asl fayl ham serverda saqlanadi. Reading matn ko'rinishi asl sahifa dizaynini takrorlamaydi.
+- Tarjima va audio Gemini kaliti/ruxsati/kvotasiga bog'liq. Audio fayl yuklangani zahoti butun kitob bo'ylab tayyor bo'lishi kafolatlanmaydi.
+- Upload tayyorlanayotganda tabni ochiq tuting; qolgan matn/audio keyin davom ettiriladi. Yarim yuklangan original faylni qayta yuklash mumkin.
+- Haqiqiy kalitlar bu ZIPga qo'shilmagan. Sizning Firebase/Gemini kalitlaringiz bilan yakuniy ishlashni lokalda sinang.
+- Build, TypeScript, rollar, fan/markaz ruxsatlari, kodlar, ulashish, UNIT qulfi, mikrofon va mavjud mashqlar avtomatik tekshirildi.
+- Brauzer orqali vizual tekshiruv bu muhitda bajarilmadi. Telefoningizda karta, modal, player va mikrofonni sinab ko'ring.
+
+2026-10-06 QO‘SHIMCHA SINASH
+- Markaz/fan tanlash: faqat Sozlamalar. Ro‘yxatdan o‘tishda avvalgi tanlash saqlangan.
+- Administrator: Profilni ochish -> English fanining kodi -> yangi 4 belgi -> English kodini saqlash. Mavjud o‘quvchilar o‘chmaydi.
+- English -> AI bilan suhbat -> Boshlashni bir marta bosing. Mikrofon ruxsatidan so‘ng AI sozlamadagi ovoz bilan salomlashadi; keyin tinglaydi, jimlikdan keyin avtomatik yuboradi. AI gapirayotganda siz gapirsangiz ovoz to‘xtaydi. Suhbatni tugatish ovoz va mikrofonni yopadi. Chrome/Edge va quloqchin tavsiya etiladi. Haqiqiy qurilmada mikrofon va aks-sadoni tekshiring.
+- Listening: Navigate yoki Audio kitoblarim. Navigate ichida avvalgi Coursebook/Workbook; shaxsiy kitob ovozi ularga ta’sir qilmaydi.
+- Reading: Darsliklar PDF kartalari va shaxsiy tarjima qilingan kitoblar alohida. Essential 1 PDF ZIPda bor. Qolgan darsliklar uchun Administrator/Owner PDF yoki ochiq Drive havolasini kartaga biriktiradi; ular fayl mavjud deb ko‘rsatilmaydi. Drive huquqi fayl egasi tomonidan ochilishi kerak.
+- Shaxsiy kitob -> Matnni tayyorlash -> inglizcha matnni o‘qish/so‘z tarjimasi -> Inglizcha tarjimani yuklab olish. Yuklash UTF-8 TXT formatida (barcha inglizcha matn, Unicode saqlanadi); original PDF alohida Asl fayl tugmasidan olinadi. Tarjima tugamaguncha inglizcha yuklash rad etiladi.
+
+YANGI TARJIMA VA TEZLIK SINOVI
+1. pnpm install, keyin pnpm dev. .env.local, firebase-service-account.json va media papkasini o‘zingiznikicha saqlang; almashtirmang.
+2. Teacher -> English -> Reading -> Guruhlar uchun kitob tarjimasi. Avval o‘chiq. O‘z guruhi yonidagi English ↔ O‘zbekcha ni yoqing.
+3. Shu guruhdagi Student -> Reading -> Qo‘shish -> PDF/DOCX/TXT. 100 MBgacha. Katta/skanerlangan kitob OCR va tarjimaga ko‘proq vaqt oladi; Gemini/Firebase tarif va kvotalari amal qiladi.
+4. O‘zbekcha kitob avtomatik inglizcha matnga tayyorlanadi. Yuklash tugagach audio majburan hammasi yaratilmaydi; Listeningda Play yoki Qolgan audiolarni tayyorlash orqali olinadi.
+5. Teacher tarjimani yoqqanida kitob ichida O‘qish tili: English/O‘zbekcha. O‘zbekcha tarjimani tayyorlash -> o‘qish -> tarjimani TXT sifatida yuklab olish.
+6. Teacher tarjimani o‘chirsa o‘zbekcha variant/yuklash/generatsiya yopiladi. Inglizcha o‘qish/listening saqlanadi. Lug‘atdagi Tarjimon bundan mustaqil ishlaydi.
+7. Lug‘at daftar -> ikki ustunli Tarjimon -> English/O‘zbekcha. Yozishdan 0.7 soniya keyin tarjima boshlanadi; ⇄ tillarni almashtiradi. Ko‘proq izohni alohida ochadi. Takror tarjimalar keshdan olinadi.
+8. Reading PDF yo‘q kartasi -> Administrator/Owner -> PDF havolasini biriktirish. Essential 1 bor; qolgan haqiqiy PDFlarni o‘zingiz biriktiring.
+9. Firebase xatosi davom etsa .env.local yoki Netlify server credentials/Firestore ulanishini tekshiring. Tarjimon ishlashi notelar bazasi ham ishlayapti degani emas; maxfiy kalitni chatga yubormang.
+10. Build va avtomatik sinovlar bajarilgan. Brauzer mikrofon/ovoz sifati va haqiqiy Gemini/Firebase tezligi sizning qurilmangizda tekshiriladi; tezlik internet va xizmatga bog‘liq.
+
+READING IKKI BO‘LIM
+- Reading: Darsliklar (Essential/Navigate PDF) va Kitoblarim (o‘zingiz yuklagan kitoblar).
+- Qo‘shish tugmasi Reading -> Kitoblarim ichida. Guruh tarjimasi ham shu yerda Teacherga ko‘rinadi.
+- Yuklangan kitob avtomatik Listening -> Audio kitoblarimda ham ko‘rinadi. Matn tayyorlangach birinchi audio qismi avtomatik yaratiladi; keyingi qismlar tinglash davomida tayyorlanadi va saqlanadi. Barcha audio kerak bo‘lsa Qolgan audiolarni tayyorlashni bosing.

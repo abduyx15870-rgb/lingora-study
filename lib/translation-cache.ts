@@ -1,0 +1,2 @@
+const cache=new Map<string,{text:string;expires:number}>();const pending=new Map<string,Promise<string>>();
+export async function cachedTranslation(key:string,generate:()=>Promise<string>){const saved=cache.get(key);if(saved&&saved.expires>Date.now())return saved.text;const existing=pending.get(key);if(existing)return existing;const task=generate().then(text=>{if(cache.size>=200)cache.delete(cache.keys().next().value!);cache.set(key,{text,expires:Date.now()+3600000});return text}).finally(()=>pending.delete(key));pending.set(key,task);return task}

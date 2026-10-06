@@ -1,3 +1,3 @@
 // Never persistent: leaving the account clears this tab's preview context.
-export function modeHeaders():Record<string,string>{if(typeof window==='undefined')return{};const h:Record<string,string>={};for(const [key,name] of [['owner-user','X-Owner-User'],['demo-role','X-Demo-Role'],['demo-key','X-Demo-Key']]){const value=sessionStorage.getItem(key);if(value)h[name]=value}return h}
-export function clearMode(){if(typeof window==='undefined')return;for(const key of ['owner-user','demo-role','demo-key'])sessionStorage.removeItem(key)}
+export function modeHeaders():Record<string,string>{if(typeof window==='undefined')return{};const h:Record<string,string>={};for(const [key,name] of [['owner-user','X-Owner-User'],['demo-role','X-Demo-Role'],['demo-key','X-Demo-Key'],['active-subject','X-Subject-Id'],['active-center','X-Learning-Center']]){const value=sessionStorage.getItem(key);if(value)h[name]=value}return h}
+export function clearMode(){if(typeof window==='undefined')return;for(const key of ['owner-user','demo-role','active-subject','active-center'])sessionStorage.removeItem(key)}

@@ -1,0 +1,10 @@
+Natural sonlar va amallar
+
+1. Natural sonlar: 1, 2, 3, 4 va hokazo. Ular narsalarni sanashda ishlatiladi.
+2. Qo'shish: 2 + 3 = 5. Ayirish: 7 - 2 = 5.
+3. Ko'paytirish: 3 x 4 = 12. Bo'lish: 12 : 3 = 4.
+4. Amallar tartibi: avval qavs, so'ng ko'paytirish va bo'lish, so'ng qo'shish va ayirish.
+   Masalan: 2 + 3 x 4 = 14. (2 + 3) x 4 = 20.
+5. Oddiy masala: Ali 3 ta olma oldi, keyin yana 2 ta oldi. Hammasi 5 ta olma.
+
+Bu kichik fayl saytga kitob yuklashni sinash uchun. Haqiqiy darslik o'rnini bosmaydi.

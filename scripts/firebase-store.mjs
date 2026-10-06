@@ -1,7 +1,7 @@
 import {tashkentDate} from './billing.mjs';
 import {createHash,createSign,randomUUID} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
-let cachedToken,expires=0;
+let cachedToken,expires=0,tokenPending;
 export async function credentials(){
  let c;
  if(process.env.FIREBASE_SERVICE_ACCOUNT_JSON)c=JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON);
@@ -13,6 +13,10 @@ export async function credentials(){
 }
 export async function accessToken(){
  if(cachedToken&&Date.now()<expires)return cachedToken;
+ if(tokenPending)return tokenPending;
+ tokenPending=createAccessToken().finally(()=>{tokenPending=undefined});return tokenPending;
+}
+async function createAccessToken(){
  const c=await credentials(),now=Math.floor(Date.now()/1000),encode=v=>Buffer.from(JSON.stringify(v)).toString('base64url');
  const unsigned=encode({alg:'RS256',typ:'JWT'})+'.'+encode({iss:c.client_email,scope:'https://www.googleapis.com/auth/datastore https://www.googleapis.com/auth/devstorage.read_write',aud:'https://oauth2.googleapis.com/token',iat:now,exp:now+3600});
  const jwt=unsigned+'.'+createSign('RSA-SHA256').update(unsigned).sign(c.private_key,'base64url');
@@ -141,7 +145,7 @@ export async function moveSchoolUserCenter(userId,centerId){
  const doc=await request('/school_users/'+userId),user=row(doc),oldCenter=user.center_id||'zamon';if(user.role==='owner')throw new Error('Owner cannot be moved.');if(oldCenter===centerId)return true;
  const writes=[],update=(d,v)=>writes.push({update:{name:d.name,fields:fields(v)},currentDocument:{updateTime:d.updateTime}});
  const loginName=(user.first_name+' '+user.last_name).normalize('NFKC').toLowerCase().replace(/\s+/g,' ').replace(/[‘’ʻʼ]/g,"'");
- update(doc,{...user,center_id:centerId,group_id:null,login_name:loginName});
+ update(doc,{...user,center_id:centerId,group_id:null,login_name:loginName,...(Array.isArray(user.enrollments)?{enrollments:[{centerId,subjectId:'english',startUnit:1},...user.enrollments.filter(e=>e.centerId!==centerId).map(e=>({...e,groupId:null}))]}:{}),...(Array.isArray(user.subject_ids)?{subject_ids:['english']}: {})});
  for(const table of ['school_attempts','school_progress','school_reads','school_notes','school_questions','school_bookmarks','school_inbox','school_push','school_learning_sessions','school_word_sessions'])for(const item of await documents(table,'user_id=eq.'+encodeURIComponent(userId)))writes.push({update:{name:item.name,fields:fields({...item.data,center_id:centerId,...(table==='school_questions'?{group_id:null}:{})})},currentDocument:{updateTime:item.updateTime}});
  for(const item of await documents('school_groups','teacher_id=eq.'+encodeURIComponent(userId)))writes.push({update:{name:item.name,fields:fields({...item.data,teacher_id:null})},currentDocument:{updateTime:item.updateTime}});
  for(const item of await documents('school_sessions','user_id=eq.'+encodeURIComponent(userId)))writes.push({delete:item.name,currentDocument:{exists:true}});
