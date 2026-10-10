@@ -1,0 +1,2418 @@
+[
+  {
+    "id": "ielts-full-reading-1",
+    "exam": "ielts",
+    "skill": "reading",
+    "title": "Full mock 1 · Academic Reading",
+    "minutes": 60,
+    "origin": "Lingora original full-length mock · not a past official paper",
+    "fullLength": true,
+    "groups": [
+      {
+        "title": "Passage 1 · A library of things · Questions 1–15",
+        "text": "A. Before the city of Bellhaven opened its first library of things, residents could borrow books but not the equipment needed to maintain their homes. Buying a drill for a single afternoon seemed wasteful, yet commercial hire shops mainly served professional builders and required expensive deposits. A neighbourhood survey found that householders were more interested in borrowing practical equipment than in attending additional workshops. The council therefore converted a vacant room beside the public library into a lending service. It opened in March 2017 with ninety donated objects, ranging from carpet cleaners to sewing machines. Its purpose was to reduce unnecessary purchases rather than to generate a profit. A small membership fee was introduced to pay for maintenance, but residents receiving certain benefits could join free.\n\nB. The organisers initially predicted that gardening equipment would be most popular. In practice, carpet cleaners were requested more often than any other category. The result reflected the large number of rented flats in the area: tenants wanted to clean before moving out, while many had no garden. Some objects attracted surprisingly little interest. A pasta machine was borrowed twice in its first year, despite attracting many enthusiastic comments at the launch. Staff learned that what people admire publicly and what they actually need are not always the same. They began asking members about upcoming tasks rather than showing them attractive products and requesting opinions. This changed both purchasing decisions and the wording of publicity materials.\n\nC. Borrowing rules also evolved. During the first six months, everything could be kept for seven days. Members complained that weekend-only projects did not require a whole week, whereas sewing projects sometimes took longer. The service eventually introduced different loan periods for different categories. A deposit remained compulsory for especially valuable items, but ordinary members did not need a deposit for basic tools. Late returns caused more difficulties than broken items: an object that appeared available online could still be in somebody's kitchen when the next borrower arrived. Automated reminders helped, but staff also reserved a day between consecutive bookings for inspections. Consequently, an item was not always bookable immediately after its scheduled return.\n\nD. Maintaining the collection required expertise that the original volunteers did not all possess. Two retired engineers began a weekly repair session, and a local college supplied supervised students. The partnership gave students experience with genuine faults rather than carefully prepared classroom demonstrations. Every electrical item was inspected after each loan, even when the borrower reported no problem. Items that failed inspection were removed from the catalogue until repaired. The service did not invite members to mend electrical faults themselves. However, it offered a short introductory session on safe operation before lending unfamiliar equipment. Attendance was compulsory for some machines but optional for ordinary hand tools. Records of repairs gradually revealed which brands were economical over their entire working life, not merely cheap to acquire.\n\nE. The environmental benefits were harder to establish than the borrowing statistics. A lending transaction does not automatically replace a purchase: without the service, some members might simply have postponed their project or borrowed from a relative. Researcher Maya Chen interviewed 120 members and asked what they would otherwise have done. She estimated that approximately half of the loans replaced purchases, while warning that the sample was voluntary and might overrepresent environmentally motivated residents. Her study did not compare Bellhaven with another city. Nor did it measure the energy used in manufacturing every object. Chen recommended reporting several indicators, including utilisation, repairs and avoided purchases, rather than presenting one impressive but uncertain carbon-saving figure.\n\nF. In 2022, a grant allowed the service to extend its opening hours to two evenings a week. Members working during ordinary library hours then used it more often. The grant did not fund a larger collection; staff argued that access mattered more than adding objects which would sit unused. Membership rose, but the council declined an offer from a retailer to install advertisements in the borrowing room. Managers wanted advice to remain independent of sales. They still bought replacement items from several suppliers and published their selection principles. The next planned improvement was a shared reservation system with two nearby neighbourhoods. It would increase access to specialist equipment without requiring each branch to own an identical collection.",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "The service was designed primarily to earn money.",
+            "accepted": [
+              "FALSE"
+            ],
+            "explanation": "A: reducing unnecessary purchases, not generating profit.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "2",
+            "prompt": "The collection initially consisted of donated objects.",
+            "accepted": [
+              "TRUE"
+            ],
+            "explanation": "A: ninety donated objects.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "3",
+            "prompt": "Carpet cleaners were more popular than the organisers had expected.",
+            "accepted": [
+              "TRUE"
+            ],
+            "explanation": "B: gardening equipment was expected to lead, but carpet cleaners did.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "4",
+            "prompt": "Most members owned a large garden.",
+            "accepted": [
+              "FALSE"
+            ],
+            "explanation": "B: many tenants had no garden.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "5",
+            "prompt": "The pasta machine was the most expensive object in the collection.",
+            "accepted": [
+              "NOT GIVEN"
+            ],
+            "explanation": "B gives usage but no price comparison.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "6",
+            "prompt": "After the change, every object had the same loan period.",
+            "accepted": [
+              "FALSE"
+            ],
+            "explanation": "C: loan periods differed by category.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "7",
+            "prompt": "All electrical objects were inspected after being returned.",
+            "accepted": [
+              "TRUE"
+            ],
+            "explanation": "D: every electrical item was inspected after each loan.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "8",
+            "prompt": "Chen compared Bellhaven with a second city.",
+            "accepted": [
+              "FALSE"
+            ],
+            "explanation": "E explicitly says no comparison city.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "9",
+            "prompt": "The initial survey asked householders about borrowing practical ____.",
+            "accepted": [
+              "equipment"
+            ],
+            "explanation": "A: practical equipment.",
+            "wordLimit": 1
+          },
+          {
+            "id": "10",
+            "prompt": "Staff left a day between bookings to carry out ____.",
+            "accepted": [
+              "inspections"
+            ],
+            "explanation": "C: a day for inspections.",
+            "wordLimit": 1
+          },
+          {
+            "id": "11",
+            "prompt": "Two retired ____ helped repair the collection.",
+            "accepted": [
+              "engineers"
+            ],
+            "explanation": "D: two retired engineers.",
+            "wordLimit": 1
+          },
+          {
+            "id": "12",
+            "prompt": "Chen interviewed ____ members.",
+            "accepted": [
+              "120",
+              "one hundred and twenty"
+            ],
+            "explanation": "E: 120 members; write the number.",
+            "wordLimit": 1
+          },
+          {
+            "id": "13",
+            "prompt": "The grant mainly improved members’ ____ to the service.",
+            "accepted": [
+              "access"
+            ],
+            "explanation": "F: access mattered more than new objects.",
+            "wordLimit": 1
+          },
+          {
+            "id": "14",
+            "prompt": "Which paragraph describes a difference between expressed enthusiasm and real behaviour?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "See paragraph B.",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ]
+          },
+          {
+            "id": "15",
+            "prompt": "Which paragraph explains why a loan cannot always be counted as an avoided purchase?",
+            "accepted": [
+              "E"
+            ],
+            "explanation": "See paragraph E.",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Passage 2 · Light with a purpose · Questions 16–28",
+        "text": "A. For decades, city administrations have treated street lighting as a straightforward question of visibility: brighter streets were assumed to be better streets. Yet the introduction of efficient LED lamps has reopened a more complicated debate. A lamp that consumes fewer watts can still produce a great deal of unwanted light. If its lower running cost encourages a city to install more lamps or operate them for longer, total energy savings may be smaller than predicted. Researchers call this a rebound effect. It does not mean that efficient technology is useless. It means that the benefits of efficiency depend partly on decisions made after installation, including how much illumination users consider necessary.\n\nB. Light can be directed more precisely than older systems allowed. A well-designed fitting illuminates a pavement without sending much light into bedroom windows or directly into the sky. This distinction matters because total brightness is a poor description of lighting quality. A powerful lamp shining into a pedestrian's eyes can reduce the ability to see an uneven surface beyond it. Engineers describe such discomfort as glare. Shielding the source and controlling its angle may improve visibility even when measured output is lower. Some city councils now assess whether a light serves a specific task instead of applying the same standard to every street, park and car park.\n\nC. Ecological concerns have also changed the discussion. Artificial light at night can alter the behaviour of insects, birds and other animals. In a fictional field trial near Lanton, researchers compared riverbank sites under three types of lamp. Blue-rich white lamps attracted more flying insects than warmer lamps, although the difference varied with weather. Removing lights altogether had a larger effect than changing their colour. The team emphasised that the experiment examined attraction to lamps, not long-term changes in insect populations. A lower count at a particular lamp therefore did not prove that more insects survived across the whole landscape. Similar care is needed when drawing conclusions about birds from observations on a single illuminated building.\n\nD. Public safety is often invoked as a reason to resist dimming. However, correlations between lighting and recorded crime can be difficult to interpret. Wealthier districts may have both newer lights and other investments such as better transport or staffed public spaces. When a council changes lighting, it may also increase police patrols. A subsequent decline in crime cannot automatically be attributed to the lamps. This uncertainty does not justify ignoring residents' concerns. Rather, it suggests that evaluations should include comparable areas and record other changes during the study. Perceived safety also matters because fear can stop people using a route even when recorded incidents are rare. A technically efficient scheme that nobody trusts may fail in practice.\n\nE. In the fictional town of Norbridge, a pilot project dimmed selected residential streetlights after midnight rather than switching them off. The council excluded road junctions and pedestrian crossings. Before the trial, residents walked the routes with engineers and identified places where trees blocked the light. Pruning branches solved several problems without adding brighter lamps. The council then collected feedback through both an online questionnaire and paper forms at the library, since an online-only survey would have excluded some residents. Most respondents accepted the dimming, but people working night shifts asked for a well-lit connection between the bus stop and the main road. That section was subsequently removed from the pilot.\n\nF. Smart controls provide another possibility. Sensors can increase output when a pedestrian approaches and reduce it afterwards. Nevertheless, buying sensors introduces costs of its own: equipment must be maintained, software supported and faults investigated. A control system that works well in a demonstration may struggle with heavy rain or moving branches. Councils therefore need to assess reliability as well as projected electricity savings. Collecting movement data can also raise privacy questions. A system need not store identifiable journeys merely to activate a lamp, so planners should consider what data are genuinely necessary and how long they are retained. Technical capability is not, by itself, a reason to collect everything.\n\nG. The emerging principle is not universal darkness, nor unlimited brightness. It is light that is sufficient for an identified purpose, used at the times and places where that purpose exists. Decisions involve trade-offs among accessibility, energy, ecology and public confidence. A single measurement such as lamp wattage cannot settle them. Trials are especially valuable when they include a clear baseline, alternatives and a plan for listening to people who use the area at different hours. Successful projects may look modest: a shield on one lamp, a warmer source beside a river, or a timetable that reflects real use. Their value lies in solving a particular problem rather than producing the brightest photograph.",
+        "questions": [
+          {
+            "id": "16",
+            "prompt": "Choose the heading for paragraph A.",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "The central point of paragraph A matches this heading.",
+            "options": [
+              "A. Limits of an ecological experiment",
+              "B. Why economy can encourage extra consumption",
+              "C. The abolition of all night-time transport",
+              "D. Separating safety effects from other changes",
+              "E. Directing light where it is needed",
+              "F. Hidden responsibilities of automated controls",
+              "G. A history of private electricity suppliers",
+              "H. Residents helping to improve a trial",
+              "I. A balanced principle for future decisions"
+            ]
+          },
+          {
+            "id": "17",
+            "prompt": "Choose the heading for paragraph B.",
+            "accepted": [
+              "E"
+            ],
+            "explanation": "The central point of paragraph B matches this heading.",
+            "options": [
+              "A. Limits of an ecological experiment",
+              "B. Why economy can encourage extra consumption",
+              "C. The abolition of all night-time transport",
+              "D. Separating safety effects from other changes",
+              "E. Directing light where it is needed",
+              "F. Hidden responsibilities of automated controls",
+              "G. A history of private electricity suppliers",
+              "H. Residents helping to improve a trial",
+              "I. A balanced principle for future decisions"
+            ]
+          },
+          {
+            "id": "18",
+            "prompt": "Choose the heading for paragraph C.",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "The central point of paragraph C matches this heading.",
+            "options": [
+              "A. Limits of an ecological experiment",
+              "B. Why economy can encourage extra consumption",
+              "C. The abolition of all night-time transport",
+              "D. Separating safety effects from other changes",
+              "E. Directing light where it is needed",
+              "F. Hidden responsibilities of automated controls",
+              "G. A history of private electricity suppliers",
+              "H. Residents helping to improve a trial",
+              "I. A balanced principle for future decisions"
+            ]
+          },
+          {
+            "id": "19",
+            "prompt": "Choose the heading for paragraph D.",
+            "accepted": [
+              "D"
+            ],
+            "explanation": "The central point of paragraph D matches this heading.",
+            "options": [
+              "A. Limits of an ecological experiment",
+              "B. Why economy can encourage extra consumption",
+              "C. The abolition of all night-time transport",
+              "D. Separating safety effects from other changes",
+              "E. Directing light where it is needed",
+              "F. Hidden responsibilities of automated controls",
+              "G. A history of private electricity suppliers",
+              "H. Residents helping to improve a trial",
+              "I. A balanced principle for future decisions"
+            ]
+          },
+          {
+            "id": "20",
+            "prompt": "Choose the heading for paragraph E.",
+            "accepted": [
+              "H"
+            ],
+            "explanation": "The central point of paragraph E matches this heading.",
+            "options": [
+              "A. Limits of an ecological experiment",
+              "B. Why economy can encourage extra consumption",
+              "C. The abolition of all night-time transport",
+              "D. Separating safety effects from other changes",
+              "E. Directing light where it is needed",
+              "F. Hidden responsibilities of automated controls",
+              "G. A history of private electricity suppliers",
+              "H. Residents helping to improve a trial",
+              "I. A balanced principle for future decisions"
+            ]
+          },
+          {
+            "id": "21",
+            "prompt": "Choose the heading for paragraph F.",
+            "accepted": [
+              "F"
+            ],
+            "explanation": "The central point of paragraph F matches this heading.",
+            "options": [
+              "A. Limits of an ecological experiment",
+              "B. Why economy can encourage extra consumption",
+              "C. The abolition of all night-time transport",
+              "D. Separating safety effects from other changes",
+              "E. Directing light where it is needed",
+              "F. Hidden responsibilities of automated controls",
+              "G. A history of private electricity suppliers",
+              "H. Residents helping to improve a trial",
+              "I. A balanced principle for future decisions"
+            ]
+          },
+          {
+            "id": "22",
+            "prompt": "Choose the heading for paragraph G.",
+            "accepted": [
+              "I"
+            ],
+            "explanation": "The central point of paragraph G matches this heading.",
+            "options": [
+              "A. Limits of an ecological experiment",
+              "B. Why economy can encourage extra consumption",
+              "C. The abolition of all night-time transport",
+              "D. Separating safety effects from other changes",
+              "E. Directing light where it is needed",
+              "F. Hidden responsibilities of automated controls",
+              "G. A history of private electricity suppliers",
+              "H. Residents helping to improve a trial",
+              "I. A balanced principle for future decisions"
+            ]
+          },
+          {
+            "id": "23",
+            "prompt": "What does the rebound effect describe?",
+            "accepted": [
+              "D"
+            ],
+            "explanation": "A: lower cost can encourage additional lamps or longer operation.",
+            "options": [
+              "A. Electricity prices falling to zero",
+              "B. Lamps breaking more frequently",
+              "C. Insects avoiding efficient lamps",
+              "D. Extra use reducing anticipated savings"
+            ]
+          },
+          {
+            "id": "24",
+            "prompt": "What did the Lanton trial directly measure?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "C: attraction, not long-term population change.",
+            "options": [
+              "A. Insect attraction to different lamps",
+              "B. City-wide bird populations",
+              "C. The cost of river maintenance",
+              "D. Long-term insect survival"
+            ]
+          },
+          {
+            "id": "25",
+            "prompt": "Why did Norbridge offer paper forms?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "E: online-only responses would exclude some residents.",
+            "options": [
+              "A. To stop residents reporting faults",
+              "B. To include people who might not answer online",
+              "C. To measure electricity directly",
+              "D. To remove the need for engineers"
+            ]
+          },
+          {
+            "id": "26",
+            "prompt": "What is the author’s overall recommendation?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "G: sufficient light for an identified purpose with trade-offs.",
+            "options": [
+              "A. Assess lighting in relation to its purpose and effects",
+              "B. Make every street equally bright",
+              "C. Replace evaluation with photographs",
+              "D. Avoid all new technology"
+            ]
+          },
+          {
+            "id": "27",
+            "prompt": "The discomfort caused by a bright source in the eyes is called ____.",
+            "accepted": [
+              "glare"
+            ],
+            "explanation": "B identifies glare.",
+            "wordLimit": 1
+          },
+          {
+            "id": "28",
+            "prompt": "At Norbridge, ____ blocked light in some places.",
+            "accepted": [
+              "trees"
+            ],
+            "explanation": "E: trees blocked the light. No other cause is named.",
+            "wordLimit": 1
+          }
+        ]
+      },
+      {
+        "title": "Passage 3 · Learning from work · Questions 29–40",
+        "text": "A. When an organisation makes a mistake, managers often announce that they will create a culture of learning. The phrase sounds attractive, but it leaves a difficult question unanswered: what exactly should be learned, and from which events? An accident that occurred under unusual conditions may teach little about ordinary work. Conversely, a process that succeeds every day may contain vulnerabilities that remain invisible until several small changes occur together. Learning requires more than collecting stories about failure. It requires an explanation that links actions, circumstances and outcomes without pretending that participants possessed information which became available only afterwards.\n\nB. Historian Lena Ortiz distinguishes between a useful account and a satisfying account. A satisfying account often identifies one careless individual and gives the organisation a simple remedy: replace that person or require more attention. A useful account asks why a decision made sense to the person at the time. This does not remove responsibility or imply that all behaviour is acceptable. Deliberate disregard of a known safety rule can still deserve a sanction. But if several competent employees independently make the same error, treating each one as an isolated exception may conceal a confusing instruction, an unrealistic deadline or an unreliable display. The point is to improve explanation before choosing an intervention.\n\nC. A fictional hospital illustrates the distinction. Nurses twice selected the wrong package from a cupboard containing visually similar medicines. Both events were caught before a patient received the medicine. The initial proposal was a reminder to read labels more carefully. A review instead found that the two products occupied neighbouring shelves and that evening staff read small print under weak lighting. The hospital separated the products, enlarged shelf labels and improved the lamp. In six months of observation, no further selection error was reported. The review team nevertheless avoided claiming that the changes had eliminated the risk: reports could be incomplete and six months was a limited period. It continued to monitor near misses as well as actual harm.\n\nD. Near misses can provide unusually rich information because the organisation can investigate them without the injury or damage of a completed accident. Yet employees may not report them if reporting leads automatically to blame. An anonymous reporting channel can help, although it makes follow-up questions harder. Another solution is to distinguish a confidential conversation about ordinary mistakes from the procedure for reckless behaviour. Trust develops through experience: employees watch what happens to colleagues who report problems. A poster promising openness has little effect if the first reporter loses a promotion. Managers must also respond visibly, since reports that disappear into a database can persuade staff that speaking up is pointless.\n\nE. Collecting reports is therefore only the beginning. A review meeting can generate a long list of recommendations, but organisations often prefer those that are easy to announce rather than those that change work. Training is a common example. It is appropriate when knowledge is missing, yet additional training cannot repair a badly designed interface or provide staff with time that their schedules do not allow. Engineer Arun Vale proposes testing each recommendation against a question: would this change make the undesired action less likely even on a busy day? He also advises assigning an owner and a review date. Without these, a recommendation may remain officially accepted but practically absent.\n\nF. Success deserves investigation too. A team may deliver a project on schedule only because experienced staff quietly compensate for gaps in the plan. If management interprets the result as proof that the plan needs no improvement, those compensations become normal expectations. The organisation loses the opportunity to learn about fragile conditions before somebody is unable to bridge them. Observing ordinary work helps reveal how tasks are actually completed rather than how a procedure says they should be completed. Such observation must be conducted respectfully. If employees believe the observer is searching for reasons to punish them, they may demonstrate an ideal procedure which conceals everyday adjustments.\n\nG. There is no universal number of reports that demonstrates a healthy learning culture. A rising total might indicate more problems, greater willingness to disclose them, or both. A falling total might signal safer processes or growing silence. Interpretation requires several sources of evidence, including conversations, observations and the completion of improvement actions. Leaders should resist ranking departments by report counts alone. The most defensible goal is an organisation that notices weak signals, investigates them fairly and tests whether its response actually changes the conditions of work. In that sense, learning is an ongoing practice rather than a badge awarded after a training session.",
+        "questions": [
+          {
+            "id": "29",
+            "prompt": "The author believes every unusual accident is a reliable guide to everyday work.",
+            "accepted": [
+              "NO"
+            ],
+            "explanation": "A: unusual accidents may teach little about ordinary work.",
+            "options": [
+              "YES",
+              "NO",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "30",
+            "prompt": "Ortiz argues that seeking an explanation removes all individual responsibility.",
+            "accepted": [
+              "NO"
+            ],
+            "explanation": "B explicitly says responsibility is not removed.",
+            "options": [
+              "YES",
+              "NO",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "31",
+            "prompt": "The hospital proved that its selection risk had been eliminated permanently.",
+            "accepted": [
+              "NO"
+            ],
+            "explanation": "C explicitly avoids claiming risk elimination.",
+            "options": [
+              "YES",
+              "NO",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "32",
+            "prompt": "Anonymous reports are always more accurate than named reports.",
+            "accepted": [
+              "NOT GIVEN"
+            ],
+            "explanation": "D discusses follow-up difficulty, not comparative accuracy.",
+            "options": [
+              "YES",
+              "NO",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "33",
+            "prompt": "Investigating successful work can expose weaknesses in a plan.",
+            "accepted": [
+              "YES"
+            ],
+            "explanation": "F: experienced staff compensate for plan gaps.",
+            "options": [
+              "YES",
+              "NO",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "34",
+            "prompt": "Departments should be ranked only by the number of reports they submit.",
+            "accepted": [
+              "NO"
+            ],
+            "explanation": "G advises resisting such rankings.",
+            "options": [
+              "YES",
+              "NO",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "35",
+            "prompt": "Who distinguishes useful explanations from satisfying explanations?",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "B: Ortiz makes the distinction.",
+            "options": [
+              "A. Arun Vale",
+              "B. The hospital review team",
+              "C. Lena Ortiz"
+            ]
+          },
+          {
+            "id": "36",
+            "prompt": "Who recommends testing a proposed change against conditions on a busy day?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "E: Vale proposes the busy-day question.",
+            "options": [
+              "A. Arun Vale",
+              "B. The hospital review team",
+              "C. Lena Ortiz"
+            ]
+          },
+          {
+            "id": "37",
+            "prompt": "Who continued monitoring after six months without a reported selection error?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "C: the review team continued monitoring.",
+            "options": [
+              "A. Arun Vale",
+              "B. The hospital review team",
+              "C. Lena Ortiz"
+            ]
+          },
+          {
+            "id": "38",
+            "prompt": "According to the author, what can a rising number of reports indicate?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "G gives multiple possible interpretations.",
+            "options": [
+              "A. More problems, more openness, or both",
+              "B. A guaranteed absence of risk",
+              "C. Only worse performance",
+              "D. Only better processes"
+            ]
+          },
+          {
+            "id": "39",
+            "prompt": "What weakness can anonymous reporting have?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "D: anonymous channels make follow-up questions harder.",
+            "options": [
+              "A. It requires the reporter to publish their name",
+              "B. Investigators may be unable to ask follow-up questions",
+              "C. It automatically proves deliberate misconduct",
+              "D. It prevents any report from being collected"
+            ]
+          },
+          {
+            "id": "40",
+            "prompt": "What is the main aim of this passage?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "All paragraphs develop responsible organisational learning.",
+            "options": [
+              "A. To recommend dismissing every employee who errs",
+              "B. To explain how organisations can learn responsibly from work",
+              "C. To replace investigation with report totals",
+              "D. To show that training never helps"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cefr-full-reading-1",
+    "exam": "cefr",
+    "skill": "reading",
+    "title": "Full mock 1 · Multilevel Reading",
+    "minutes": 60,
+    "origin": "Lingora original full-length mock · not a past official paper",
+    "fullLength": true,
+    "groups": [
+      {
+        "title": "Part 1 · Gap filling · Questions 1–6",
+        "text": "A small village had no public library, so residents created a travelling library in a van. The library van visits the village every Tuesday. On that day, the travelling vehicle is parked outside the school. Children can enter the (1) ____ there. The librarian carries books for children and adults. Each reader may choose three (2) ____ and keep them for two weeks. Most readers return their books on time. If a reader cannot visit the van, the librarian collects the books from the reader's home. This home service is free. It began after an elderly (3) ____ who borrowed books explained that he could not walk to the school. Other elderly readers now use the (4) ____ too. The village school helps the project by providing a safe place to park. The (5) ____ also stores donated books during the holidays. Although the van is small, its collection changes regularly. People who join become new (6) ____ and can discover something different on each visit.",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "Fill gap 1 using ONE word from elsewhere in the text.",
+            "accepted": [
+              "van"
+            ],
+            "explanation": "The repeated noun fits the meaning and grammar of gap 1.",
+            "wordLimit": 1
+          },
+          {
+            "id": "2",
+            "prompt": "Fill gap 2 using ONE word from elsewhere in the text.",
+            "accepted": [
+              "books"
+            ],
+            "explanation": "The repeated noun fits the meaning and grammar of gap 2.",
+            "wordLimit": 1
+          },
+          {
+            "id": "3",
+            "prompt": "Fill gap 3 using ONE word from elsewhere in the text.",
+            "accepted": [
+              "reader"
+            ],
+            "explanation": "The repeated noun fits the meaning and grammar of gap 3.",
+            "wordLimit": 1
+          },
+          {
+            "id": "4",
+            "prompt": "Fill gap 4 using ONE word from elsewhere in the text.",
+            "accepted": [
+              "service"
+            ],
+            "explanation": "The repeated noun fits the meaning and grammar of gap 4.",
+            "wordLimit": 1
+          },
+          {
+            "id": "5",
+            "prompt": "Fill gap 5 using ONE word from elsewhere in the text.",
+            "accepted": [
+              "school"
+            ],
+            "explanation": "The repeated noun fits the meaning and grammar of gap 5.",
+            "wordLimit": 1
+          },
+          {
+            "id": "6",
+            "prompt": "Fill gap 6 using ONE word from elsewhere in the text.",
+            "accepted": [
+              "readers"
+            ],
+            "explanation": "The repeated noun fits the meaning and grammar of gap 6.",
+            "wordLimit": 1
+          }
+        ]
+      },
+      {
+        "title": "Part 2 · Matching advertisements · Questions 7–14",
+        "text": "A. Riverside pottery: evening classes for complete beginners. All clay and tools supplied. Adults only. Take your finished bowl home after firing.\n\nB. Hill walkers: Sunday morning routes for experienced walkers. Bring waterproof clothing. Dogs are welcome if kept on leads. Own transport required.\n\nC. Green kitchen: vegetarian cookery for families on Saturday afternoons. Children aged eight and above may join with an adult. Ingredients included.\n\nD. Camera club: learn to edit photographs online every Wednesday evening. Suitable for people who already know their camera. Free software provided.\n\nE. Bike workshop: learn basic repairs on Saturday mornings. Bring your own bicycle. No experience required. Replacement parts cost extra.\n\nF. City choir: lunchtime singing sessions near the railway station. No audition and no need to read music. Open to adults of any experience.\n\nG. History walks: explore old buildings on Friday evenings with a local guide. Routes are short and wheelchair accessible. Booking is essential.\n\nH. Garden exchange: swap spare seeds and plants at the community centre. Sunday afternoons. Volunteers give advice on growing vegetables in small spaces.",
+        "questions": [
+          {
+            "id": "7",
+            "prompt": "Which person’s need is met by advertisement A?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "Advertisement A directly meets the named requirements.",
+            "options": [
+              "A. An adult beginner wants to make an object from clay.",
+              "B. A visitor wants to hire a car for a week.",
+              "C. An experienced walker wants an outing with a dog.",
+              "D. A gardener wants to exchange surplus plants on Sunday.",
+              "E. A wheelchair user wants to learn about local buildings.",
+              "F. A child wants competitive swimming lessons.",
+              "G. A family wants to learn to prepare meat-free meals.",
+              "H. Someone wants to fix a bicycle they already own.",
+              "I. A worker wants to sing at lunchtime without an audition.",
+              "J. A photographer wants to improve pictures using a computer at home."
+            ]
+          },
+          {
+            "id": "8",
+            "prompt": "Which person’s need is met by advertisement B?",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "Advertisement B directly meets the named requirements.",
+            "options": [
+              "A. An adult beginner wants to make an object from clay.",
+              "B. A visitor wants to hire a car for a week.",
+              "C. An experienced walker wants an outing with a dog.",
+              "D. A gardener wants to exchange surplus plants on Sunday.",
+              "E. A wheelchair user wants to learn about local buildings.",
+              "F. A child wants competitive swimming lessons.",
+              "G. A family wants to learn to prepare meat-free meals.",
+              "H. Someone wants to fix a bicycle they already own.",
+              "I. A worker wants to sing at lunchtime without an audition.",
+              "J. A photographer wants to improve pictures using a computer at home."
+            ]
+          },
+          {
+            "id": "9",
+            "prompt": "Which person’s need is met by advertisement C?",
+            "accepted": [
+              "G"
+            ],
+            "explanation": "Advertisement C directly meets the named requirements.",
+            "options": [
+              "A. An adult beginner wants to make an object from clay.",
+              "B. A visitor wants to hire a car for a week.",
+              "C. An experienced walker wants an outing with a dog.",
+              "D. A gardener wants to exchange surplus plants on Sunday.",
+              "E. A wheelchair user wants to learn about local buildings.",
+              "F. A child wants competitive swimming lessons.",
+              "G. A family wants to learn to prepare meat-free meals.",
+              "H. Someone wants to fix a bicycle they already own.",
+              "I. A worker wants to sing at lunchtime without an audition.",
+              "J. A photographer wants to improve pictures using a computer at home."
+            ]
+          },
+          {
+            "id": "10",
+            "prompt": "Which person’s need is met by advertisement D?",
+            "accepted": [
+              "J"
+            ],
+            "explanation": "Advertisement D directly meets the named requirements.",
+            "options": [
+              "A. An adult beginner wants to make an object from clay.",
+              "B. A visitor wants to hire a car for a week.",
+              "C. An experienced walker wants an outing with a dog.",
+              "D. A gardener wants to exchange surplus plants on Sunday.",
+              "E. A wheelchair user wants to learn about local buildings.",
+              "F. A child wants competitive swimming lessons.",
+              "G. A family wants to learn to prepare meat-free meals.",
+              "H. Someone wants to fix a bicycle they already own.",
+              "I. A worker wants to sing at lunchtime without an audition.",
+              "J. A photographer wants to improve pictures using a computer at home."
+            ]
+          },
+          {
+            "id": "11",
+            "prompt": "Which person’s need is met by advertisement E?",
+            "accepted": [
+              "H"
+            ],
+            "explanation": "Advertisement E directly meets the named requirements.",
+            "options": [
+              "A. An adult beginner wants to make an object from clay.",
+              "B. A visitor wants to hire a car for a week.",
+              "C. An experienced walker wants an outing with a dog.",
+              "D. A gardener wants to exchange surplus plants on Sunday.",
+              "E. A wheelchair user wants to learn about local buildings.",
+              "F. A child wants competitive swimming lessons.",
+              "G. A family wants to learn to prepare meat-free meals.",
+              "H. Someone wants to fix a bicycle they already own.",
+              "I. A worker wants to sing at lunchtime without an audition.",
+              "J. A photographer wants to improve pictures using a computer at home."
+            ]
+          },
+          {
+            "id": "12",
+            "prompt": "Which person’s need is met by advertisement F?",
+            "accepted": [
+              "I"
+            ],
+            "explanation": "Advertisement F directly meets the named requirements.",
+            "options": [
+              "A. An adult beginner wants to make an object from clay.",
+              "B. A visitor wants to hire a car for a week.",
+              "C. An experienced walker wants an outing with a dog.",
+              "D. A gardener wants to exchange surplus plants on Sunday.",
+              "E. A wheelchair user wants to learn about local buildings.",
+              "F. A child wants competitive swimming lessons.",
+              "G. A family wants to learn to prepare meat-free meals.",
+              "H. Someone wants to fix a bicycle they already own.",
+              "I. A worker wants to sing at lunchtime without an audition.",
+              "J. A photographer wants to improve pictures using a computer at home."
+            ]
+          },
+          {
+            "id": "13",
+            "prompt": "Which person’s need is met by advertisement G?",
+            "accepted": [
+              "E"
+            ],
+            "explanation": "Advertisement G directly meets the named requirements.",
+            "options": [
+              "A. An adult beginner wants to make an object from clay.",
+              "B. A visitor wants to hire a car for a week.",
+              "C. An experienced walker wants an outing with a dog.",
+              "D. A gardener wants to exchange surplus plants on Sunday.",
+              "E. A wheelchair user wants to learn about local buildings.",
+              "F. A child wants competitive swimming lessons.",
+              "G. A family wants to learn to prepare meat-free meals.",
+              "H. Someone wants to fix a bicycle they already own.",
+              "I. A worker wants to sing at lunchtime without an audition.",
+              "J. A photographer wants to improve pictures using a computer at home."
+            ]
+          },
+          {
+            "id": "14",
+            "prompt": "Which person’s need is met by advertisement H?",
+            "accepted": [
+              "D"
+            ],
+            "explanation": "Advertisement H directly meets the named requirements.",
+            "options": [
+              "A. An adult beginner wants to make an object from clay.",
+              "B. A visitor wants to hire a car for a week.",
+              "C. An experienced walker wants an outing with a dog.",
+              "D. A gardener wants to exchange surplus plants on Sunday.",
+              "E. A wheelchair user wants to learn about local buildings.",
+              "F. A child wants competitive swimming lessons.",
+              "G. A family wants to learn to prepare meat-free meals.",
+              "H. Someone wants to fix a bicycle they already own.",
+              "I. A worker wants to sing at lunchtime without an audition.",
+              "J. A photographer wants to improve pictures using a computer at home."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Part 3 · Matching headings · Questions 15–20",
+        "text": "A. When a building is no longer required for its original purpose, demolition is not the only possible response. An old school can become a community centre, while a warehouse can house small businesses. This process is often called adaptive reuse. It can retain a familiar landmark and make use of materials already present. However, the age of a building does not automatically make reuse sensible. Planners must examine its condition, the intended use and the work needed to connect the two. An attractive exterior may hide a structure that needs extensive repair.\n\nB. One advantage is that much of the energy once used to produce the building's materials need not be spent again on complete replacement. Reusing walls and floors can avoid the production and transport of new materials. These benefits vary greatly with the repairs required. A project that retains only the facade while replacing everything behind it is different from one that keeps most of the structure. Meaningful comparisons should include future energy use as well as construction. A poorly insulated building may need improvements before it is comfortable to occupy throughout the year.\n\nC. Older buildings can be awkward to adapt. Corridors designed for schoolchildren may not suit equipment used by a business. A historic stairway may prevent wheelchair users from reaching upper floors. Engineers must consider fire safety, access and the load that floors can carry. Solving one problem sometimes creates another: installing a lift may remove space that the new users need. Early discussions among designers, future occupants and conservation specialists are therefore valuable. They help identify requirements while there is still time to change the plan rather than after expensive work has begun.\n\nD. Financial decisions are rarely straightforward. A developer may compare the estimated cost of reuse with the cost of a new building but overlook uncertainty. Hidden damage can add expense after work starts. On the other hand, demolition can require waste disposal and delays for new permissions. The most useful budget therefore includes a contingency rather than pretending the first estimate is exact. Long-term demand also matters. A conversion designed for a single organisation may become empty if that organisation moves. Flexible rooms can make a building easier to let to different users later.\n\nE. Residents do not always share the same view of a familiar building. Some value its history; others remember poor conditions and want a fresh start. Public discussion can reveal which features carry meaning, such as a hall used for celebrations or a courtyard where people gathered. Keeping these features may matter more to the community than preserving every internal partition. Consultation should include people who will use the building as well as those who live nearby. The aim is to understand competing needs, not simply count signatures supporting a predetermined design.\n\nF. Successful reuse is therefore both a technical and a social achievement. It respects what is valuable without requiring the past to remain unchanged. There are cases where replacement is safer or more practical, and acknowledging them does not weaken the case for reuse elsewhere. Decisions improve when comparisons are transparent and outcomes are checked after occupation. Are the rooms being used? Can everybody access them? Are maintenance costs manageable? These questions turn a promising design into an accountable project and help the next team avoid repeating preventable mistakes.",
+        "questions": [
+          {
+            "id": "15",
+            "prompt": "Choose a heading for paragraph A.",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "The paragraph’s main idea matches this heading.",
+            "options": [
+              "A. Checking whether the completed project works",
+              "B. Considering a second life for a building",
+              "C. Replacing public discussion with a private decision",
+              "D. Requiring all buildings to keep every internal wall",
+              "E. Understanding different community memories",
+              "F. Making old spaces safe and accessible",
+              "G. Environmental gains that need careful comparison",
+              "H. Allowing for uncertainty in costs and future use"
+            ]
+          },
+          {
+            "id": "16",
+            "prompt": "Choose a heading for paragraph B.",
+            "accepted": [
+              "G"
+            ],
+            "explanation": "The paragraph’s main idea matches this heading.",
+            "options": [
+              "A. Checking whether the completed project works",
+              "B. Considering a second life for a building",
+              "C. Replacing public discussion with a private decision",
+              "D. Requiring all buildings to keep every internal wall",
+              "E. Understanding different community memories",
+              "F. Making old spaces safe and accessible",
+              "G. Environmental gains that need careful comparison",
+              "H. Allowing for uncertainty in costs and future use"
+            ]
+          },
+          {
+            "id": "17",
+            "prompt": "Choose a heading for paragraph C.",
+            "accepted": [
+              "F"
+            ],
+            "explanation": "The paragraph’s main idea matches this heading.",
+            "options": [
+              "A. Checking whether the completed project works",
+              "B. Considering a second life for a building",
+              "C. Replacing public discussion with a private decision",
+              "D. Requiring all buildings to keep every internal wall",
+              "E. Understanding different community memories",
+              "F. Making old spaces safe and accessible",
+              "G. Environmental gains that need careful comparison",
+              "H. Allowing for uncertainty in costs and future use"
+            ]
+          },
+          {
+            "id": "18",
+            "prompt": "Choose a heading for paragraph D.",
+            "accepted": [
+              "H"
+            ],
+            "explanation": "The paragraph’s main idea matches this heading.",
+            "options": [
+              "A. Checking whether the completed project works",
+              "B. Considering a second life for a building",
+              "C. Replacing public discussion with a private decision",
+              "D. Requiring all buildings to keep every internal wall",
+              "E. Understanding different community memories",
+              "F. Making old spaces safe and accessible",
+              "G. Environmental gains that need careful comparison",
+              "H. Allowing for uncertainty in costs and future use"
+            ]
+          },
+          {
+            "id": "19",
+            "prompt": "Choose a heading for paragraph E.",
+            "accepted": [
+              "E"
+            ],
+            "explanation": "The paragraph’s main idea matches this heading.",
+            "options": [
+              "A. Checking whether the completed project works",
+              "B. Considering a second life for a building",
+              "C. Replacing public discussion with a private decision",
+              "D. Requiring all buildings to keep every internal wall",
+              "E. Understanding different community memories",
+              "F. Making old spaces safe and accessible",
+              "G. Environmental gains that need careful comparison",
+              "H. Allowing for uncertainty in costs and future use"
+            ]
+          },
+          {
+            "id": "20",
+            "prompt": "Choose a heading for paragraph F.",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "The paragraph’s main idea matches this heading.",
+            "options": [
+              "A. Checking whether the completed project works",
+              "B. Considering a second life for a building",
+              "C. Replacing public discussion with a private decision",
+              "D. Requiring all buildings to keep every internal wall",
+              "E. Understanding different community memories",
+              "F. Making old spaces safe and accessible",
+              "G. Environmental gains that need careful comparison",
+              "H. Allowing for uncertainty in costs and future use"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Part 4 · Detail and inference · Questions 21–29",
+        "text": "A. Before the city of Bellhaven opened its first library of things, residents could borrow books but not the equipment needed to maintain their homes. Buying a drill for a single afternoon seemed wasteful, yet commercial hire shops mainly served professional builders and required expensive deposits. A neighbourhood survey found that householders were more interested in borrowing practical equipment than in attending additional workshops. The council therefore converted a vacant room beside the public library into a lending service. It opened in March 2017 with ninety donated objects, ranging from carpet cleaners to sewing machines. Its purpose was to reduce unnecessary purchases rather than to generate a profit. A small membership fee was introduced to pay for maintenance, but residents receiving certain benefits could join free.\n\nB. The organisers initially predicted that gardening equipment would be most popular. In practice, carpet cleaners were requested more often than any other category. The result reflected the large number of rented flats in the area: tenants wanted to clean before moving out, while many had no garden. Some objects attracted surprisingly little interest. A pasta machine was borrowed twice in its first year, despite attracting many enthusiastic comments at the launch. Staff learned that what people admire publicly and what they actually need are not always the same. They began asking members about upcoming tasks rather than showing them attractive products and requesting opinions. This changed both purchasing decisions and the wording of publicity materials.\n\nC. Borrowing rules also evolved. During the first six months, everything could be kept for seven days. Members complained that weekend-only projects did not require a whole week, whereas sewing projects sometimes took longer. The service eventually introduced different loan periods for different categories. A deposit remained compulsory for especially valuable items, but ordinary members did not need a deposit for basic tools. Late returns caused more difficulties than broken items: an object that appeared available online could still be in somebody's kitchen when the next borrower arrived. Automated reminders helped, but staff also reserved a day between consecutive bookings for inspections. Consequently, an item was not always bookable immediately after its scheduled return.\n\nD. Maintaining the collection required expertise that the original volunteers did not all possess. Two retired engineers began a weekly repair session, and a local college supplied supervised students. The partnership gave students experience with genuine faults rather than carefully prepared classroom demonstrations. Every electrical item was inspected after each loan, even when the borrower reported no problem. Items that failed inspection were removed from the catalogue until repaired. The service did not invite members to mend electrical faults themselves. However, it offered a short introductory session on safe operation before lending unfamiliar equipment. Attendance was compulsory for some machines but optional for ordinary hand tools. Records of repairs gradually revealed which brands were economical over their entire working life, not merely cheap to acquire.\n\nE. The environmental benefits were harder to establish than the borrowing statistics. A lending transaction does not automatically replace a purchase: without the service, some members might simply have postponed their project or borrowed from a relative. Researcher Maya Chen interviewed 120 members and asked what they would otherwise have done. She estimated that approximately half of the loans replaced purchases, while warning that the sample was voluntary and might overrepresent environmentally motivated residents. Her study did not compare Bellhaven with another city. Nor did it measure the energy used in manufacturing every object. Chen recommended reporting several indicators, including utilisation, repairs and avoided purchases, rather than presenting one impressive but uncertain carbon-saving figure.\n\nF. In 2022, a grant allowed the service to extend its opening hours to two evenings a week. Members working during ordinary library hours then used it more often. The grant did not fund a larger collection; staff argued that access mattered more than adding objects which would sit unused. Membership rose, but the council declined an offer from a retailer to install advertisements in the borrowing room. Managers wanted advice to remain independent of sales. They still bought replacement items from several suppliers and published their selection principles. The next planned improvement was a shared reservation system with two nearby neighbourhoods. It would increase access to specialist equipment without requiring each branch to own an identical collection.",
+        "questions": [
+          {
+            "id": "21",
+            "prompt": "Why was the Bellhaven service established?",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "A: reduce unnecessary purchases.",
+            "options": [
+              "A. To close the public library",
+              "B. To train professional builders only",
+              "C. To reduce unnecessary purchases",
+              "D. To sell donated equipment"
+            ]
+          },
+          {
+            "id": "22",
+            "prompt": "What did staff learn from the pasta machine?",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "B contrasts launch enthusiasm with only two loans.",
+            "options": [
+              "A. Cooking equipment was unsafe",
+              "B. Every item needed the same loan period",
+              "C. Public enthusiasm did not reliably predict borrowing",
+              "D. It could not be repaired"
+            ]
+          },
+          {
+            "id": "23",
+            "prompt": "Why was a day left between consecutive bookings?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "C: a day for inspections.",
+            "options": [
+              "A. To inspect returned items",
+              "B. To advertise them for sale",
+              "C. To ensure nobody borrowed twice",
+              "D. To shorten repair training"
+            ]
+          },
+          {
+            "id": "24",
+            "prompt": "Why did Chen recommend several environmental indicators?",
+            "accepted": [
+              "D"
+            ],
+            "explanation": "E: voluntary sample and uncertainty about avoided purchases.",
+            "options": [
+              "A. Members refused every interview",
+              "B. Loan totals were never recorded",
+              "C. All loans certainly replaced purchases",
+              "D. One carbon-saving figure could be misleading"
+            ]
+          },
+          {
+            "id": "25",
+            "prompt": "The original collection contained ninety objects.",
+            "accepted": [
+              "TRUE"
+            ],
+            "explanation": "A: ninety donated objects.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "26",
+            "prompt": "Garden equipment was the most borrowed category.",
+            "accepted": [
+              "FALSE"
+            ],
+            "explanation": "B: carpet cleaners led.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "27",
+            "prompt": "Members were encouraged to repair electrical faults themselves.",
+            "accepted": [
+              "FALSE"
+            ],
+            "explanation": "D: members were not invited to mend these faults.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "28",
+            "prompt": "The college students received a salary from the council.",
+            "accepted": [
+              "NOT GIVEN"
+            ],
+            "explanation": "D mentions experience but gives no payment information.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          },
+          {
+            "id": "29",
+            "prompt": "The 2022 grant was spent on adding a larger collection.",
+            "accepted": [
+              "FALSE"
+            ],
+            "explanation": "F explicitly states the grant did not fund a larger collection.",
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Part 5 · Completion and choice · Questions 30–35",
+        "text": "A. For decades, city administrations have treated street lighting as a straightforward question of visibility: brighter streets were assumed to be better streets. Yet the introduction of efficient LED lamps has reopened a more complicated debate. A lamp that consumes fewer watts can still produce a great deal of unwanted light. If its lower running cost encourages a city to install more lamps or operate them for longer, total energy savings may be smaller than predicted. Researchers call this a rebound effect. It does not mean that efficient technology is useless. It means that the benefits of efficiency depend partly on decisions made after installation, including how much illumination users consider necessary.\n\nB. Light can be directed more precisely than older systems allowed. A well-designed fitting illuminates a pavement without sending much light into bedroom windows or directly into the sky. This distinction matters because total brightness is a poor description of lighting quality. A powerful lamp shining into a pedestrian's eyes can reduce the ability to see an uneven surface beyond it. Engineers describe such discomfort as glare. Shielding the source and controlling its angle may improve visibility even when measured output is lower. Some city councils now assess whether a light serves a specific task instead of applying the same standard to every street, park and car park.\n\nC. Ecological concerns have also changed the discussion. Artificial light at night can alter the behaviour of insects, birds and other animals. In a fictional field trial near Lanton, researchers compared riverbank sites under three types of lamp. Blue-rich white lamps attracted more flying insects than warmer lamps, although the difference varied with weather. Removing lights altogether had a larger effect than changing their colour. The team emphasised that the experiment examined attraction to lamps, not long-term changes in insect populations. A lower count at a particular lamp therefore did not prove that more insects survived across the whole landscape. Similar care is needed when drawing conclusions about birds from observations on a single illuminated building.\n\nD. Public safety is often invoked as a reason to resist dimming. However, correlations between lighting and recorded crime can be difficult to interpret. Wealthier districts may have both newer lights and other investments such as better transport or staffed public spaces. When a council changes lighting, it may also increase police patrols. A subsequent decline in crime cannot automatically be attributed to the lamps. This uncertainty does not justify ignoring residents' concerns. Rather, it suggests that evaluations should include comparable areas and record other changes during the study. Perceived safety also matters because fear can stop people using a route even when recorded incidents are rare. A technically efficient scheme that nobody trusts may fail in practice.\n\nE. In the fictional town of Norbridge, a pilot project dimmed selected residential streetlights after midnight rather than switching them off. The council excluded road junctions and pedestrian crossings. Before the trial, residents walked the routes with engineers and identified places where trees blocked the light. Pruning branches solved several problems without adding brighter lamps. The council then collected feedback through both an online questionnaire and paper forms at the library, since an online-only survey would have excluded some residents. Most respondents accepted the dimming, but people working night shifts asked for a well-lit connection between the bus stop and the main road. That section was subsequently removed from the pilot.\n\nF. Smart controls provide another possibility. Sensors can increase output when a pedestrian approaches and reduce it afterwards. Nevertheless, buying sensors introduces costs of its own: equipment must be maintained, software supported and faults investigated. A control system that works well in a demonstration may struggle with heavy rain or moving branches. Councils therefore need to assess reliability as well as projected electricity savings. Collecting movement data can also raise privacy questions. A system need not store identifiable journeys merely to activate a lamp, so planners should consider what data are genuinely necessary and how long they are retained. Technical capability is not, by itself, a reason to collect everything.\n\nG. The emerging principle is not universal darkness, nor unlimited brightness. It is light that is sufficient for an identified purpose, used at the times and places where that purpose exists. Decisions involve trade-offs among accessibility, energy, ecology and public confidence. A single measurement such as lamp wattage cannot settle them. Trials are especially valuable when they include a clear baseline, alternatives and a plan for listening to people who use the area at different hours. Successful projects may look modest: a shield on one lamp, a warmer source beside a river, or a timetable that reflects real use. Their value lies in solving a particular problem rather than producing the brightest photograph.",
+        "questions": [
+          {
+            "id": "30",
+            "prompt": "The reduction in anticipated savings caused by extra use is called the ____ effect.",
+            "accepted": [
+              "rebound"
+            ],
+            "explanation": "A names rebound effect.",
+            "wordLimit": 1
+          },
+          {
+            "id": "31",
+            "prompt": "Discomfort from light shining into the eyes is known as ____.",
+            "accepted": [
+              "glare"
+            ],
+            "explanation": "B defines glare.",
+            "wordLimit": 1
+          },
+          {
+            "id": "32",
+            "prompt": "In Norbridge, branches were removed by ____ rather than installing brighter lamps.",
+            "accepted": [
+              "pruning"
+            ],
+            "explanation": "E: pruning branches solved problems.",
+            "wordLimit": 1
+          },
+          {
+            "id": "33",
+            "prompt": "Movement data can create concerns about ____.",
+            "accepted": [
+              "privacy"
+            ],
+            "explanation": "F: privacy questions.",
+            "wordLimit": 1
+          },
+          {
+            "id": "34",
+            "prompt": "What was a limitation of the Lanton trial?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "C distinguishes attraction from long-term population change.",
+            "options": [
+              "A. It measured attraction rather than long-term populations",
+              "B. It proved warmer lamps protect every species",
+              "C. It measured only electricity prices",
+              "D. It had no lamps"
+            ]
+          },
+          {
+            "id": "35",
+            "prompt": "Why was the bus-stop connection excluded from dimming?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "E: night-shift workers needed the connection.",
+            "options": [
+              "A. Night-shift workers requested a well-lit route",
+              "B. The lights were all broken",
+              "C. Residents requested advertisements",
+              "D. The library closed"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ielts-full-listening-1",
+    "exam": "ielts",
+    "skill": "listening",
+    "title": "Full mock 1 · IELTS Listening",
+    "minutes": 32,
+    "origin": "Lingora original full-length mock · not a past official paper",
+    "fullLength": true,
+    "groups": [
+      {
+        "title": "Part 1 · Community centre · Questions 1–10",
+        "script": "You will hear a conversation about joining a community centre. First look at questions one to ten.\n\nGood morning, Westgate Community Centre. How can I help? Hello, I'd like to join a course, but I haven't used the centre before. Is registration online? You can begin online, although we need to see identification on your first visit. I can take your details now if you like. Thank you. My surname is Mercer. That's M, E, R, C, E, R. And your first name? Helen. Fine. May I have a contact number? It's 07182 640395. Let me repeat the final part: six four zero three nine five. Yes, that's right. Please use that mobile number rather than my old landline.\n\nWhich course interests you? I thought about painting, but I already do that at home. I'd like to try pottery. We have a beginner pottery course on Tuesday evenings and another on Saturday mornings. Tuesdays would be difficult because I work late. Then Saturday would suit you. It begins on the eighteenth of November, not the eleventh as the old leaflet says. The tutor had to change the first date. Classes start at nine thirty and finish at eleven thirty. Please arrive ten minutes early for your first session so that you can find the room. Nine thirty, then. I'll put that in my calendar.\n\nHow many classes are there? The course runs for eight weeks. There is a break during the holiday, so the final class is later than eight calendar weeks after the first. The full fee is ninety-six pounds. That includes clay and use of the tools. You will not need to buy a starter kit, despite what you may have seen on a private supplier's website. Are finished objects fired at the centre? Yes, and that is included too. We send an email when the objects are ready to collect. We don't post them because they are easily damaged in transit.\n\nWhich room should I go to? Room twelve, on the ground floor. The painting group uses room twenty-one, so be careful to check the number. Go through reception and turn left. Room twelve is at the end of that corridor. The lift is on the other side, but you won't need it for this class. Is there anything I should bring? Just an apron. Some people bring gloves, but the tutor finds that bare hands work better with clay. A towel is useful, though we provide one if you forget. The apron is the one thing we ask everyone to bring.\n\nHow can I pay? You can pay by bank transfer before the first lesson, or use a card at reception. We no longer accept cash for course fees. I'd prefer to pay when I arrive. A card at reception is fine, then. We'll reserve the place for you until Friday afternoon. If you decide not to come, please tell us before then so another person can join.\n\nOne last question: is there parking? There are six spaces behind the building, but they fill quickly. Most people use the bus. The closest stop is opposite the library, about three minutes' walk away. The stop called Westgate School is farther from us. I'll use the library stop. Thanks for explaining everything. You're welcome. I'll email your booking details today. Please check the course, date and contact number, and let us know if anything needs correcting.",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "Surname: ____",
+            "accepted": [
+              "Mercer"
+            ],
+            "explanation": "The caller spells M E R C E R.",
+            "wordLimit": 1
+          },
+          {
+            "id": "2",
+            "prompt": "Mobile number: ____",
+            "accepted": [
+              "07182 640395"
+            ],
+            "explanation": "The caller confirms 07182 640395.",
+            "wordLimit": 2
+          },
+          {
+            "id": "3",
+            "prompt": "Course chosen: ____",
+            "accepted": [
+              "pottery"
+            ],
+            "explanation": "She already paints and chooses pottery.",
+            "wordLimit": 1
+          },
+          {
+            "id": "4",
+            "prompt": "Class day: ____",
+            "accepted": [
+              "Saturday"
+            ],
+            "explanation": "Tuesday clashes with late work.",
+            "wordLimit": 1
+          },
+          {
+            "id": "5",
+            "prompt": "First class: ____ November",
+            "accepted": [
+              "18",
+              "18th",
+              "eighteenth"
+            ],
+            "explanation": "The eighteenth replaces the old eleventh date.",
+            "wordLimit": 1
+          },
+          {
+            "id": "6",
+            "prompt": "Start time: ____",
+            "accepted": [
+              "9:30",
+              "9.30",
+              "09:30",
+              "nine thirty"
+            ],
+            "explanation": "Arrival ten minutes early is different from the 9:30 start.",
+            "wordLimit": 2
+          },
+          {
+            "id": "7",
+            "prompt": "Course length: ____ weeks",
+            "accepted": [
+              "8",
+              "eight"
+            ],
+            "explanation": "Eight teaching weeks, with a holiday break.",
+            "wordLimit": 1
+          },
+          {
+            "id": "8",
+            "prompt": "Total course fee: £____",
+            "accepted": [
+              "96",
+              "ninety-six"
+            ],
+            "explanation": "Ninety-six pounds including materials.",
+            "wordLimit": 1
+          },
+          {
+            "id": "9",
+            "prompt": "Room number: ____",
+            "accepted": [
+              "12",
+              "twelve"
+            ],
+            "explanation": "Pottery is in room twelve, not painting room twenty-one.",
+            "wordLimit": 1
+          },
+          {
+            "id": "10",
+            "prompt": "Required item to bring: an ____",
+            "accepted": [
+              "apron"
+            ],
+            "explanation": "An apron is required; a towel is provided if needed.",
+            "wordLimit": 1
+          }
+        ]
+      },
+      {
+        "title": "Part 2 · Festival briefing · Questions 11–20",
+        "script": "You will hear the organiser of a town festival addressing volunteers. Look at questions eleven to twenty.\n\nWelcome to the briefing for the Riverlight Festival. This year the festival will take place in the old market square. We originally planned to use the riverside field, but recent rain has made the ground unsuitable for heavy equipment. The market square has a firm surface and better access for deliveries. The programme has not changed, although some activities will be closer together than we intended. Please remember that residents still need to reach their homes around the square. Keeping the entrances clear is more important than arranging a perfectly straight row of stalls.\n\nWe expect visitors from eleven in the morning. Volunteers need to report at eight forty-five, not nine thirty. Several of you may have the earlier draft of the timetable, so please update it now. You will receive a badge at the information desk. Wear it throughout your shift: visitors and the emergency team need to identify you quickly. We will also issue radios to team leaders. Ordinary volunteers should contact their leader rather than trying to call every other team. This keeps urgent messages from being lost in too much conversation.\n\nIf you find a lost child, stay with the child and call the information desk. Do not walk around the festival looking for the family, and do not make an announcement yourself. The staff at the desk follow a specific procedure and contact security when necessary. For a minor injury, take the visitor to the first-aid tent beside the fountain. If somebody cannot move safely, contact your team leader and keep the area clear. The public announcement system is for urgent information, not for asking a colleague to bring lunch.\n\nHere are the tasks for our five volunteer teams. The Red team will check tickets at the entrance. Some visitors have paper tickets and others have an electronic code; both are acceptable. Please direct anyone whose code cannot be read to the information desk. The Blue team is responsible for helping performers find the stage and their waiting area. Several visiting musicians do not know the town, so show them the route rather than simply pointing across the crowd.\n\nThe Green team will collect litter and replace full recycling bags. You are not expected to lift equipment or move tables. Tell a team leader if a bag contains something sharp. The Yellow team will provide information at the desk. Please study the programme and know where the accessible toilets are. The Purple team will look after the children's craft area. Parents must remain with their children; volunteers are helping with the activity, not providing a childcare service. If a parent tries to leave, explain this rule politely.\n\nSome volunteers have asked about money. Food sellers deal with their own payments. None of our five teams will handle stall income. Equally, transport to and from the station is being managed by the council, so no festival volunteer is assigned to the station bus. These two tasks were included on an early list, which is why I want to make the distinction clear today.\n\nYou will have a twenty-minute break during each shift. Agree the time with your leader so that the entire team does not leave together. Water is available behind the information desk. The festival finishes at five, but visitors may take time to leave. Please wait until your leader says your work is complete. We do not want bags or barriers removed while visitors still need the routes. Finally, there will be a short review next week. Tell us what worked and what could be improved; good reports help us plan next year's event.",
+        "questions": [
+          {
+            "id": "11",
+            "prompt": "Where will the festival take place?",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "Rain made the field unsuitable; the venue changed to the square.",
+            "options": [
+              "A. Inside the library",
+              "B. In the riverside field",
+              "C. In the old market square"
+            ]
+          },
+          {
+            "id": "12",
+            "prompt": "When must volunteers report?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "The organiser corrects the earlier timetable to 8:45.",
+            "options": [
+              "A. 8:45",
+              "B. 11:00",
+              "C. 9:30"
+            ]
+          },
+          {
+            "id": "13",
+            "prompt": "What must all volunteers wear?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "All wear badges; only leaders receive radios.",
+            "options": [
+              "A. A waterproof coat",
+              "B. An identification badge",
+              "C. A team radio"
+            ]
+          },
+          {
+            "id": "14",
+            "prompt": "What should a volunteer do on finding a lost child?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "The organiser explicitly states the procedure.",
+            "options": [
+              "A. Make an announcement immediately",
+              "B. Stay with the child and contact the information desk",
+              "C. Walk around searching for the family"
+            ]
+          },
+          {
+            "id": "15",
+            "prompt": "Where is first aid located?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "The first-aid tent is beside the fountain.",
+            "options": [
+              "A. Beside the fountain",
+              "B. At the station",
+              "C. Behind the stage"
+            ]
+          },
+          {
+            "id": "16",
+            "prompt": "Match the Red team with its task.",
+            "accepted": [
+              "G"
+            ],
+            "explanation": "The briefing assigns this task to that colour team.",
+            "options": [
+              "A. Visitor information",
+              "B. Stall payments",
+              "C. Station transport",
+              "D. Performer support",
+              "E. Recycling and litter",
+              "F. Children’s craft activities",
+              "G. Entrance tickets"
+            ]
+          },
+          {
+            "id": "17",
+            "prompt": "Match the Blue team with its task.",
+            "accepted": [
+              "D"
+            ],
+            "explanation": "The briefing assigns this task to that colour team.",
+            "options": [
+              "A. Visitor information",
+              "B. Stall payments",
+              "C. Station transport",
+              "D. Performer support",
+              "E. Recycling and litter",
+              "F. Children’s craft activities",
+              "G. Entrance tickets"
+            ]
+          },
+          {
+            "id": "18",
+            "prompt": "Match the Green team with its task.",
+            "accepted": [
+              "E"
+            ],
+            "explanation": "The briefing assigns this task to that colour team.",
+            "options": [
+              "A. Visitor information",
+              "B. Stall payments",
+              "C. Station transport",
+              "D. Performer support",
+              "E. Recycling and litter",
+              "F. Children’s craft activities",
+              "G. Entrance tickets"
+            ]
+          },
+          {
+            "id": "19",
+            "prompt": "Match the Yellow team with its task.",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "The briefing assigns this task to that colour team.",
+            "options": [
+              "A. Visitor information",
+              "B. Stall payments",
+              "C. Station transport",
+              "D. Performer support",
+              "E. Recycling and litter",
+              "F. Children’s craft activities",
+              "G. Entrance tickets"
+            ]
+          },
+          {
+            "id": "20",
+            "prompt": "Match the Purple team with its task.",
+            "accepted": [
+              "F"
+            ],
+            "explanation": "The briefing assigns this task to that colour team.",
+            "options": [
+              "A. Visitor information",
+              "B. Stall payments",
+              "C. Station transport",
+              "D. Performer support",
+              "E. Recycling and litter",
+              "F. Children’s craft activities",
+              "G. Entrance tickets"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Part 3 · Student research · Questions 21–30",
+        "script": "You will hear two students discussing a research project with their tutor. Look at questions twenty-one to thirty.\n\nWe've brought our project plan about food waste on campus. Our first idea was to compare the university with local restaurants, but that would require permission from too many businesses. We've narrowed the project to waste in the campus dining halls. A sensible choice. What do you want to find out? Whether smaller plates reduce the amount students leave after lunch. We don't want to suggest that students eat less; we're interested in whether the serving arrangement affects leftovers. Good. Define your outcome clearly before you start collecting data.\n\nWe thought about asking students to estimate their own waste in a survey. That could tell you about attitudes, but not reliably about quantities. People may not remember accurately, and those who feel embarrassed could understate the amount. We will weigh the leftovers instead. We can separate food from packaging at the collection point. Yes, make sure you distinguish edible leftovers from bones and peels. Otherwise a change in the menu could look like a change in behaviour. We've arranged a short training session for the people who collect the trays so they all follow the same procedure.\n\nHow will you compare plate sizes? For the first week, dining hall North will use the ordinary plates while South uses smaller ones. Then we switch them for the second week. Keeping each hall permanently in one condition would be simpler, but the halls attract different students. Exactly. Switching helps you avoid confusing a hall's usual customers with the effect of its plates. It doesn't remove every problem, so describe the limitations. We plan to keep the main menu identical in the two halls. Students can still choose among the options, but the available dishes should be the same.\n\nWhat about attendance? We'll count the diners. Comparing total waste would be misleading if one hall serves twice as many lunches. We should calculate waste per diner. That's important. Also note special events. If a sports group arrives in only one hall on one day, its eating habits might influence the result. We can record the event in our notes rather than quietly removing that day's data. Good. Your report should explain any exclusion of data, and the rule should be decided before you see whether the result helps your hypothesis.\n\nWe asked the dining staff about practical difficulties. They said students sometimes carry food out, so not all leftovers return on a tray. We'll explain that we measure waste returned to the hall, not every piece of food students discard anywhere. Will you photograph the trays? No. We don't need images of people or their meals to weigh leftovers. We will use anonymous counts and ask the ethics office to review the procedure. That is more appropriate than collecting names and deleting them later.\n\nFor our information sources, we found a newspaper article which claims that smaller plates always work. Don't use that as your main evidence. It can introduce the topic, but you should examine the research behind the claim. We found a journal review that compares studies and explains why results differ. That is a better starting point for the literature section. We'll also interview the catering manager about how feasible a permanent change would be. The interview won't establish whether the plates reduce waste, but it can explain practical constraints.\n\nWe have three weeks until the presentation. We should collect data next week, analyse it during the following week and prepare the slides in the final week. Send me your final data sheet by Friday before you begin. Check the units and categories now: changing them halfway through would make comparison difficult. You should also test the scales with a known weight each day. Thank you. We'll run a small pilot tomorrow to check the collection procedure before the main study.",
+        "questions": [
+          {
+            "id": "21",
+            "prompt": "What is the revised scope of the project?",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "They narrow the project to campus dining halls.",
+            "options": [
+              "A. Household kitchens",
+              "B. All local restaurants",
+              "C. Campus dining halls"
+            ]
+          },
+          {
+            "id": "22",
+            "prompt": "Why is self-reported waste unsuitable for measuring quantity?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "The tutor names inaccurate memory and understatement.",
+            "options": [
+              "A. Surveys always cost more than scales",
+              "B. Memory and embarrassment may distort estimates",
+              "C. Students cannot read the survey"
+            ]
+          },
+          {
+            "id": "23",
+            "prompt": "Why will the students switch plate sizes between halls?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "Hall customers differ, so permanent conditions would confound the comparison.",
+            "options": [
+              "A. To let all staff take a holiday",
+              "B. To reduce the influence of differences between the halls’ customers",
+              "C. To avoid counting diners"
+            ]
+          },
+          {
+            "id": "24",
+            "prompt": "What will be kept the same in the two halls?",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "They explicitly plan identical main menus.",
+            "options": [
+              "A. The number of sports events",
+              "B. The names of all diners",
+              "C. The main menu"
+            ]
+          },
+          {
+            "id": "25",
+            "prompt": "What quantity should be compared?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "Attendance varies, so waste per diner is appropriate.",
+            "options": [
+              "A. Total packaging purchased",
+              "B. Waste per diner",
+              "C. Number of photographs"
+            ]
+          },
+          {
+            "id": "26",
+            "prompt": "Why will they not photograph trays?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "Anonymous counts and weights suffice; no general ban is stated.",
+            "options": [
+              "A. Photography has been banned throughout the campus",
+              "B. The measurements do not require those images",
+              "C. All trays look identical"
+            ]
+          },
+          {
+            "id": "27",
+            "prompt": "What source should lead the literature section?",
+            "accepted": [
+              "journal review"
+            ],
+            "explanation": "The final part of the discussion names journal review.",
+            "wordLimit": 2
+          },
+          {
+            "id": "28",
+            "prompt": "Who will explain practical constraints?",
+            "accepted": [
+              "catering manager"
+            ],
+            "explanation": "The final part of the discussion names catering manager.",
+            "wordLimit": 2
+          },
+          {
+            "id": "29",
+            "prompt": "When must the final data sheet reach the tutor?",
+            "accepted": [
+              "Friday"
+            ],
+            "explanation": "The final part of the discussion names Friday.",
+            "wordLimit": 2
+          },
+          {
+            "id": "30",
+            "prompt": "What device must be checked using a known weight?",
+            "accepted": [
+              "scales"
+            ],
+            "explanation": "The final part of the discussion names scales.",
+            "wordLimit": 2
+          }
+        ]
+      },
+      {
+        "title": "Part 4 · Peatland lecture · Questions 31–40",
+        "script": "You will hear a lecture about restoring peatlands. Look at questions thirty-one to forty.\n\nToday's lecture concerns peatlands, landscapes in which partially decomposed plant material accumulates over long periods. The key condition is waterlogging. When ground remains saturated, there is little oxygen available below the surface, and decomposition slows. Plant material can consequently accumulate as peat instead of being broken down rapidly. This process does not happen at the same rate everywhere, so an apparently similar surface can conceal very different depths and histories. A peatland is therefore not simply a wet field; it is a system in which water, vegetation and accumulated material interact.\n\nPeatlands can store a large amount of carbon. Draining them for farming or other uses lowers the water table and allows oxygen to enter layers that were previously saturated. Decomposition then increases and stored carbon can be released into the atmosphere. Dry peat can also burn. Fires may continue below the visible surface, which makes them difficult to detect and extinguish. Restoring a peatland often begins by raising the water table rather than by planting a decorative collection of flowers. Without suitable water conditions, the intended vegetation may fail to establish and the underlying loss of peat may continue.\n\nA common restoration action is to block old drainage ditches with dams. The dams may be made from peat or other suitable material, depending on the site. Their purpose is to slow the escape of water, not to create a deep lake over the entire landscape. Hydrology must be studied carefully because a poorly placed barrier can flood neighbouring land or direct water along a new channel. Teams also need to understand who owns and uses the land. Agreements with farmers and nearby residents are part of restoration, not an optional addition after engineering work has been finished.\n\nAnother action is to protect bare peat from erosion. In a fictional trial on Glen Moss, workers covered selected damaged surfaces with heather cuttings. The cuttings reduced exposure to wind and helped trap moisture. Elsewhere, they replanted small patches of moss taken from a healthy part of the same site under a conservation permit. The project was not a claim that one planting method would work everywhere. It was a comparison of methods in a particular place. Areas receiving no treatment were included so the team could distinguish a treatment effect from a wet season which improved all plots.\n\nHow should success be measured? The most immediate indicator is often the water level. Teams place instruments in the ground and measure the depth of the water table repeatedly. A single reading after heavy rain can be misleading. Measurements across seasons are more informative, and they can reveal whether a dam is leaking during dry weather. Vegetation surveys provide a second indicator, but a green surface alone does not prove that peat accumulation has resumed. Some fast-growing grasses tolerate conditions quite different from those required by peat-forming mosses.\n\nGas measurements add another complication. Rewetting may reduce carbon dioxide emissions from decomposition while temporarily increasing methane emissions. It is therefore important to consider the whole balance over time rather than celebrating a reduction in one gas and ignoring another. Researchers use models and repeated observations to estimate the climate effect. Their conclusions depend on assumptions about future conditions, so reports should make those assumptions explicit. Restoration benefits can also include cleaner water, reduced erosion and habitat improvement, even when the climate calculation remains uncertain.\n\nFinally, these landscapes develop slowly. A dam can be installed in a day, but a functioning peat-forming ecosystem may take many years to recover. Funding that covers only construction and one follow-up visit is unlikely to demonstrate lasting success. Projects need a monitoring plan, responsibility for repairs and a way to learn from sites where recovery is slower than expected. Restoration is not achieved when the last machine leaves. It is achieved through sustained changes in water conditions and ecological processes, supported by long-term care.",
+        "questions": [
+          {
+            "id": "31",
+            "prompt": "The condition that slows decomposition in peatlands is ____.",
+            "accepted": [
+              "waterlogging"
+            ],
+            "explanation": "The opening identifies waterlogging.",
+            "wordLimit": 1
+          },
+          {
+            "id": "32",
+            "prompt": "Saturated layers contain little ____.",
+            "accepted": [
+              "oxygen"
+            ],
+            "explanation": "Waterlogging limits oxygen.",
+            "wordLimit": 1
+          },
+          {
+            "id": "33",
+            "prompt": "Peatlands store substantial amounts of ____.",
+            "accepted": [
+              "carbon"
+            ],
+            "explanation": "The second paragraph identifies carbon storage.",
+            "wordLimit": 1
+          },
+          {
+            "id": "34",
+            "prompt": "Restoration often begins by raising the water ____.",
+            "accepted": [
+              "table"
+            ],
+            "explanation": "The lecturer says water table.",
+            "wordLimit": 1
+          },
+          {
+            "id": "35",
+            "prompt": "Old drainage ditches may be blocked using ____.",
+            "accepted": [
+              "dams"
+            ],
+            "explanation": "Dams slow the escape of water.",
+            "wordLimit": 1
+          },
+          {
+            "id": "36",
+            "prompt": "In the trial, damaged surfaces were covered with heather ____.",
+            "accepted": [
+              "cuttings"
+            ],
+            "explanation": "Heather cuttings reduced exposure.",
+            "wordLimit": 1
+          },
+          {
+            "id": "37",
+            "prompt": "The untreated plots helped separate treatment effects from the effects of a wet ____.",
+            "accepted": [
+              "season"
+            ],
+            "explanation": "Untreated plots controlled for a wet season.",
+            "wordLimit": 1
+          },
+          {
+            "id": "38",
+            "prompt": "Water-level measurements should be taken across several ____.",
+            "accepted": [
+              "seasons"
+            ],
+            "explanation": "Repeated seasonal measurements are more informative.",
+            "wordLimit": 1
+          },
+          {
+            "id": "39",
+            "prompt": "Rewetting can temporarily increase emissions of ____.",
+            "accepted": [
+              "methane"
+            ],
+            "explanation": "Methane may rise even while carbon dioxide falls.",
+            "wordLimit": 1
+          },
+          {
+            "id": "40",
+            "prompt": "Projects need a long-term ____ plan.",
+            "accepted": [
+              "monitoring"
+            ],
+            "explanation": "The final paragraph calls for a monitoring plan.",
+            "wordLimit": 1
+          }
+        ]
+      }
+    ],
+    "maxPlays": 1,
+    "readSeconds": 30,
+    "transferSeconds": 120
+  },
+  {
+    "id": "cefr-full-listening-1",
+    "exam": "cefr",
+    "skill": "listening",
+    "title": "Full mock 1 · Multilevel Listening",
+    "minutes": 45,
+    "origin": "Lingora original full-length mock · not a past official paper",
+    "fullLength": true,
+    "groups": [
+      {
+        "title": "Part 1 · Appropriate replies · Questions 1–8",
+        "script": "Number one. Would you mind closing the window? It's getting cold in here.\n\nNumber two. I'm sorry I didn't send you the timetable yesterday.\n\nNumber three. How long have you been living in this town?\n\nNumber four. Do you know where I can buy a bus ticket?\n\nNumber five. Shall we meet outside the museum at ten?\n\nNumber six. What was the film like? Did you enjoy it?\n\nNumber seven. Could I borrow your dictionary until tomorrow?\n\nNumber eight. I can't find my phone. Have you seen it anywhere?",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "Choose the most appropriate reply to utterance 1.",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "The reply addresses the request, apology or question heard in the audio.",
+            "options": [
+              "A. Yes, the shop is open.",
+              "B. I bought it last week.",
+              "C. Of course. I’ll close it now."
+            ]
+          },
+          {
+            "id": "2",
+            "prompt": "Choose the most appropriate reply to utterance 2.",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "The reply addresses the request, apology or question heard in the audio.",
+            "options": [
+              "A. It leaves from platform two.",
+              "B. Don’t worry. I found it online.",
+              "C. It takes thirty minutes."
+            ]
+          },
+          {
+            "id": "3",
+            "prompt": "Choose the most appropriate reply to utterance 3.",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "The reply addresses the request, apology or question heard in the audio.",
+            "options": [
+              "A. For about three years.",
+              "B. I usually go by bicycle.",
+              "C. It’s a very large town."
+            ]
+          },
+          {
+            "id": "4",
+            "prompt": "Choose the most appropriate reply to utterance 4.",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "The reply addresses the request, apology or question heard in the audio.",
+            "options": [
+              "A. No, I haven’t travelled abroad.",
+              "B. At the machine beside the station entrance.",
+              "C. The journey was very comfortable."
+            ]
+          },
+          {
+            "id": "5",
+            "prompt": "Choose the most appropriate reply to utterance 5.",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "The reply addresses the request, apology or question heard in the audio.",
+            "options": [
+              "A. It was built in the last century.",
+              "B. I didn’t lose my watch.",
+              "C. Yes, that time works for me."
+            ]
+          },
+          {
+            "id": "6",
+            "prompt": "Choose the most appropriate reply to utterance 6.",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "The reply addresses the request, apology or question heard in the audio.",
+            "options": [
+              "A. There are two cinemas nearby.",
+              "B. It starts at seven tomorrow.",
+              "C. Yes, the story was excellent."
+            ]
+          },
+          {
+            "id": "7",
+            "prompt": "Choose the most appropriate reply to utterance 7.",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "The reply addresses the request, apology or question heard in the audio.",
+            "options": [
+              "A. The classroom has twelve desks.",
+              "B. Certainly. Please bring it back tomorrow.",
+              "C. I don’t know that person."
+            ]
+          },
+          {
+            "id": "8",
+            "prompt": "Choose the most appropriate reply to utterance 8.",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "The reply addresses the request, apology or question heard in the audio.",
+            "options": [
+              "A. I usually call my sister.",
+              "B. Yes, it’s on the kitchen table.",
+              "C. The battery lasts two days."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Part 2 · Visit information · Questions 9–14",
+        "script": "Here is the information for Saturday's visit to the science centre. Please listen carefully because a few details have changed since the first announcement. Our bus will leave from the college car park at eight fifteen. We considered leaving at eight thirty, but we need extra time for traffic near the centre. Please arrive by eight o'clock so the staff can check the list. The trip is on Saturday, the twenty-third of April. The previous date was the sixteenth, but the centre was already fully booked then.\n\nThe cost for each student is fourteen pounds. This includes transport and admission. The normal centre ticket costs nine pounds, but that is not the total cost of our trip. Payment should be made to the college office by Thursday. Please tell the office if you need assistance; there is a small support fund, and asking about it will not affect your place on the trip. We have space for thirty students on the bus. Anyone who signs up after the bus is full will be placed on a waiting list.\n\nWe will start with the robotics exhibition. After that, a guide will take us to the planetarium. You do not need to bring any special equipment. Please do bring a notebook so you can record ideas for your class project. A camera is optional, but photographs are not allowed inside the planetarium. You may leave your bags in the lockers near reception. Keep your valuables with you because the centre cannot accept responsibility for them.\n\nLunch will be in the garden if the weather is dry. Bring a packed lunch, since the cafe may be busy with other visitors. If it rains, the centre has offered us a classroom for our break. Water fountains are available, so bring a refillable bottle. We expect to return to the college at four forty-five. If traffic causes a serious delay, the accompanying teacher will send a message to the class group. Make sure your family knows where you will be collected when we return.",
+        "questions": [
+          {
+            "id": "9",
+            "prompt": "Bus departure time: ____",
+            "accepted": [
+              "8:15",
+              "8.15",
+              "08:15"
+            ],
+            "explanation": "8:15 is the departure; 8:00 is arrival for check-in.",
+            "wordLimit": 1
+          },
+          {
+            "id": "10",
+            "prompt": "Visit date: ____ April",
+            "accepted": [
+              "23",
+              "23rd",
+              "twenty-third"
+            ],
+            "explanation": "The twenty-third replaces the sixteenth.",
+            "wordLimit": 1
+          },
+          {
+            "id": "11",
+            "prompt": "Total student cost: £____",
+            "accepted": [
+              "14",
+              "fourteen"
+            ],
+            "explanation": "Fourteen includes both transport and admission.",
+            "wordLimit": 1
+          },
+          {
+            "id": "12",
+            "prompt": "Maximum students on bus: ____",
+            "accepted": [
+              "30",
+              "thirty"
+            ],
+            "explanation": "Thirty student places.",
+            "wordLimit": 1
+          },
+          {
+            "id": "13",
+            "prompt": "Required item for project ideas: a ____",
+            "accepted": [
+              "notebook"
+            ],
+            "explanation": "A notebook is required; camera optional.",
+            "wordLimit": 1
+          },
+          {
+            "id": "14",
+            "prompt": "Dry-weather lunch location: the ____",
+            "accepted": [
+              "garden"
+            ],
+            "explanation": "Garden if dry; classroom if rain.",
+            "wordLimit": 1
+          }
+        ]
+      },
+      {
+        "title": "Part 3 · Speaker matching · Questions 15–18",
+        "script": "Speaker one. I joined a local walking group last year. I enjoy the fresh air, but the real attraction is the people. I had moved to a new area and didn't know anybody. Now I meet familiar faces every Sunday, and we often have tea after the walk. I would probably walk less if I had to do it alone.\n\nSpeaker two. I used to drive to work even though the office is only a few kilometres away. Cycling seemed difficult at first, but fuel and parking were becoming expensive. I bought a second-hand bicycle and now spend much less on the journey. I don't cycle to win races. It is simply a practical way to reduce my monthly costs.\n\nSpeaker three. My cousin asked me to help at a food bank. I was nervous because I had never done volunteer work, but the team showed me what to do. Seeing people receive something they genuinely need gives the work meaning. I don't get paid, and I only go on Saturday mornings, but I feel that the time is well spent.\n\nSpeaker four. I started learning photography because I wanted to notice ordinary places more carefully. I don't plan to become a professional. Taking pictures makes me look at light, shapes and details that I used to ignore. A street I've walked down for years can suddenly look interesting when I try to frame a photograph.",
+        "questions": [
+          {
+            "id": "15",
+            "prompt": "Match speaker 1 to their main motivation.",
+            "accepted": [
+              "F"
+            ],
+            "explanation": "The speaker explicitly explains this central motivation.",
+            "options": [
+              "A. Helping people in need",
+              "B. Preparing for a professional sports career",
+              "C. Earning an additional salary",
+              "D. Seeing familiar surroundings differently",
+              "E. Saving money on transport",
+              "F. Making social connections"
+            ]
+          },
+          {
+            "id": "16",
+            "prompt": "Match speaker 2 to their main motivation.",
+            "accepted": [
+              "E"
+            ],
+            "explanation": "The speaker explicitly explains this central motivation.",
+            "options": [
+              "A. Helping people in need",
+              "B. Preparing for a professional sports career",
+              "C. Earning an additional salary",
+              "D. Seeing familiar surroundings differently",
+              "E. Saving money on transport",
+              "F. Making social connections"
+            ]
+          },
+          {
+            "id": "17",
+            "prompt": "Match speaker 3 to their main motivation.",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "The speaker explicitly explains this central motivation.",
+            "options": [
+              "A. Helping people in need",
+              "B. Preparing for a professional sports career",
+              "C. Earning an additional salary",
+              "D. Seeing familiar surroundings differently",
+              "E. Saving money on transport",
+              "F. Making social connections"
+            ]
+          },
+          {
+            "id": "18",
+            "prompt": "Match speaker 4 to their main motivation.",
+            "accepted": [
+              "D"
+            ],
+            "explanation": "The speaker explicitly explains this central motivation.",
+            "options": [
+              "A. Helping people in need",
+              "B. Preparing for a professional sports career",
+              "C. Earning an additional salary",
+              "D. Seeing familiar surroundings differently",
+              "E. Saving money on transport",
+              "F. Making social connections"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Part 4 · Garden map · Questions 19–23",
+        "script": "Welcome to the newly renovated community garden. I will describe the layout so you can find the facilities. Look at the plan while you listen. You enter at the south, where the entrance is shown at the bottom. The main path runs north from the entrance to a round fountain in the centre. A second path crosses from west to east through that fountain. The letters on the plan mark the locations; they are not the names of the facilities.\n\nThe information hut is the building closest to the entrance on your left, which is the west side. Volunteers can give you a map and answer questions there. Directly opposite it, on the east side of the entrance path, there is a storage hut. Visitors do not normally need to enter the storage hut. Continue towards the fountain. The cafe is on the west end of the cross path, immediately to the left of the fountain as you approach from the entrance. It opens at ten and offers water as well as hot drinks. The structure at the east end of that cross path is used for maintenance equipment, not refreshments.\n\nIf you follow the main path north past the fountain, there are two larger areas at the far end. The playground is in the northwest corner. It has a low fence and is separate from the vegetable plots, so children can play without damaging plants. Parents should stay with their children, as our volunteers cannot supervise them. The northeast corner is occupied by the greenhouse. The greenhouse is open during guided tours, but otherwise please look from the path. Its doors must remain closed to keep the temperature stable.\n\nThere are also two small buildings in the middle of the upper half of the garden. The accessible toilets are on the west side of the path, between the cafe and the playground. On the east side, between the maintenance area and the greenhouse, there is a teaching room. Classes meet there when the weather is poor. The room is not a public shelter during an ordinary visit, because equipment is sometimes left out for a lesson. Notice that both buildings are closer to the fountain than the two corner areas. If you are unsure, ask at the information hut rather than entering a locked building.\n\nBefore you explore, please remember to stay on the paths unless a volunteer invites you onto a growing plot. Some newly planted areas look empty but contain seeds. Bicycles must be left outside the entrance. Dogs are welcome on leads, except inside the greenhouse and the children's area. We hope you enjoy your visit and return during a different season to see how the garden changes.",
+        "image": "/exams/garden-map.svg",
+        "questions": [
+          {
+            "id": "19",
+            "prompt": "Information hut: choose its map location.",
+            "accepted": [
+              "G"
+            ],
+            "explanation": "Closest to south entrance on west side: G.",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F",
+              "G",
+              "H"
+            ]
+          },
+          {
+            "id": "20",
+            "prompt": "Cafe: choose its map location.",
+            "accepted": [
+              "E"
+            ],
+            "explanation": "West end of the fountain cross path: E.",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F",
+              "G",
+              "H"
+            ]
+          },
+          {
+            "id": "21",
+            "prompt": "Playground: choose its map location.",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "Northwest corner: A.",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F",
+              "G",
+              "H"
+            ]
+          },
+          {
+            "id": "22",
+            "prompt": "Greenhouse: choose its map location.",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "Northeast corner: B.",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F",
+              "G",
+              "H"
+            ]
+          },
+          {
+            "id": "23",
+            "prompt": "Accessible toilets: choose their map location.",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "West side, between cafe and playground: C.",
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E",
+              "F",
+              "G",
+              "H"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Part 5 · Dialogues · Questions 24–29",
+        "script": "Dialogue one. You look worried about the presentation. Is it the topic? Not really. I know the subject well, and I've already prepared the slides. My problem is speaking in front of a room full of people. Last time I talked so quickly that nobody could follow the important points. Could you practise with me after class? Yes, that would help. I don't need you to rewrite it, just listen and tell me where I rush. We can record a practice run too. I would rather start without a camera because that makes me more nervous. Once I feel comfortable, a recording might be useful.\n\nDialogue two. Did you buy the laptop we looked at? No, I decided to wait. The cheaper model had enough memory, and the screen was fine, but it was too heavy to carry to college every day. The lighter model was more expensive than I could afford. So what are you using now? The college library computers. I can do my work there until I save more money. My brother offered me his old laptop, but it has a damaged battery and only works when it is plugged in. That wouldn't solve my problem on the bus. I'll compare prices again next month rather than buying something unsuitable now.\n\nDialogue three. How was your first shift at the cafe? Busy, but better than I expected. I thought remembering the orders would be the hardest part. Actually, the till was straightforward and customers were patient. What surprised me was how carefully we had to coordinate the cleaning. If everybody left their station at once, nobody was ready when the next customers arrived. The manager showed us a rota for those jobs. Would you like to stay there? Yes. The hours fit around my course, and I like working with a team. I wouldn't want extra shifts during exams, but for now the arrangement works well.",
+        "questions": [
+          {
+            "id": "24",
+            "prompt": "What worries the first student most?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "Topic and slides are ready; pace and public speaking are the concern.",
+            "options": [
+              "A. Repairing the computer",
+              "B. Speaking too fast in front of people",
+              "C. Choosing a topic"
+            ]
+          },
+          {
+            "id": "25",
+            "prompt": "What help does the student want first?",
+            "accepted": [
+              "C"
+            ],
+            "explanation": "The student asks for listening and feedback, initially without a camera.",
+            "options": [
+              "A. A filmed performance immediately",
+              "B. Someone to rewrite every slide",
+              "C. A listener for a practice run"
+            ]
+          },
+          {
+            "id": "26",
+            "prompt": "Why was the cheaper laptop rejected?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "Memory and screen were fine, but weight was unsuitable.",
+            "options": [
+              "A. It was too heavy for daily travel",
+              "B. It had no memory",
+              "C. Its screen was broken"
+            ]
+          },
+          {
+            "id": "27",
+            "prompt": "How is the student completing work temporarily?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "The student uses library computers while saving.",
+            "options": [
+              "A. By using the college library computers",
+              "B. By using a damaged laptop on the bus",
+              "C. By stopping the course"
+            ]
+          },
+          {
+            "id": "28",
+            "prompt": "What surprised the new cafe employee?",
+            "accepted": [
+              "B"
+            ],
+            "explanation": "Cleaning required coordinated timing.",
+            "options": [
+              "A. The difficulty of every order",
+              "B. The need to coordinate cleaning",
+              "C. The impatience of customers"
+            ]
+          },
+          {
+            "id": "29",
+            "prompt": "Why does the cafe job suit the employee?",
+            "accepted": [
+              "A"
+            ],
+            "explanation": "The final exchange gives both reasons.",
+            "options": [
+              "A. The hours fit the course and the team is enjoyable",
+              "B. It requires no teamwork",
+              "C. It replaces their course"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Part 6 · Urban trees · Questions 30–35",
+        "script": "Today I will introduce a school project studying urban trees. The project is designed to help students collect useful observations rather than simply memorise tree names. Each team studies one street. Teams record the location of each tree and estimate the width of its trunk. The essential measuring tool is a tape. We use flexible measuring tapes, not rulers, because a tape can be wrapped around the trunk. Students should record the circumference at a height of one metre above the ground, unless an unusual shape makes that impossible. In that case they should write a note describing the problem.\n\nStudents also observe the leaves. Leaf shape can help identify a species, but colour alone is unreliable because it changes with season and health. For the first survey, we ask students to work in pairs. One person measures while the other writes, and then they exchange roles. Working alone is possible later, once the method is familiar. The aim is not to complete the longest list in the class but to collect measurements another team could check. Accuracy matters more than speed.\n\nTeams should avoid measuring trees on private property without permission. Our first route includes only trees beside public pavements. There is no need to enter gardens or climb over fences. We have agreed the route with the school and the local authority. A teacher will accompany each group because some trees are beside busy roads. Students must keep away from the edge of the road while concentrating on their observations.\n\nThe observations are entered into a shared spreadsheet. Before entering data, every team checks that all measurements use the same unit. We record circumference in centimetres. Mixing metres and centimetres would create false differences between trees. The spreadsheet also has a notes column for damaged bark, missing branches and any uncertainty about species. An uncertain identification should be marked as uncertain rather than replaced by a confident guess. We can ask a local specialist to review these cases afterwards.\n\nThe second survey takes place in September. By returning to the same trees, students can compare observations over time. Growth over a few months may be too small for our method to detect, but changes in leaves or damage can still be interesting. We do not claim that the class survey measures the carbon stored in each tree precisely. That would require additional information and a validated model. Our project is about careful observation, consistent records and asking questions that the available evidence can answer. At the end, teams will prepare a short poster for the school exhibition showing their method, findings and limitations.",
+        "questions": [
+          {
+            "id": "30",
+            "prompt": "The measuring tool is a flexible ____.",
+            "accepted": [
+              "tape"
+            ],
+            "explanation": "A tape wraps around the trunk.",
+            "wordLimit": 1
+          },
+          {
+            "id": "31",
+            "prompt": "Measurements are taken ____ metre above the ground.",
+            "accepted": [
+              "1",
+              "one"
+            ],
+            "explanation": "The specified height is one metre.",
+            "wordLimit": 1
+          },
+          {
+            "id": "32",
+            "prompt": "Students first work in ____.",
+            "accepted": [
+              "pairs"
+            ],
+            "explanation": "One measures while the other writes.",
+            "wordLimit": 1
+          },
+          {
+            "id": "33",
+            "prompt": "Data are entered in a shared ____.",
+            "accepted": [
+              "spreadsheet"
+            ],
+            "explanation": "The lecture names a spreadsheet.",
+            "wordLimit": 1
+          },
+          {
+            "id": "34",
+            "prompt": "The measurement unit is ____.",
+            "accepted": [
+              "centimetres",
+              "centimeters"
+            ],
+            "explanation": "Circumference is recorded in centimetres.",
+            "wordLimit": 1
+          },
+          {
+            "id": "35",
+            "prompt": "The second survey is in ____.",
+            "accepted": [
+              "September"
+            ],
+            "explanation": "The repeated survey takes place in September.",
+            "wordLimit": 1
+          }
+        ]
+      }
+    ],
+    "maxPlays": 2,
+    "readSeconds": 30,
+    "transferSeconds": 600
+  },
+  {
+    "id": "ielts-full-writing-1",
+    "exam": "ielts",
+    "skill": "writing",
+    "title": "Full mock 1 · Academic Writing",
+    "minutes": 60,
+    "origin": "Lingora original full-length mock · not a past official paper",
+    "groups": [
+      {
+        "title": "Task 1 · At least 150 words",
+        "text": "The table shows the percentage of commuters using three types of transport in the fictional town of Westford. Summarise the main patterns and make relevant comparisons.\n\nTransport | 2010 | 2020\nCar | 65% | 45%\nBus | 25% | 30%\nBicycle | 10% | 25%",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "Write your Task 1 response.",
+            "accepted": [],
+            "explanation": "Teacher assessment: task achievement, coherence, vocabulary, grammar."
+          }
+        ]
+      },
+      {
+        "title": "Task 2 · At least 250 words",
+        "text": "Some people believe that cities should spend more money on public transport than on new roads. To what extent do you agree or disagree? Give reasons and relevant examples.",
+        "questions": [
+          {
+            "id": "2",
+            "prompt": "Write your Task 2 essay.",
+            "accepted": [],
+            "explanation": "Teacher assessment. Task 2 carries twice the weight of Task 1 in IELTS Writing."
+          }
+        ]
+      }
+    ],
+    "wordTargets": [
+      150,
+      250
+    ],
+    "fullLength": true
+  },
+  {
+    "id": "cefr-full-writing-1",
+    "exam": "cefr",
+    "skill": "writing",
+    "title": "Full mock 1 · Multilevel Writing",
+    "minutes": 60,
+    "origin": "Lingora original full-length mock · not a past official paper",
+    "groups": [
+      {
+        "title": "1.1 · Informal email · About 50 words",
+        "text": "Your local sports club has announced that the swimming pool will close for two weeks for repairs. Members can use the outdoor courts during this period. The manager asks for suggestions about alternative activities. Write to a friend who also belongs to the club. Explain how you feel and suggest what you could do together.",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "Write an informal email.",
+            "accepted": [],
+            "explanation": ""
+          }
+        ]
+      },
+      {
+        "title": "1.2 · Formal email · 120–150 words",
+        "text": "Write to the club manager about the same situation. Explain how the closure affects you, suggest an alternative activity and ask for information about when the pool will reopen.",
+        "questions": [
+          {
+            "id": "2",
+            "prompt": "Write a formal email.",
+            "accepted": [],
+            "explanation": ""
+          }
+        ]
+      },
+      {
+        "title": "2 · Discussion post · 180–200 words",
+        "text": "An online discussion asks: Is it better to learn a practical skill in a group or on your own? Write a discussion post giving your view, reasons and examples.",
+        "questions": [
+          {
+            "id": "3",
+            "prompt": "Write your discussion post.",
+            "accepted": [],
+            "explanation": ""
+          }
+        ]
+      }
+    ],
+    "wordTargets": [
+      50,
+      120,
+      180
+    ],
+    "fullLength": true
+  },
+  {
+    "id": "ielts-full-speaking-1",
+    "exam": "ielts",
+    "skill": "speaking",
+    "title": "Full mock 1 · IELTS Speaking",
+    "minutes": 14,
+    "origin": "Lingora original full-length mock · not a past official paper",
+    "fullLength": true,
+    "groups": [
+      {
+        "title": "Part 1 · Home",
+        "questions": [],
+        "stageId": "s1",
+        "prompt": "Where do you live, and what do you like about the area?",
+        "speakSeconds": 35,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 1 · Home",
+        "questions": [],
+        "stageId": "s2",
+        "prompt": "Is there anything you would like to change about your neighbourhood?",
+        "speakSeconds": 35,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 1 · Study or work",
+        "questions": [],
+        "stageId": "s3",
+        "prompt": "Do you work or study? What do you find most interesting about it?",
+        "speakSeconds": 35,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 1 · Study or work",
+        "questions": [],
+        "stageId": "s4",
+        "prompt": "How do you usually organise a busy day?",
+        "speakSeconds": 35,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 1 · Free time",
+        "questions": [],
+        "stageId": "s5",
+        "prompt": "What do you enjoy doing when you have some free time?",
+        "speakSeconds": 35,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 1 · Free time",
+        "questions": [],
+        "stageId": "s6",
+        "prompt": "Have your interests changed since you were a child?",
+        "speakSeconds": 35,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 1 · Reading",
+        "questions": [],
+        "stageId": "s7",
+        "prompt": "Do you prefer reading on paper or on a screen? Why?",
+        "speakSeconds": 35,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 1 · Reading",
+        "questions": [],
+        "stageId": "s8",
+        "prompt": "What kind of information do you read most often?",
+        "speakSeconds": 35,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 2 · Long turn",
+        "questions": [],
+        "stageId": "s9",
+        "prompt": "Describe a skill you learned that was useful to you. You should say what the skill was, how you learned it, what was difficult about learning it, and explain why it has been useful.",
+        "speakSeconds": 120,
+        "prepareSeconds": 60
+      },
+      {
+        "title": "Part 3 · Learning",
+        "questions": [],
+        "stageId": "s10",
+        "prompt": "Why do some adults find it difficult to learn something new?",
+        "speakSeconds": 50,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 3 · Learning",
+        "questions": [],
+        "stageId": "s11",
+        "prompt": "How can schools encourage students to continue learning outside the classroom?",
+        "speakSeconds": 50,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 3 · Learning",
+        "questions": [],
+        "stageId": "s12",
+        "prompt": "Do you think practical skills and academic knowledge are equally important?",
+        "speakSeconds": 50,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 3 · Learning",
+        "questions": [],
+        "stageId": "s13",
+        "prompt": "How might technology change the way people learn in the future?",
+        "speakSeconds": 50,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 3 · Learning",
+        "questions": [],
+        "stageId": "s14",
+        "prompt": "Who should be responsible for providing opportunities for adults to learn?",
+        "speakSeconds": 50,
+        "prepareSeconds": 0
+      }
+    ],
+    "stagedSpeaking": true,
+    "instructions": "Three parts: personal questions, a one-minute preparation and two-minute long turn, then a discussion. Prompts are voiced automatically. Each answer is recorded separately for teacher assessment. This uses fixed prompts; a live examiner may adapt follow-up questions."
+  },
+  {
+    "id": "cefr-full-speaking-1",
+    "exam": "cefr",
+    "skill": "speaking",
+    "title": "Full mock 1 · Multilevel Speaking",
+    "minutes": 15,
+    "origin": "Lingora original full-length mock · not a past official paper",
+    "fullLength": true,
+    "groups": [
+      {
+        "title": "Part 1.1 · Question 1",
+        "questions": [],
+        "stageId": "s1",
+        "prompt": "Tell me about the place where you live.",
+        "speakSeconds": 30,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 1.1 · Question 2",
+        "questions": [],
+        "stageId": "s2",
+        "prompt": "What do you enjoy doing in your free time?",
+        "speakSeconds": 30,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 1.1 · Question 3",
+        "questions": [],
+        "stageId": "s3",
+        "prompt": "Which subject did you enjoy most at school? Why?",
+        "speakSeconds": 30,
+        "prepareSeconds": 0
+      },
+      {
+        "title": "Part 1.2 · Question 4",
+        "questions": [],
+        "stageId": "s4",
+        "prompt": "Describe and compare what you can see in these two pictures.",
+        "speakSeconds": 45,
+        "prepareSeconds": 0,
+        "image": "/exams/study-pictures.svg"
+      },
+      {
+        "title": "Part 1.2 · Question 5",
+        "questions": [],
+        "stageId": "s5",
+        "prompt": "What are the advantages of studying with other people?",
+        "speakSeconds": 30,
+        "prepareSeconds": 0,
+        "image": "/exams/study-pictures.svg"
+      },
+      {
+        "title": "Part 1.2 · Question 6",
+        "questions": [],
+        "stageId": "s6",
+        "prompt": "Which way of studying do you prefer, and why?",
+        "speakSeconds": 30,
+        "prepareSeconds": 0,
+        "image": "/exams/study-pictures.svg"
+      },
+      {
+        "title": "Part 2 · Extended response",
+        "questions": [],
+        "stageId": "s7",
+        "prompt": "Describe a time when you had to keep trying to achieve something. How did you deal with the difficulties? What did this experience teach you?",
+        "speakSeconds": 120,
+        "prepareSeconds": 60,
+        "image": "/exams/challenge-picture.svg"
+      },
+      {
+        "title": "Part 3 · Discuss both sides",
+        "questions": [],
+        "stageId": "s8",
+        "prompt": "All university courses should be taught online. Discuss both sides of this statement and explain your own view.",
+        "speakSeconds": 120,
+        "prepareSeconds": 60,
+        "text": "FOR: Students can study from different locations; recorded lessons can be reviewed; travel costs may be lower.\n\nAGAINST: Some subjects require equipment and practical work; face-to-face interaction can support motivation; reliable internet is not available to everyone."
+      }
+    ],
+    "stagedSpeaking": true,
+    "instructions": "Part 1.1: three 30-second answers. Part 1.2: pictures, 45 / 30 / 30 seconds. Parts 2 and 3: one-minute preparation and two-minute answers. Microphone recording starts and stops automatically after each prompt."
+  }
+]

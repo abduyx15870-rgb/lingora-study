@@ -1,0 +1,641 @@
+[
+  {
+    "id": "ielts-reading-1",
+    "exam": "ielts",
+    "skill": "reading",
+    "title": "Urban gardens · Reading",
+    "minutes": 20,
+    "origin": "Lingora original practice",
+    "groups": [
+      {
+        "title": "A changing neighbourhood",
+        "text": "A. In 2018, residents of Elmbridge turned an unused car park into a community garden. The council lent the land for five years, but the residents paid for tools themselves. They initially wanted a quiet place to grow vegetables. By the second summer, the garden had become a meeting place for people who rarely spoke to one another before.\n\nB. Water was the first practical difficulty. The nearest tap was inside a locked building. Rather than buy expensive irrigation equipment, volunteers fitted tanks to collect rain from the roof of a nearby shed. This reduced their need for tap water, although they still used it during long dry periods.\n\nC. A local researcher interviewed forty residents before the garden opened and a year later. More people reported knowing their neighbours after the project began. However, the study had no comparison group, so the researcher warned that the garden alone could not be credited with every change. She did not measure air temperature or property prices.\n\nD. In 2023, the council renewed the land agreement for another five years. It declined a proposal to charge visitors, because free access had been a condition of the original agreement. A small weekend market now helps to cover the cost of seeds. Money from the market is used for the garden, not distributed to volunteers.",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "The garden was created on land formerly used for parking.",
+            "accepted": [
+              "TRUE"
+            ],
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ],
+            "explanation": "Paragraph A describes an unused car park."
+          },
+          {
+            "id": "2",
+            "prompt": "The council bought the residents their tools.",
+            "accepted": [
+              "FALSE"
+            ],
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ],
+            "explanation": "Residents paid for the tools themselves."
+          },
+          {
+            "id": "3",
+            "prompt": "The garden reduced summer air temperatures.",
+            "accepted": [
+              "NOT GIVEN"
+            ],
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ],
+            "explanation": "The researcher did not measure temperature; no result is given."
+          },
+          {
+            "id": "4",
+            "prompt": "Rainwater was collected in _____.",
+            "accepted": [
+              "tanks"
+            ],
+            "wordLimit": 1,
+            "explanation": "Paragraph B: volunteers fitted tanks."
+          },
+          {
+            "id": "5",
+            "prompt": "The researcher interviewed _____ residents.",
+            "accepted": [
+              "forty",
+              "40"
+            ],
+            "wordLimit": 1,
+            "explanation": "Paragraph C specifies forty residents."
+          },
+          {
+            "id": "6",
+            "prompt": "Which paragraph describes a limitation of the research?",
+            "accepted": [
+              "C"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "explanation": "Paragraph C: no comparison group."
+          },
+          {
+            "id": "7",
+            "prompt": "Why was a visitor fee rejected?",
+            "accepted": [
+              "B"
+            ],
+            "options": [
+              "A. Volunteers opposed all spending.",
+              "B. The agreement required free access.",
+              "C. The market had already closed."
+            ],
+            "explanation": "Paragraph D gives free access as an original condition."
+          },
+          {
+            "id": "8",
+            "prompt": "Market income pays for _____.",
+            "accepted": [
+              "seeds"
+            ],
+            "wordLimit": 1,
+            "explanation": "Paragraph D states that the market covers the cost of seeds."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cefr-reading-1",
+    "exam": "cefr",
+    "skill": "reading",
+    "title": "Learning and travel · Reading",
+    "minutes": 20,
+    "origin": "Lingora original practice",
+    "groups": [
+      {
+        "title": "Course notice",
+        "text": "The Riverside Learning Centre will run a photography course from 6 November to 18 December. Lessons take place on Thursday evenings, from six to eight. Students must bring a phone or camera; computers are provided at the centre. The course costs sixty pounds, including printing. Registration closes on 30 October. There are twelve places. Complete beginners are welcome, but students under sixteen must attend with an adult.",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "On which day are the lessons?",
+            "accepted": [
+              "Thursday"
+            ],
+            "wordLimit": 1,
+            "explanation": "The notice says Thursday evenings."
+          },
+          {
+            "id": "2",
+            "prompt": "Students must bring a computer.",
+            "accepted": [
+              "FALSE"
+            ],
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ],
+            "explanation": "Computers are provided."
+          },
+          {
+            "id": "3",
+            "prompt": "How many places are available?",
+            "accepted": [
+              "12",
+              "twelve"
+            ],
+            "wordLimit": 1,
+            "explanation": "The notice specifies twelve places."
+          },
+          {
+            "id": "4",
+            "prompt": "An experienced photographer teaches the course.",
+            "accepted": [
+              "NOT GIVEN"
+            ],
+            "options": [
+              "TRUE",
+              "FALSE",
+              "NOT GIVEN"
+            ],
+            "explanation": "The notice gives no information about the teacher."
+          }
+        ]
+      },
+      {
+        "title": "A quieter journey",
+        "text": "Last year, Maya began cycling to work instead of driving. The journey takes fifteen minutes longer, but she says she arrives feeling calmer. She bought a second-hand bicycle, which needed new lights but no other repairs. At first she avoided the main road because of traffic. In May, the town opened a protected cycle lane, and she changed her route. She still takes the bus in heavy rain. Maya would like to cycle at weekends too, but she currently uses that time to look after her grandfather.",
+        "questions": [
+          {
+            "id": "5",
+            "prompt": "Why does Maya prefer cycling?",
+            "accepted": [
+              "A"
+            ],
+            "options": [
+              "A. She feels calmer when she arrives.",
+              "B. It is fifteen minutes faster.",
+              "C. Her office has banned cars."
+            ],
+            "explanation": "She arrives feeling calmer, although the journey is longer."
+          },
+          {
+            "id": "6",
+            "prompt": "Her bicycle needed new _____.",
+            "accepted": [
+              "lights"
+            ],
+            "wordLimit": 1,
+            "explanation": "New lights were the only repairs needed."
+          },
+          {
+            "id": "7",
+            "prompt": "The protected lane opened in _____.",
+            "accepted": [
+              "May"
+            ],
+            "wordLimit": 1,
+            "explanation": "The text specifies May."
+          },
+          {
+            "id": "8",
+            "prompt": "What prevents Maya from cycling at weekends?",
+            "accepted": [
+              "C"
+            ],
+            "options": [
+              "A. Heavy rain every weekend.",
+              "B. The lane closes.",
+              "C. She looks after a relative."
+            ],
+            "explanation": "She uses weekends to look after her grandfather."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ielts-listening-1",
+    "exam": "ielts",
+    "skill": "listening",
+    "title": "Library and fieldwork · Listening",
+    "minutes": 15,
+    "origin": "Lingora original practice",
+    "groups": [
+      {
+        "title": "Library registration",
+        "script": "Good morning. I would like to join the library. Certainly. What is your surname? It is Benton. B E N T O N. Thank you. Which branch will you use? The branch on River Street. Fine. Our standard card is free, but printing costs twenty pence a page. I do not need printing today. I would like to attend the language club. That meets on Wednesday, not Tuesday, at a quarter past six in the evening. Please bring your passport when you register.",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "Surname: _____.",
+            "accepted": [
+              "Benton"
+            ],
+            "wordLimit": 1,
+            "explanation": "The surname is spelled B E N T O N."
+          },
+          {
+            "id": "2",
+            "prompt": "Branch: _____ Street.",
+            "accepted": [
+              "River"
+            ],
+            "wordLimit": 1,
+            "explanation": "The speaker chooses River Street."
+          },
+          {
+            "id": "3",
+            "prompt": "Language club day: _____.",
+            "accepted": [
+              "Wednesday"
+            ],
+            "wordLimit": 1,
+            "explanation": "The speaker corrects Tuesday to Wednesday."
+          },
+          {
+            "id": "4",
+            "prompt": "Document required: _____.",
+            "accepted": [
+              "passport"
+            ],
+            "wordLimit": 1,
+            "explanation": "A passport is required for registration."
+          }
+        ]
+      },
+      {
+        "title": "Planning a field visit",
+        "script": "Our geography group will visit the wetlands on Friday. We had hoped to leave at eight, but the coach is only available at nine. Bring a notebook and waterproof boots. There is no need to bring lunch, because the visitor centre will provide sandwiches. The morning task is to count water birds. In the afternoon, we will compare water samples. We shall work in pairs because the equipment is limited. The final report is due on Monday, although the photographs can be sent later.",
+        "questions": [
+          {
+            "id": "5",
+            "prompt": "Departure time: _____.",
+            "accepted": [
+              "nine",
+              "9",
+              "9:00"
+            ],
+            "wordLimit": 1,
+            "explanation": "The final departure time is nine."
+          },
+          {
+            "id": "6",
+            "prompt": "The morning task is to count _____.",
+            "accepted": [
+              "water birds"
+            ],
+            "wordLimit": 2,
+            "explanation": "Bird counting is the morning task."
+          },
+          {
+            "id": "7",
+            "prompt": "Why will students work in pairs?",
+            "accepted": [
+              "C"
+            ],
+            "options": [
+              "A. The site is unsafe.",
+              "B. Only two students are attending.",
+              "C. There is limited equipment."
+            ],
+            "explanation": "Pair work is needed because equipment is limited."
+          },
+          {
+            "id": "8",
+            "prompt": "Report deadline: _____.",
+            "accepted": [
+              "Monday"
+            ],
+            "wordLimit": 1,
+            "explanation": "The report is due on Monday; photographs may follow."
+          }
+        ]
+      }
+    ],
+    "maxPlays": 1
+  },
+  {
+    "id": "cefr-listening-1",
+    "exam": "cefr",
+    "skill": "listening",
+    "title": "Daily plans · Listening",
+    "minutes": 15,
+    "origin": "Lingora original practice",
+    "groups": [
+      {
+        "title": "A changed appointment",
+        "script": "Hello, this is Green Dental Clinic. Your appointment was originally on Tuesday at ten. Unfortunately, the dentist will be away that morning. We can offer you Thursday at eleven thirty instead. Please call us before five today to confirm. The clinic entrance is now on Park Road, because the front door on Market Street is being repaired. You do not need to bring your old appointment letter, but please bring your identification card.",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "The new appointment is on which day?",
+            "accepted": [
+              "Thursday"
+            ],
+            "wordLimit": 1,
+            "explanation": "Thursday replaces Tuesday."
+          },
+          {
+            "id": "2",
+            "prompt": "Which entrance should the patient use?",
+            "accepted": [
+              "B"
+            ],
+            "options": [
+              "A. Market Street",
+              "B. Park Road",
+              "C. Station Road"
+            ],
+            "explanation": "The current entrance is on Park Road."
+          },
+          {
+            "id": "3",
+            "prompt": "What document should the patient bring?",
+            "accepted": [
+              "identification card"
+            ],
+            "wordLimit": 2,
+            "explanation": "An identification card is requested."
+          },
+          {
+            "id": "4",
+            "prompt": "When should the patient confirm?",
+            "accepted": [
+              "A"
+            ],
+            "options": [
+              "A. Before five today",
+              "B. After five on Thursday",
+              "C. On Tuesday morning"
+            ],
+            "explanation": "The caller asks for confirmation before five today."
+          }
+        ]
+      },
+      {
+        "title": "A school visit",
+        "script": "Tomorrow, our class is visiting the science museum. Meet at the school gate at eight thirty. The bus will leave fifteen minutes later. The museum ticket is six pounds for students. Please bring a packed lunch and a bottle of water. You may take photographs in the space exhibition, but not in the laboratory. We expect to return by four. If traffic is heavy, we will send your parents a message.",
+        "questions": [
+          {
+            "id": "5",
+            "prompt": "Meeting time: _____.",
+            "accepted": [
+              "8:30",
+              "eight thirty",
+              "8.30"
+            ],
+            "wordLimit": 2,
+            "explanation": "Students meet at eight thirty."
+          },
+          {
+            "id": "6",
+            "prompt": "Student ticket price in pounds: _____.",
+            "accepted": [
+              "six",
+              "6"
+            ],
+            "wordLimit": 1,
+            "explanation": "The ticket costs six pounds."
+          },
+          {
+            "id": "7",
+            "prompt": "Where are photographs prohibited?",
+            "accepted": [
+              "laboratory"
+            ],
+            "wordLimit": 1,
+            "explanation": "Photography is not allowed in the laboratory."
+          },
+          {
+            "id": "8",
+            "prompt": "Who will receive a message if the bus is delayed?",
+            "accepted": [
+              "parents"
+            ],
+            "wordLimit": 1,
+            "explanation": "Parents will be contacted if traffic is heavy."
+          }
+        ]
+      }
+    ],
+    "maxPlays": 2
+  },
+  {
+    "id": "ielts-official-rockets",
+    "exam": "ielts",
+    "skill": "reading",
+    "title": "Official sample · Matching features (2023)",
+    "minutes": 10,
+    "origin": "IELTS / British Council official sample",
+    "paper": "https://takeielts.britishcouncil.org/sites/default/files/%5Bdownloads%5D/ielts-academic-reading-sample-tasks-2023.pdf#page=3",
+    "groups": [
+      {
+        "title": "Pages 3–4 · Questions 7–10",
+        "questions": [
+          {
+            "id": "7",
+            "prompt": "Question 7",
+            "accepted": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "explanation": "Official answer key: page 5 of the source PDF."
+          },
+          {
+            "id": "8",
+            "prompt": "Question 8",
+            "accepted": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "explanation": "Official answer key: page 5 of the source PDF."
+          },
+          {
+            "id": "9",
+            "prompt": "Question 9",
+            "accepted": [
+              "B"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "explanation": "Official answer key: page 5 of the source PDF."
+          },
+          {
+            "id": "10",
+            "prompt": "Question 10",
+            "accepted": [
+              "E"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "explanation": "Official answer key: page 5 of the source PDF."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ielts-writing-1",
+    "exam": "ielts",
+    "skill": "writing",
+    "title": "Academic Writing · Two tasks",
+    "minutes": 60,
+    "origin": "Lingora original practice",
+    "groups": [
+      {
+        "title": "Task 1 · At least 150 words",
+        "text": "The table shows the percentage of commuters using three types of transport in the fictional town of Westford. Summarise the main patterns and make relevant comparisons.\n\nTransport | 2010 | 2020\nCar | 65% | 45%\nBus | 25% | 30%\nBicycle | 10% | 25%",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "Write your Task 1 response.",
+            "accepted": [],
+            "explanation": "Teacher assessment: task achievement, coherence, vocabulary, grammar."
+          }
+        ]
+      },
+      {
+        "title": "Task 2 · At least 250 words",
+        "text": "Some people believe that cities should spend more money on public transport than on new roads. To what extent do you agree or disagree? Give reasons and relevant examples.",
+        "questions": [
+          {
+            "id": "2",
+            "prompt": "Write your Task 2 essay.",
+            "accepted": [],
+            "explanation": "Teacher assessment. Task 2 carries twice the weight of Task 1 in IELTS Writing."
+          }
+        ]
+      }
+    ],
+    "wordTargets": [
+      150,
+      250
+    ]
+  },
+  {
+    "id": "cefr-writing-1",
+    "exam": "cefr",
+    "skill": "writing",
+    "title": "Multilevel Writing · New format practice",
+    "minutes": 60,
+    "origin": "Lingora original practice",
+    "groups": [
+      {
+        "title": "1.1 · Informal email · About 50 words",
+        "text": "Your local sports club has announced that the swimming pool will close for two weeks for repairs. Members can use the outdoor courts during this period. The manager asks for suggestions about alternative activities. Write to a friend who also belongs to the club. Explain how you feel and suggest what you could do together.",
+        "questions": [
+          {
+            "id": "1",
+            "prompt": "Write an informal email.",
+            "accepted": [],
+            "explanation": ""
+          }
+        ]
+      },
+      {
+        "title": "1.2 · Formal email · 120–150 words",
+        "text": "Write to the club manager about the same situation. Explain how the closure affects you, suggest an alternative activity and ask for information about when the pool will reopen.",
+        "questions": [
+          {
+            "id": "2",
+            "prompt": "Write a formal email.",
+            "accepted": [],
+            "explanation": ""
+          }
+        ]
+      },
+      {
+        "title": "2 · Discussion post · 180–200 words",
+        "text": "An online discussion asks: Is it better to learn a practical skill in a group or on your own? Write a discussion post giving your view, reasons and examples.",
+        "questions": [
+          {
+            "id": "3",
+            "prompt": "Write your discussion post.",
+            "accepted": [],
+            "explanation": ""
+          }
+        ]
+      }
+    ],
+    "wordTargets": [
+      50,
+      120,
+      180
+    ]
+  },
+  {
+    "id": "ielts-speaking-1",
+    "exam": "ielts",
+    "skill": "speaking",
+    "title": "Speaking · Recorded response practice",
+    "minutes": 14,
+    "origin": "Lingora original practice",
+    "groups": [
+      {
+        "title": "Personal questions",
+        "text": "Describe your hometown. What do you enjoy doing after classes? How do you usually travel to school?"
+      },
+      {
+        "title": "Long turn",
+        "text": "Describe a useful skill you learned. Explain what it was, how you learned it, who helped you and why it is useful. Prepare for one minute, then speak for up to two minutes."
+      },
+      {
+        "title": "Discussion",
+        "text": "Why do some people find it difficult to learn new skills? Should schools spend more time teaching practical skills? How might technology change learning in the future?"
+      }
+    ],
+    "speakingPractice": true
+  },
+  {
+    "id": "cefr-speaking-1",
+    "exam": "cefr",
+    "skill": "speaking",
+    "title": "Speaking · Recorded response practice",
+    "minutes": 15,
+    "origin": "Lingora original practice",
+    "groups": [
+      {
+        "title": "Personal questions",
+        "text": "Describe your hometown. What do you enjoy doing after classes? How do you usually travel to school?"
+      },
+      {
+        "title": "Long turn",
+        "text": "Describe a useful skill you learned. Explain what it was, how you learned it, who helped you and why it is useful. Prepare for one minute, then speak for up to two minutes."
+      },
+      {
+        "title": "Discussion",
+        "text": "Why do some people find it difficult to learn new skills? Should schools spend more time teaching practical skills? How might technology change learning in the future?"
+      }
+    ],
+    "speakingPractice": true
+  }
+]

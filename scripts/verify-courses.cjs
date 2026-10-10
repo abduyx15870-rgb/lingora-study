@@ -3,10 +3,11 @@ const roles=[['owner','o','platform'],['advertiser','a','platform'],['student','
 function matches(r,q){return [...new URLSearchParams(q)].every(([k,v])=>{if(['order','limit','on_conflict'].includes(k))return true;const [op,...a]=v.split('.'),value=a.join('.');return op==='eq'?String(r[k])===value:op==='gt'?String(r[k])>value:true})}
 async function firebaseDb(table,method='GET',data,q=''){if(table==='rpc/school_login_guard')return true;const rows=tables[table]||(tables[table]=[]),found=rows.filter(r=>matches(r,q));if(method==='GET'){readCalls.push(table+'|'+q);return structuredClone(found);}calls.push({table,method,data:structuredClone(data)});if(method==='POST'){const id=data.id||crypto.createHash('sha256').update(data.identity||crypto.randomUUID()).digest('hex');if(rows.some(r=>r.id===id)){const e=new Error('Exists');e.status=409;throw e}const row={...data,id};if(table==='school_users'){row.settings??={...settings};row.billing??={status:'paid',paidAt:day};row.center_id??='zamon'}rows.push(row);return structuredClone([row])}if(method==='PATCH'){found.forEach(r=>Object.assign(r,data));return structuredClone(found)}if(method==='DELETE'){tables[table]=rows.filter(r=>!found.includes(r));return[]}throw Error('unsupported')}
 const voiceInputs=[];const adapter={db:firebaseDb,createOwnerSession:async()=>true,moveSchoolUserCenter:async()=>true,activateTeacher:async()=>true,claimPendingTeacher:async()=>true,createAdministrator:async()=>true,resignTemporaryAdministrator:async()=>true};
-function load(file){file=path.resolve(file);if(cache[file])return cache[file].exports;const m={exports:{}};cache[file]=m;const req=id=>id==='@/app/api/voice/route'?{POST:async r=>{const body=await r.json();voiceInputs.push(body);return new Response(new Uint8Array(Buffer.alloc(144)),{headers:{'content-type':'audio/wav'}})}}:id==='server-only'?{}:id==='web-push'?{setVapidDetails(){},sendNotification(){}}:id.endsWith('firebase-store.mjs')?adapter:id.startsWith('@/')?load(root+'/'+id.slice(2)+(path.extname(id)?'':'.ts')):id.startsWith('.')?load(path.resolve(path.dirname(file),id)+(path.extname(id)?'':'.ts')):require(id);if(file.endsWith('.json')){m.exports=JSON.parse(fs.readFileSync(file));return m.exports}vm.runInNewContext(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,esModuleInterop:true}}).outputText,{require:req,module:m,exports:m.exports,console,Buffer,process,Map,Set,Date,URLSearchParams,structuredClone,Error,setTimeout,clearTimeout,Response,Request,Headers,URL,AbortSignal,fetch},{filename:file});return m.exports}
+function load(file){file=path.resolve(file);if(cache[file])return cache[file].exports;const m={exports:{}};cache[file]=m;const req=id=>id==='@/lib/tts'?{generateVoice:async body=>{voiceInputs.push({...body,language:body.language==='English'?'en':'uz'});return{bytes:Buffer.alloc(144),mime:'audio/wav'}}}:id==='server-only'?{}:id==='web-push'?{setVapidDetails(){},sendNotification(){}}:id.endsWith('firebase-store.mjs')?adapter:id.startsWith('@/')?load(root+'/'+id.slice(2)+(path.extname(id)?'':'.ts')):id.startsWith('.')?load(path.resolve(path.dirname(file),id)+(path.extname(id)?'':'.ts')):require(id);if(file.endsWith('.json')){m.exports=JSON.parse(fs.readFileSync(file));return m.exports}vm.runInNewContext(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.CommonJS,esModuleInterop:true}}).outputText,{require:req,module:m,exports:m.exports,console,Buffer,process,Map,Set,Date,URLSearchParams,structuredClone,Error,setTimeout,clearTimeout,Response,Request,Headers,URL,AbortSignal,fetch:(...args)=>global.fetch(...args)},{filename:file});return m.exports}
 function request(id,mode={},data){return new Request('http://localhost/api/test',{method:data?'POST':'GET',headers:{cookie:'school_session='+id,host:'localhost',...mode},...(data?{body:JSON.stringify(data)}:{})})}
 (async()=>{
-const server=load(root+'/lib/school-server.ts'),courses=load(root+'/app/api/courses/route.ts'),auth=load(root+'/app/api/auth/route.ts');
+process.env.GEMINI_API_KEY='test-key-not-real-123456789';const server=load(root+'/lib/school-server.ts'),courses=load(root+'/app/api/courses/route.ts'),auth=load(root+'/app/api/auth/route.ts');
+let diagnostic=server.fail(new server.AppError('Firebase database was not found. (HTTP 404)',503));assert.equal(diagnostic.status,503);assert.equal((await diagnostic.json()).error,'Firebase database was not found. (HTTP 404)');
 function get(id,center='zamon',subject='english',extra=''){return new Request('http://localhost/api/courses?center='+center+'&subject='+subject+extra,{headers:{cookie:'school_session='+id}})}
 function post(id,data,center='zamon',subject='english',mode={}){return new Request('http://localhost/api/courses',{method:'POST',headers:{cookie:'school_session='+id,host:'localhost',...mode},body:JSON.stringify({...data,center,subject})})}
 let r=await auth.GET(new Request('http://localhost/api/auth'));let d=await r.json();assert(d.subjects.every(s=>s.id==='english'));assert(!JSON.stringify(d).includes('code_hash'));
@@ -51,18 +52,24 @@ r=await courses.POST(post('s',{action:'audio',id,index:0,subIndex:0,voice:'Kore'
 for(let sub=1;sub<d.subparts;sub++){r=await courses.POST(post('s',{action:'audio',id,index:0,subIndex:sub,voice:'Kore'},'zamon',math));assert.equal(r.status,200)}
 assert.equal(voiceInputs.map(v=>v.text).join(' ').replace(/\s+/g,' ').trim(),longText.replace(/\s+/g,' ').trim());assert(voiceInputs.every(v=>v.text.length<=500));
 // PDF catalogue is centre scoped; only managers may attach sources.
-r=await courses.GET(get('s','zamon','english','&action=textbooks'));assert.equal(r.status,200);d=await r.json();assert(d.books.some(b=>b.id==='essential'&&b.url==='/books/essential-1.pdf'));
+r=await courses.GET(get('s','zamon','english','&action=textbooks'));assert.equal(r.status,200);d=await r.json();assert(d.books.some(b=>b.id==='essential'&&b.url==='/books/essential-1.pdf'));assert.equal(d.books.filter(b=>b.id==='essential'||b.id.startsWith('essential-')).filter(b=>b.url).length,6);assert.equal(d.books.find(b=>b.id==='a1').url,'/books/navigate-a1.pdf');for(const book of ['a2','b1','b1plus','b2','c1'])assert.equal(d.books.find(b=>b.id===book).url,'/books/navigate-'+book+'.pdf');
 r=await courses.POST(post('s',{action:'textbook',book:'a1',url:'https://example.org/a1.pdf'}));assert.equal(r.status,403);
 r=await courses.POST(post('m',{action:'textbook',book:'a1',url:'javascript:alert(1)'}));assert.equal(r.status,400);
 r=await courses.POST(post('m',{action:'textbook',book:'a1',url:'https://example.org/a1.pdf'}));assert.equal(r.status,200);
 r=await courses.GET(get('s','zamon','english','&action=textbooks'));d=await r.json();assert.equal(d.books.find(b=>b.id==='a1').url,'https://example.org/a1.pdf');
-r=await courses.GET(get('other','other','english','&action=textbooks'));d=await r.json();assert.equal(d.books.find(b=>b.id==='a1').url,null);
+r=await courses.GET(get('other','other','english','&action=textbooks'));d=await r.json();assert.equal(d.books.find(b=>b.id==='a1').url,'/books/navigate-a1.pdf');for(const book of ['a2','b1','b1plus','b2','c1'])assert.equal(d.books.find(b=>b.id===book).url,'/books/navigate-'+book+'.pdf');
 r=await courses.POST(post('s',{action:'upload',title:'English story',filename:'story.txt',mime:'text/plain',parts:1,originalParts:1}));assert.equal(r.status,200);const englishId=(await r.json()).id;
 r=await courses.GET(get('s','zamon','english','&action=translated&id='+englishId));assert.equal(r.status,409);
 r=await courses.POST(post('s',{action:'chunk',id:englishId,index:0,data:'A story.'}));assert.equal(r.status,200);
 r=await courses.POST(post('s',{action:'correctPart',id:englishId,index:0,text:'A café in London — an English story.'}));assert.equal(r.status,200);
 r=await courses.GET(get('s','zamon','english','&action=translated&id='+englishId));assert.equal(r.status,200);assert((await r.text()).includes('café in London —'));assert(r.headers.get('content-disposition').includes('English.txt'));
 r=await courses.GET(get('other','other','english','&action=translated&id='+englishId));assert.equal(r.status,404);
+// Narration removes export wrappers without dropping story numbers or adding explanations.
+const story='A boy has 12 books. He asks, \"Can I read one?\"';
+await courses.POST(post('s',{action:'correctPart',id:englishId,index:0,text:'English story\nPage 1\nTranslation:\n'+story+'\nwww.example.org'}));
+let voiceStart=voiceInputs.length;r=await courses.POST(post('s',{action:'audio',id:englishId,index:0,voice:'Kore'}));assert.equal(r.status,200);assert.equal(voiceInputs.at(-1).text,story);assert.equal(voiceInputs.at(-1).purpose,'book');
+await courses.POST(post('s',{action:'correctPart',id:englishId,index:0,text:'English story\nPage 2\nwww.example.org'}));
+r=await courses.POST(post('s',{action:'audio',id:englishId,index:0,voice:'Kore'}));assert.equal(r.status,200);assert.equal(voiceInputs.length,voiceStart+1);assert.equal((await r.json()).mime,'audio/wav');
 // Large uploads keep bounded requests; translation is explicitly controlled by the assigned teacher.
 r=await courses.POST(post('s',{action:'upload',title:'Large book',filename:'large.pdf',mime:'application/pdf',parts:950,originalParts:777,byteSize:100*1024*1024}));assert.equal(r.status,200);
 r=await courses.POST(post('s',{action:'upload',title:'Too large',filename:'large.pdf',mime:'application/pdf',parts:1,originalParts:777,byteSize:100*1024*1024+1}));assert.equal(r.status,400);
@@ -83,6 +90,38 @@ r=await courses.GET(get('s','zamon','english','&action=translated&id='+englishId
 r=await courses.GET(get('s','zamon',math,'&action=original&id='+id+'&part=0'));assert.equal(r.status,200);assert.equal(await r.text(),'Sonlar va amallar');
 r=await courses.GET(get('s','zamon',math,'&action=original&id='+id+'&part=99'));assert.equal(r.status,400);
 r=await courses.GET(get('other','other','english','&action=original&id='+id+'&part=0'));assert.equal(r.status,404);
+// Deferred extraction must keep the original downloadable even when OCR fails.
+r=await courses.POST(post('s',{action:'upload',title:'Scanned book',filename:'scan.pdf',mime:'application/pdf',parts:0,deferredText:true,originalParts:1,byteSize:8,language:'uz'}));assert.equal(r.status,200);const staged=(await r.json()).id;
+r=await courses.POST(post('s',{action:'chunk',id:staged,index:0,original:true,data:Buffer.from('%PDFtest').toString('base64')}));assert.equal(r.status,200);
+r=await courses.POST(post('s',{action:'completeUpload',id:staged}));assert.equal(r.status,200);
+r=await courses.GET(get('s','zamon','english','&action=original&id='+staged));assert.equal(r.status,200);assert.equal(await r.text(),'%PDFtest');
+r=await courses.GET(get('s','zamon','english','&action=material&id='+staged));d=await r.json();assert.equal(d.material.textStatus,'pending');assert.equal(d.parts.length,0);
+r=await courses.POST(post('s',{action:'audio',id:staged,index:0}));assert.equal(r.status,409);
+r=await courses.POST(post('t',{action:'share',id:staged,groups:['english-g'],reviewed:true}));assert.equal(r.status,400);
+let aiCalls=0;global.fetch=async()=>{aiCalls++;return Response.json({candidates:[{content:{parts:[{text:'Salom, bu o‘qish uchun sinov kitobi.'}]},finishReason:'STOP'}]})};
+r=await courses.POST(post('s',{action:'ocr',id:staged,page:1,image:'data:image/jpeg;base64,dGVzdA=='}));assert.equal(r.status,200);assert.equal(aiCalls,1);
+r=await courses.POST(post('s',{action:'ocr',id:staged,page:1,image:'data:image/jpeg;base64,dGVzdA=='}));assert.equal(r.status,200);assert.equal(aiCalls,1);assert((await r.json()).text.includes('Salom'));
+r=await courses.POST(post('other',{action:'ocr',id:staged,page:1,image:'data:image/jpeg;base64,dGVzdA=='},'other'));assert.equal(r.status,404);assert.equal(aiCalls,1);
+r=await courses.POST(post('s',{action:'beginText',id:staged,parts:2}));assert.equal(r.status,200);
+r=await courses.POST(post('s',{action:'chunk',id:staged,index:0,data:'Salom, bu birinchi sahifa.'}));assert.equal(r.status,200);
+r=await courses.POST(post('s',{action:'completeText',id:staged}));assert.equal(r.status,409);
+r=await courses.GET(get('s','zamon','english','&action=material&id='+staged));assert.equal((await r.json()).parts.length,0);
+r=await courses.POST(post('s',{action:'chunk',id:staged,index:1,data:'Bu esa ikkinchi sahifa.'}));assert.equal(r.status,200);
+r=await courses.POST(post('s',{action:'completeText',id:staged}));assert.equal(r.status,200);
+r=await courses.POST(post('s',{action:'completeText',id:staged}));assert.equal(r.status,200);
+const stagedRow=tables.school_materials.find(m=>m.id===staged);assert.equal(stagedRow.textStatus,'ready');
+r=await courses.GET(get('s','zamon','english','&action=material&id='+staged));d=await r.json();assert.equal(d.parts.length,2);
+global.fetch=async()=>{aiCalls++;return Response.json({candidates:[{content:{parts:[{text:'Hello, this is a test book for reading.'}]},finishReason:'STOP'}]})};
+r=await courses.POST(post('s',{action:'translatePart',id:staged,index:0}));assert.equal(r.status,200);const afterTranslation=aiCalls;
+r=await courses.POST(post('s',{action:'translatePart',id:staged,index:0}));assert.equal(r.status,200);assert.equal(aiCalls,afterTranslation);
+r=await courses.GET(get('s','zamon','english','&action=translated&id='+staged));assert.equal(r.status,409);
+r=await courses.POST(post('s',{action:'translatePart',id:staged,index:1}));assert.equal(r.status,200);
+r=await courses.GET(get('s','zamon','english','&action=translated&id='+staged));assert.equal(r.status,200);assert((await r.text()).includes('Hello'));
+const beforeAudio=voiceInputs.length;
+r=await courses.POST(post('s',{action:'audio',id:staged,index:0,voice:'Kore'}));assert.equal(r.status,200);
+r=await courses.POST(post('s',{action:'audio',id:staged,index:0,voice:'Kore'}));assert.equal(r.status,200);assert.equal(voiceInputs.length,beforeAudio+1);
+r=await courses.GET(get('other','other','english','&action=original&id='+staged));assert.equal(r.status,404);
+console.log('PASS: original saved before OCR; pending audio/share blocked; partial text hidden; complete text succeeds only with all parts; OCR/translation/audio resume reuses checkpoints; other centre denied.');
 console.log('PASS: 100 MB boundary; only assigned teacher toggles bilingual books; disabled Uzbek text/download/generation blocked while English stays available.');
 console.log('PASS: PDF catalogue permissions/centre isolation; translated download rejects incomplete books and preserves Unicode.');
 console.log('PASS: book audio splits long text without truncation, reuses stored audio, keeps response chunks small');

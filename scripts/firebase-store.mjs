@@ -20,7 +20,7 @@ async function createAccessToken(){
  const c=await credentials(),now=Math.floor(Date.now()/1000),encode=v=>Buffer.from(JSON.stringify(v)).toString('base64url');
  const unsigned=encode({alg:'RS256',typ:'JWT'})+'.'+encode({iss:c.client_email,scope:'https://www.googleapis.com/auth/datastore https://www.googleapis.com/auth/devstorage.read_write',aud:'https://oauth2.googleapis.com/token',iat:now,exp:now+3600});
  const jwt=unsigned+'.'+createSign('RSA-SHA256').update(unsigned).sign(c.private_key,'base64url');
- const r=await fetch('https://oauth2.googleapis.com/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({grant_type:'urn:ietf:params:oauth:grant-type:jwt-bearer',assertion:jwt})});
+ const r=await fetch('https://oauth2.googleapis.com/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},signal:AbortSignal.timeout(10000),body:new URLSearchParams({grant_type:'urn:ietf:params:oauth:grant-type:jwt-bearer',assertion:jwt})});
  if(!r.ok)throw new Error('Firebase server authentication failed.');const d=await r.json();cachedToken=d.access_token;expires=Date.now()+(d.expires_in-60)*1000;return cachedToken;
 }
 const project=()=>process.env.FIREBASE_PROJECT_ID||'zamon-c4a03';
@@ -30,7 +30,7 @@ export function pack(v){if(v===null)return {nullValue:null};if(typeof v==='strin
 export function unpack(v){if('nullValue'in v)return null;if('stringValue'in v)return v.stringValue;if('booleanValue'in v)return v.booleanValue;if('integerValue'in v)return Number(v.integerValue);if('doubleValue'in v)return v.doubleValue;if('arrayValue'in v)return (v.arrayValue.values||[]).map(unpack);return Object.fromEntries(Object.entries(v.mapValue?.fields||{}).map(([k,v])=>[k,unpack(v)]))}
 const fields=o=>pack(o).mapValue.fields;
 const row=d=>({id:d.name.split('/').pop(),...Object.fromEntries(Object.entries(d.fields||{}).map(([k,v])=>[k,unpack(v)]))});
-async function request(path,method='GET',body){const r=await fetch(path.startsWith('https:')?path:base()+path,{method,headers:{Authorization:'Bearer '+await accessToken(),'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body),cache:'no-store'});if(!r.ok){const e=new Error('Firebase database request failed (HTTP '+r.status+').');e.status=r.status;throw e}return r.status===204?{}:r.json()}
+async function request(path,method='GET',body){const r=await fetch(path.startsWith('https:')?path:base()+path,{method,headers:{Authorization:'Bearer '+await accessToken(),'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body),cache:'no-store',signal:AbortSignal.timeout(10000)});if(!r.ok){const e=new Error('Firebase database request failed (HTTP '+r.status+').');e.status=r.status;throw e}return r.status===204?{}:r.json()}
 function key(table,d){switch(table){case 'school_users':return sha(d.identity);case 'school_sessions':return d.token;case 'school_reads':return sha(d.user_id+'|'+d.assignment_id);case 'school_progress':return sha([d.user_id,d.book,d.unit,d.lesson].join('|'));case 'school_notifications':return sha(d.user_id+'|'+d.day);case 'school_push':return sha(d.endpoint);default:return d.id||randomUUID()}}
 async function documents(table,query=''){
  const params=new URLSearchParams(query),filters=[...params.entries()].filter(([k])=>!['order','limit','on_conflict'].includes(k));
@@ -181,4 +181,18 @@ export async function createOwnerSession(session,deviceId,currentToken=''){
   try{await request(':commit','POST',{writes});return true}catch(e){if(![409,412].includes(e.status))throw e}
  }
  throw new Error('Owner sign-in is busy. Please retry.');
+}
+
+// Compare-and-swap enforces one full exam per 14 days across devices.
+export async function claimExamWindow(data){
+ const name=base()+'/school_exam_windows/'+sha(data.user_id+'|'+data.exam);
+ for(let retry=0;retry<8;retry++){
+  let old;try{old=await request(name)}catch(e){if(e.status!==404)throw e}
+  const previous=old?row(old):null,now=Date.now();
+  if(previous?.session_id===data.session_id){if(previous.suite_id!==data.suite_id||previous.center_id!==data.center_id)return {conflict:true};return previous;}
+  if(previous&&Date.parse(previous.next_at)>now)return {blocked:true,next_at:previous.next_at};
+  const next={...data,started_at:new Date(now).toISOString(),next_at:new Date(now+14*86400000).toISOString()};
+  const condition=old?'currentDocument.updateTime='+encodeURIComponent(old.updateTime):'currentDocument.exists=false';
+  try{await request(name+'?'+condition,'PATCH',{fields:fields(next)});return next}catch(e){if(![409,412].includes(e.status))throw e}
+ }throw new Error('Exam start is busy. Please retry.');
 }

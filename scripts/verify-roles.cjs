@@ -52,5 +52,16 @@ response=await school.POST(request('a',{}, {action:'profile',firstName:'Reklamac
 response=await school.POST(request('a',{}, {action:'profile',firstName:'Reklamachi',lastName:'Test',currentPassword:'advertiserpass123',personalCode:'AdvertNew456'}));assert.equal(response.status,200);response=await auth.POST(request('s',{}, {action:'verifyTeacherCode',role:'teacher',code:'AdvertNew123'}));assert.equal(response.status,403);
 console.log('PASS: Owner current-code verification, database code overrides old environment code, code rotation; advertiser personal code login without centre');
 console.log('PASS: staff personal codes direct login, current password enforced, student code denied, code collision/rotation/disabled staff, renamed password login, new teacher chooses code');
+// Owner can use isolated anonymous roles without touching real users.
+const beforeAnon=JSON.stringify(tables.school_users);
+await context.schoolScope(async()=>{const user=await server.current(request('o',{'X-Demo-Role':'teacher','X-Demo-Key':'anonymousownerkey12','X-Learning-Center':'zamon'}));assert.equal(user.firstName,'Anonim');assert.equal(user.role,'teacher');await server.db('school_users','PATCH',{first_name:'Temporary'},'id=eq.demo-student');});assert.equal(JSON.stringify(tables.school_users),beforeAnon);
+const contact=load(root+'/app/api/contact/route.ts');
+response=await contact.POST(request('s',{}, {telegram:'@student'}));assert.equal(response.status,403);
+response=await contact.POST(request('a',{}, {telegram:'https://t.me/lingora_support'}));assert.equal(response.status,200);
+response=await contact.GET(request('s'));assert.deepEqual(await response.json(),{telegram:'lingora_support'});
+response=await contact.POST(request('a',{}, {telegram:'https://evil.test/unsafe'}));assert.equal(response.status,400);
+response=await contact.POST(request('a',{}, {telegram:'newcontact'}));assert.equal(response.status,200);assert.equal(tables.school_public_contact.length,1);
+response=await contact.POST(request('o',{'X-Demo-Role':'advertiser','X-Demo-Key':'anonymousownerkey12'}, {telegram:'temporarylink'}));assert.equal(response.status,200);assert.equal(tables.school_public_contact[0].telegram,'newcontact');
+console.log('PASS: anonymous Owner view has zero real user writes; contact accepts one validated Telegram, replaces old value, rejects student/unsafe links and isolates preview writes');
 console.log('PASS: Owner account switching saves, forged modes denied, demo zero real writes, Admin group boundary, center billing, targeted/idempotent events, suggestions, same-name advertiser auth, future media available, private sixth voice ID enforcement');
 })().catch(e=>{console.error(e);process.exit(1)});

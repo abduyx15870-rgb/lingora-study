@@ -1,0 +1,65 @@
+LINGORA — KITOB, TARJIMA VA AUDIO TUZATILGAN TO‘LIQ VERSIYA
+2026-10-06 · fayl avval saqlanadi, keyin tayyorlanadi
+
+ALMASHTIRISH
+ZIPdagi essential-mastery ichidagi kodni loyihangizdagi kodga almashtiring.
+O‘zingizdagi .env.local, firebase-service-account.json va media fayllarini saqlang.
+Bu ZIP ularni o‘chirishni yoki bazani tozalashni talab qilmaydi.
+
+GIT BASH / VS CODE TERMINAL
+pnpm install
+
+.env.local ichida ovoz uchun:
+GEMINI_TTS_MODEL=gemini-3.8-flash-lite-tts
+
+Keyin:
+pnpm check:ai
+pnpm dev
+
+check:ai da TRANSLATE_OK, CHAT_OK, OCR_OK va VOICE_OK chiqishi kerak.
+Kalit/kvota/model/ruxsat xatosi bo‘lsa uning aniq kodi chiqadi.
+Kalitni chatga yoki GitHubga yubormang.
+
+ENG MUHIM SINOV
+1. localhost:3000 -> English -> Reading -> Kitoblarim -> Add.
+2. Avval 2–3 sahifali o‘zbekcha PDF yoki kichik TXT tanlang.
+3. Asl tili: O‘zbekcha -> Yuklash va tayyorlash.
+4. Avval asl fayl saqlanadi va karta paydo bo‘ladi.
+5. Keyin matn o‘qiladi, barcha qismlar inglizchaga tarjima qilinadi,
+   barcha audio bo‘laklar yaratiladi. Har bir tayyor qism darhol saqlanadi.
+6. Kitob tayyor degach kartani oching: inglizcha matn, so‘z tarjimasi,
+   Asl PDFni ochish, original va inglizcha tarjimani yuklab olish.
+7. Listening -> Audio kitoblarimda shu kitobni ochib Play bosing.
+   Pause, oldinga/orqaga, tezlik va WAV audio qismini yuklab olishni sinang.
+8. Shu sinov ishlagach katta kitobni yuklang. Chegara: 100 MB,
+   1000 PDF sahifasi, 900000 matn belgisi. Katta skan PDF ko‘proq vaqt oladi.
+
+UZILSA
+Tabni ochiq tuting. Tab yopilsa generatsiya davom etmaydi.
+To‘xtatish yoki xatodan keyin kartani ochib Qolgan audiolarni tayyorlashni bosing.
+Asl fayl, OCR sahifalari, tarjima va tayyor audio saqlanadi.
+Qayta urinish tayyor qismlarni ishlatadi; yetishmagan qismlarni tayyorlaydi.
+Yarim yuklangan original faylda xato bo‘lsa qayta yuklang; yarim kartani o‘chirish mumkin.
+Ovoz o‘zgartirilsa shu ovoz uchun yangi audio kerak bo‘ladi.
+
+TEKSHIRILGAN
+TypeScript, production build, originalni OCRdan oldin saqlash,
+yarim matnni yashirish, tarjima/audio keshi, barcha audio qismlar,
+OCR xatosidan davom ettirish, bekor qilish va markaz/rol ruxsatlari.
+Haqiqiy PDFdan matn ajratish ham tekshirildi.
+Google/Firebase hisobingizning haqiqiy kalitlari bu muhitda yo‘q.
+check:ai diagnostikasi va haqiqiy kitob sinovini o‘z kompyuteringizda bajaring.
+
+2026-10-07 YANGILANISH
+Reading -> Darsliklarda Essential 1–6 va Navigate A1, A2, B1, B1+, B2, C1 PDFlar bor.
+Gemini vaqtinchalik limit uchun kutish muddatini bersa: sanagich chiqadi, so‘ng qayta urinish bo‘ladi (2 martagacha).
+Kunlik/vaqti noma’lum kvotada: saqlangan joyda to‘xtaydi. Kvota tiklangach davom ettiring.
+
+2026-10-07 HIKOYA OVOZI
+Kitob audiosi tabiiy hikoyachi ohangida faqat berilgan matnni o‘qiydi. Kirish, tushuntirish va yakuniy izoh qo‘shmaslik ko‘rsatmasi qo‘shildi.
+Reading matni o‘zgarmaydi. Audioga tarjima sarlavhasi, aniq sahifa belgisi va veb-havolalar kirmaydi. Faqat texnik yozuvdan iborat qism qisqa jim audio bilan o‘tkaziladi.
+Eski audio keshi yangi hikoya ovoziga ishlatilmaydi. Kitobni qayta ochib kerakli audioni tayyorlang.
+Firebase server xatosi bo‘lsa HTTP sababini ko‘rsatuvchi xabar yashirilmaydi. Haqiqiy Firebase sozlamasi/kvotasi baribir hisob egasi tomonidan tekshiriladi.
+
+### Bir dona PDF va sayt ichida davom etadigan tayyorlash
+Kitobda “Hammasini tayyorlash” tugmasini bosing. Matn bosqichi tugashi bilan PDF yuklash mumkin; audio tayyorlanishi alohida davom etadi. Dialog yopilsa yoki boshqa bo'limga o'tilsa holat sayt tepasida ko'rinadi. Oynani yopmang/yangilamang. To'xtatish joriy so'rovdan keyin ishlaydi; tayyor bo'laklar saqlanadi.

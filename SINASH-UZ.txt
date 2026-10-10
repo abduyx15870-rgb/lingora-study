@@ -1,3 +1,16 @@
+YANGI TUZATISHLARNI SINASH
+1. pnpm install
+2. pnpm check:ai — tarjima, qisqa suhbat va rasmli sahifani o‘qishni alohida tekshiradi. Har birining vaqtini ko‘rsatadi. Kalitni hech kimga yubormang.
+3. pnpm dev — terminal aytgan localhost manzilini oching.
+4. Books ichida Uploaded lessons paneli bo‘lmasligi kerak.
+5. Vocabulary notes tarjimoniga Hello, how are you? yozing. Tarjima chiqqach More ni alohida sinang.
+6. Talk with AI → Start. Salomlashish tugagach I am learning English deb gapiring. AI javobini kuting. Xato bo‘lsa ekrandagi xabarni yuboring.
+7. Reading → My books → Add. Avval kichik matnli PDF yoki TXT bilan sinang. Keyin skanerlangan PDFni yuklang. Matnsiz muqova [NO_TEXT] bilan tashlab ketiladi; o‘qilishi kerak bo‘lgan sahifa xatosi yashirilmaydi.
+8. Kitob yuklansa Reading va Listening ichida kartasi turadi. Tarjima yoki audio xatosi bo‘lsa uni tayyorlash tugmasidan qayta urinishingiz mumkin. Saqlangan kitobni yana yuklash shart emas.
+
+.env.local va firebase-service-account.json fayllaringizni saqlang. Ularni ZIPdagi fayllar bilan almashtirmang.
+Haqiqiy Gemini/Firebase hisobingizga ushbu tekshiruvsiz hammasi ishlaydi deb kafolat berib bo‘lmaydi. check:ai ovoz modelini yoki brauzer mikrofonini tekshirmaydi.
+
 LINGORA — BOSHQA FANLAR VA KITOBLARNI MAHALLIY SINASH
 
 1. Bitta ZIPni oching. essential-mastery ichidagi fayllarni o'zingizdagi loyiha ildiziga ko'chirib almashtiring.
@@ -58,7 +71,7 @@ LINGORA — BOSHQA FANLAR VA KITOBLARNI MAHALLIY SINASH
    O'qituvchi ulashdi bo'limi asl yuklovchida ham chiqadi. Admin guruhlarga kitob ulasha olmaydi.
 
 9. English: AI bilan suhbat -> mikrofon ruxsati -> Gapirish.
-   Jimlikdan keyin nutq yuboriladi, AI Navigate darajasiga mos javob beradi. Matn bilan ham yozish mumkin.
+   Jimlikdan keyin nutq yuboriladi, AI Navigate darajasiga mos javob beradi. Bu bo‘lim ovozli suhbat uchun.
    Ovozi va tezligi Sozlamalardan olinadi. Chrome/Edge microphone ruxsatini va Gemini server kalitini tekshiring.
 
 10. Hisobot: o'qituvchi -> O'quvchilar hisoboti.
@@ -87,22 +100,164 @@ CHEGARALAR VA TEKSHIRUV
 - Administrator: Profilni ochish -> English fanining kodi -> yangi 4 belgi -> English kodini saqlash. Mavjud o‘quvchilar o‘chmaydi.
 - English -> AI bilan suhbat -> Boshlashni bir marta bosing. Mikrofon ruxsatidan so‘ng AI sozlamadagi ovoz bilan salomlashadi; keyin tinglaydi, jimlikdan keyin avtomatik yuboradi. AI gapirayotganda siz gapirsangiz ovoz to‘xtaydi. Suhbatni tugatish ovoz va mikrofonni yopadi. Chrome/Edge va quloqchin tavsiya etiladi. Haqiqiy qurilmada mikrofon va aks-sadoni tekshiring.
 - Listening: Navigate yoki Audio kitoblarim. Navigate ichida avvalgi Coursebook/Workbook; shaxsiy kitob ovozi ularga ta’sir qilmaydi.
-- Reading: Darsliklar PDF kartalari va shaxsiy tarjima qilingan kitoblar alohida. Essential 1 PDF ZIPda bor. Qolgan darsliklar uchun Administrator/Owner PDF yoki ochiq Drive havolasini kartaga biriktiradi; ular fayl mavjud deb ko‘rsatilmaydi. Drive huquqi fayl egasi tomonidan ochilishi kerak.
+- Reading: Darsliklar PDF kartalari va shaxsiy tarjima qilingan kitoblar alohida. Essential 1–6 va Navigate A1/A2/B1/B1+/B2/C1 PDFlar ZIPda bor. Administrator/Owner istasa shu markaz uchun PDF havolasini almashtiradi. Drive huquqi fayl egasi tomonidan ochilishi kerak.
 - Shaxsiy kitob -> Matnni tayyorlash -> inglizcha matnni o‘qish/so‘z tarjimasi -> Inglizcha tarjimani yuklab olish. Yuklash UTF-8 TXT formatida (barcha inglizcha matn, Unicode saqlanadi); original PDF alohida Asl fayl tugmasidan olinadi. Tarjima tugamaguncha inglizcha yuklash rad etiladi.
 
 YANGI TARJIMA VA TEZLIK SINOVI
 1. pnpm install, keyin pnpm dev. .env.local, firebase-service-account.json va media papkasini o‘zingiznikicha saqlang; almashtirmang.
 2. Teacher -> English -> Reading -> Guruhlar uchun kitob tarjimasi. Avval o‘chiq. O‘z guruhi yonidagi English ↔ O‘zbekcha ni yoqing.
 3. Shu guruhdagi Student -> Reading -> Qo‘shish -> PDF/DOCX/TXT. 100 MBgacha. Katta/skanerlangan kitob OCR va tarjimaga ko‘proq vaqt oladi; Gemini/Firebase tarif va kvotalari amal qiladi.
-4. O‘zbekcha kitob avtomatik inglizcha matnga tayyorlanadi. Yuklash tugagach audio majburan hammasi yaratilmaydi; Listeningda Play yoki Qolgan audiolarni tayyorlash orqali olinadi.
+4. O‘zbekcha kitob avtomatik inglizcha matnga tayyorlanadi. Asl fayl saqlangach matn, inglizcha tarjima va barcha audio qismlari ketma-ket tayyorlanadi; jarayonni shu tabda kuzating.
 5. Teacher tarjimani yoqqanida kitob ichida O‘qish tili: English/O‘zbekcha. O‘zbekcha tarjimani tayyorlash -> o‘qish -> tarjimani TXT sifatida yuklab olish.
 6. Teacher tarjimani o‘chirsa o‘zbekcha variant/yuklash/generatsiya yopiladi. Inglizcha o‘qish/listening saqlanadi. Lug‘atdagi Tarjimon bundan mustaqil ishlaydi.
 7. Lug‘at daftar -> ikki ustunli Tarjimon -> English/O‘zbekcha. Yozishdan 0.7 soniya keyin tarjima boshlanadi; ⇄ tillarni almashtiradi. Ko‘proq izohni alohida ochadi. Takror tarjimalar keshdan olinadi.
-8. Reading PDF yo‘q kartasi -> Administrator/Owner -> PDF havolasini biriktirish. Essential 1 bor; qolgan haqiqiy PDFlarni o‘zingiz biriktiring.
+8. Reading PDF yo‘q kartasi -> Administrator/Owner -> PDF havolasini biriktirish. Essential 1–6 va Navigate A1/A2/B1/B1+/B2/C1 bor; PDF havolasini almashtirish ixtiyoriy.
 9. Firebase xatosi davom etsa .env.local yoki Netlify server credentials/Firestore ulanishini tekshiring. Tarjimon ishlashi notelar bazasi ham ishlayapti degani emas; maxfiy kalitni chatga yubormang.
 10. Build va avtomatik sinovlar bajarilgan. Brauzer mikrofon/ovoz sifati va haqiqiy Gemini/Firebase tezligi sizning qurilmangizda tekshiriladi; tezlik internet va xizmatga bog‘liq.
 
 READING IKKI BO‘LIM
 - Reading: Darsliklar (Essential/Navigate PDF) va Kitoblarim (o‘zingiz yuklagan kitoblar).
 - Qo‘shish tugmasi Reading -> Kitoblarim ichida. Guruh tarjimasi ham shu yerda Teacherga ko‘rinadi.
-- Yuklangan kitob avtomatik Listening -> Audio kitoblarimda ham ko‘rinadi. Matn tayyorlangach birinchi audio qismi avtomatik yaratiladi; keyingi qismlar tinglash davomida tayyorlanadi va saqlanadi. Barcha audio kerak bo‘lsa Qolgan audiolarni tayyorlashni bosing.
+- Yuklangan kitob avtomatik Listening -> Audio kitoblarimda ham ko‘rinadi. Matn tayyorlangach barcha audio qismlari avtomatik tayyorlanadi va ketma-ket saqlanadi. Barcha audio kerak bo‘lsa Qolgan audiolarni tayyorlashni bosing.
+
+2026-10-06 · AI VA KITOB XATOLARI TUZATISHI
+- ADD faqat Reading -> Kitoblarim va Listening -> Audio kitoblarimda. Books/Tasks/Tests ichida shaxsiy kitob yuklash tugmasi yo‘q.
+- Essential 1–6 va barcha 6 Navigate Coursebook PDFlar Reading -> Darsliklarda kod bilan birga keladi. O‘qish va PDFni yuklab olish tugmalarini sinang.
+- AI chat, OCR va TTS endi Gemini kaliti/model/kvota/ruxsat xatolarini yashirmaydi. Yaroqsiz kalitni kodning o‘zi tuzata olmaydi.
+- Mahalliy tekshirish: pnpm check:ai. Buyruq .env.local dan kalitni oladi, kalitni chiqarmaydi, AI_OK yoki muammoning xavfsiz xabarini chiqaradi.
+- AI_KEY: Netlify Environment variables ichidagi GEMINI_API_KEY ni o‘z AI Studio kalitingiz bilan almashtiring; Generative Language API ruxsatini tekshiring. GEMINI_MODEL dan oldingi 'models/' o‘zi olib tashlanadi. Kalit/model o‘zgargach Netlifyda qayta deploy, localhostda pnpm dev ni qayta ishga tushirish kerak.
+- AI_MODEL: GEMINI_MODEL modelini tekshiring. Model topilmasa faqat shu hisobingizga ruxsat berilgan matnli Flash modelidan biriga qayta urinadi. API kaliti xatosida model almashtirish yordam bermaydi.
+- AI_QUOTA: AI Studio kvotasini tekshiring. Bir vaqtning o‘zida katta skaner kitob OCR va tarjimasini ko‘p marta ishga tushirmang.
+- Skanerlangan PDFga OCR uchun ishlaydigan Gemini kerak. Oddiy matnli PDF/DOCX/TXT matni lokal ajratiladi. OCR xatosida endi sahifa raqami va aniq AI sababi ko‘rsatiladi. Qisqa sarlavhali sahifalarga keraksiz OCR qilinmaydi.
+- Serveringizning haqiqiy kaliti va Netlify sozlamalari bu ZIPga kiritilmagan. Build va soxta API javoblari bilan sinovlar haqiqiy hisob ruxsatini almashtirmaydi.
+
+KITOBNI TARJIMA VA AUDIOGA TAYYORLASH — YANGI SINOV
+1. Avvalgi .env.local va firebase-service-account.json fayllaringizni saqlang. Ular ZIPda yo‘q; almashtirmang.
+2. .env.local ichida GEMINI_TTS_MODEL=gemini-3.8-flash-lite-tts qo‘ying. pnpm dev ni qayta ishga tushiring.
+3. pnpm check:ai: TRANSLATE_OK, CHAT_OK, OCR_OK va VOICE_OK chiqishini tekshiring. VOICE_OK bo‘lmasa undagi kod sababni bildiradi; kalit yoki kvota muammosini boshqa model avtomatik bartaraf etmaydi. Bu buyruq Firebase va mikrofonga ruxsatni tekshirmaydi.
+4. pnpm dev -> Reading -> Kitoblarim -> Add. Avval kichik o‘zbekcha TXT yoki 2–3 sahifali PDF bilan sinang. Asl tili: O‘zbekcha. English fanida avval asl fayl saqlanadi, keyin matn o‘qiladi, tarjima va barcha audio bo‘laklar ketma-ket yaratiladi.
+5. Progress: Fayl saqlanmoqda -> Sahifa o‘qilmoqda -> Matn saqlanmoqda -> Tarjima -> Audio -> Kitob tayyor. Katta/skaner kitob vaqt oladi; tabni ochiq tuting. Sahifa tasviri va matni sifatli bo‘lishi kerak.
+6. Xato yoki To‘xtatish bo‘lsa, kitob kartasi va saqlangan qismlar yo‘qolmaydi. Shu kartani ochib Qolgan audiolarni tayyorlashni bosing. O‘qilgan OCR sahifalari, tayyor tarjima va tanlangan ovozdagi tayyor audio qayta yaratilmaydi. Yangi tabda original fayl serverdan olinadi.
+7. Readingda Asl PDFni ochish original sahifa dizaynini ko‘rsatadi; tarjima matni alohida. Inglizcha tarjimani yuklab olish barcha qismlar tayyorlangach UTF-8 TXT beradi. Asl PDF/DOCX/TXT ham yuklab olinadi.
+8. Listening -> Audio kitoblarim -> shu kitob. Play, Pause, -10 s, +10 s va 10 tezlik mavjud. Player keyingi audio bo‘lagiga avtomatik o‘tadi. Shu audio qismini yuklab olish tanlangan bo‘lakni WAV sifatida beradi.
+9. Ovoz o‘zgarsa, yangi ovoz audiosi alohida tayyorlanadi; oldingi ovozning saqlangan audiosi qoladi. Kitob audio uchun brauzer ovoziga yashirin almashtirish yo‘q: haqiqiy AI xatosi ko‘rsatiladi.
+10. Maksimum 100 MB, 1000 PDF sahifasi, 900000 matn belgisi. Hammasi bir zumda tayyor bo‘lmaydi. Sahifada matn yo‘q bo‘lsa o‘tkaziladi; AI vaqt tugashi matnsiz sahifa deb hisoblanmaydi. O‘qituvchi noaniq OCR/tarjimani tekshirib tuzatishi mumkin.
+11. Sayt/tabni yopganda yangi generatsiya davom etmaydi; qayta kirib davom ettirasiz. Saqlangan fayl, tarjima, audio va o‘quvchi progressi Firebase bazasida qoladi.
+12. Kod avtomatik sinovlar va production build bilan tekshirilgan. Sizning haqiqiy Firebase/Gemini hisobingiz va telefoningizdagi ishini yuqoridagi tartibda tekshirish zarur.
+
+2026-10-07 · QOLGAN NAVIGATE PDF VA VAQTINCHALIK LIMIT
+- Reading -> Darsliklar: Elementary A2, Pre-Intermediate B1, Intermediate B1+, Upper-Intermediate B2, Advanced C1 ham qo‘shildi. Darajalari muqovadan tekshirildi. Mavjud markazga Administrator PDF havolasi biriktirgan bo‘lsa, o‘sha havola ustun turadi.
+- Gemini vaqtinchalik limitda RetryInfo orqali kutish muddatini yuborsa: OCR, tarjima va audio tayyorlash sanagich bilan kutadi va ko‘pi bilan 2 marta qayta urinadi. To‘xtatish tugmasi kutishni ham bekor qiladi.
+- Kunlik limit yoki qayta urinish vaqti noma’lum kvota bo‘lsa: avtomatik so‘rovlar davom etmaydi; aniq xabar ko‘rsatiladi. Tayyor fayl/OCR/tarjima/audio saqlanadi. Kvota tiklangach kitob kartasidagi Qolgan audiolarni tayyorlashdan davom ettiring.
+- API kvotasini sayt kodi ko‘paytirmaydi. Kalitlarni aylantirish yoki cheklovni chetlab o‘tish qo‘shilmagan.
+
+2026-10-07 HIKOYA OVOZI
+Kitob audiosi tabiiy hikoyachi ohangida faqat berilgan matnni o‘qiydi. Kirish, tushuntirish va yakuniy izoh qo‘shmaslik ko‘rsatmasi qo‘shildi.
+Reading matni o‘zgarmaydi. Audioga tarjima sarlavhasi, aniq sahifa belgisi va veb-havolalar kirmaydi. Faqat texnik yozuvdan iborat qism qisqa jim audio bilan o‘tkaziladi.
+Eski audio keshi yangi hikoya ovoziga ishlatilmaydi. Kitobni qayta ochib kerakli audioni tayyorlang.
+Firebase server xatosi bo‘lsa HTTP sababini ko‘rsatuvchi xabar yashirilmaydi. Haqiqiy Firebase sozlamasi/kvotasi baribir hisob egasi tomonidan tekshiriladi.
+
+## Yangi yangilanish: PDF, fonda tayyorlash va Owner menyusi
+1. O'z .env.local va firebase-service-account.json fayllaringizni saqlang.
+2. Yangi ZIPdagi fayllarni loyiha ichiga almashtiring. Terminalda pnpm install, so'ng pnpm dev bajaring.
+3. Reading → My books orqali kitob oching. “Hammasini tayyorlash” matnni to'liq tayyorlaydi, keyin barcha audio qismlarini tayyorlaydi. Oldin saqlangan tarjima va audio qayta yaratilmaydi.
+4. Dialogni yoping, Listening yoki boshqa bo'limga o'ting. Tepada jarayon holati va To'xtatish tugmasi qoladi. Oynani ochiq qoldiring: brauzer/tabni yopish yoki yangilash ishni to'xtatadi; tayyor qismlar saqlanadi, keyingi safar davom ettirish mumkin. Rol, fan, markaz o'zgarishi yoki hisobdan chiqish ham jarayonni to'xtatadi.
+5. Tarjima tugagach “Download English PDF” / “Inglizcha PDFni yuklab olish” bosing. Matn bir dona PDF bo'ladi. Uzbek tarjimasi teacher tomonidan yoqilgan guruhlarda o'zbekcha PDF ham chiqadi.
+6. Profilni faqat ism ustiga bosib oching. Telefonda ism tepadagi tugmada turadi. Settings ichida alohida Profile tugmasi yo'q.
+7. MENU yonidagi vertikal scrollbarni ushlab tortish yoki sichqoncha g‘ildiragi bilan menyuni surish mumkin. Menyu va profil bir-biriga yopishmasligi kerak.
+8. Owner → Settings → Rol tanlash: aniq hisob tanlash ixtiyoriy. Hisob tanlanmasa Anonim vaqtinchalik profil ochiladi. Uning ishlari haqiqiy foydalanuvchilar hisobiga yozilmaydi. Aniq hisob tanlansa o'zgarishlar o'sha hisobda saqlanadi.
+9. Reklamachida yo'riqnoma va Instagram @lingora.study havolasi bor. Reklamachi sahifasida bitta Telegram username saqlashi mumkin; yangi manzil eskisini almashtiradi. Settings → Bog'lanish joyida “Reklamachi” deb ko'rinadi. Vaqtinchalik rol orqali kiritilgan Telegram haqiqiy manzilga ta'sir qilmaydi.
+
+Tekshiruvlar: TypeScript, production build, fonda jarayon/cancellation, ruxsatlar, anonim izolatsiya, contact validatsiyasi va 769 qismli Unicode PDF.
+Jonli Firebase/Gemini tekshiruvi sizning kalitlaringiz bilan lokal ishga tushirganda bajariladi. Bu yangilanish mavjud foydalanuvchilarni yoki progressni o'chirmaydi.
+
+2026-10-08 · ALOQA XATOSIDA AVTOMATIK DAVOM ETISH
+- OCR, tarjima yoki audio so‘rovida vaqtinchalik aloqa / kutish vaqti / to‘liq kelmagan javob xatosi bo‘lsa, o‘sha qism 3, 6, 12, 24 soniya kutib ko‘pi bilan 4 marta avtomatik qayta uriniladi. Kutish holati tepadagi jarayon panelida ko‘rinadi.
+- Tayyor qismlar saqlanadi. Server oldin tayyorlagan tarjima/OCR/audio mavjud bo‘lsa uni qaytaradi.
+- To‘xtatish, hisobdan chiqish yoki rol/fan/markaz almashishi yangi urinishlarni bekor qiladi.
+- Noto‘g‘ri kalit, ruxsat, kunlik yoki noma’lum kvota xatosi qayta-qayta yuborilmaydi. Vaqtinchalik kvotada server aytgan kutish muddati hurmat qilinadi.
+- Barcha 4 urinish muvaffaqiyatsiz bo‘lsa aniq xabar chiqadi; bu holatda keyinroq qo‘lda davom ettirasiz. Tabni yopib yuborsangiz yangi so‘rovlar yuborilmaydi.
+
+2026-10-10 · IELTS / CEFR VA BUGUNGI KO‘RSATISH
+1. ZIP ichidagi essential-mastery fayllarini loyihangizga almashtiring. .env.local va firebase-service-account.json fayllaringizni saqlang. pnpm install, keyin pnpm dev.
+2. English fanida MENU → IELTS / CEFR. IELTS Academic yoki CEFR / Multilevel tanlang. Reading, Listening, Writing yoki Speaking tanlang.
+3. Reading: Urban gardens → Boshlash. Javoblarning katta/kichik harfi hisobga olinmaydi, so‘z chegarasi esa tekshiriladi. Topshirgach javob, kalit va tushuntirish chiqadi.
+4. Official sample · Matching features (2023): asl IELTS PDFdagi 3–4-sahifa, 7–10-savollar. Javoblar manbaning 5-sahifasidagi kalit bilan tekshiriladi. PDF telefoningizda ko‘rinmasa yuqoridagi Asl savollarni ochish havolasi bilan oching.
+5. Listening: yangi Lingora mashqlari tanlangan ovoz bilan o‘qiladi. IELTS mashqida 1, Multilevel mashqida 2 marta eshitish. Internet/API ovozi ishlamasa oldingi sayt ovoz mexanizmi qurilmadagi ovozga o‘tadi va xabar beradi. Bu rasmiy audio deb belgilangan emas. Rasmiy audio va to‘liq namunalar manbalar bo‘limida.
+6. Writing: IELTSda 2 topshiriq (150 / 250+ so‘z), Multilevelning yangi format mashqida norasmiy xat (~50), rasmiy xat (120–150), muhokama posti (180–200). So‘z sanagich bor. Javoblar o‘qituvchi baholashi uchun saqlanadi.
+7. Speaking: mikrofonga ruxsat bering. 2 daqiqagacha ovoz yozing, eshitib tekshiring va topshiring. Yozish avtomatik to‘xtaydi. AI yoki speech recognition rasmiy talaffuz balli qo‘ymaydi. O‘qituvchi ovozni eshitib baholaydi.
+8. Teacher → IELTS / CEFR → O‘quvchilar natijalari → topshirilgan Writing / Speaking → baho va izoh → Saqlash. Faqat o‘ziga biriktirilgan guruhlar. Admin o‘z guruhi; Administrator o‘z markazi; Owner tanlangan markaz. Baho xabarnomaga ham tushadi.
+9. Qoralama qurilmada va serverda saqlanadi. Menyudan boshqa joyga o‘tib qayting yoki natijalar tarixidan Davom etish bosing. Taymerning yakun vaqti serverda saqlanadi; bo‘limdan chiqish vaqtni qayta boshlamaydi. Ovoz ham serverga saqlangach boshqa qurilmada ko‘rinadi.
+10. Rasmiy namuna, avvalgi materiallar va baholash bo‘limida IELTS.org, British Council, UZBMB havolalari. Joriy ma’lumot tekshirildi: 2026-10-10. IELTS Reading namuna PDF 2023-yilgi asl material. CEFR yozish yangi formati 2025-yilgi rasmiy tafsilot bilan tekshirildi.
+11. Lingora qisqa mashqlari 8 savollik; to‘liq IELTS 40 yoki Multilevel 35 savollik imtihon sifatida ko‘rsatilmaydi. Rasmiy to‘liq mashqlar manba saytlarda ochiladi. Qisqa natijaga rasmiy band, CEFR daraja yoki sertifikat berilmaydi. Teacherning bahosi ham mashq bahosi.
+12. BUGUN KO‘RSATISHDAN OLDIN: yangi profilda kirish, Readingda 2 javob topshirish, Writing yuborish, Teacherda baholash, kitob/audio ijrosi, tarjimon va telefon menyusini o‘zingizning haqiqiy Firebase/Gemini sozlamalaringiz bilan tekshiring. .env.local maxfiy kalitlari bu ZIPga kiritilmagan. Lokal testlar haqiqiy provayder hisobi ishlashini kafolatlamaydi.
+
+
+IELTS / CEFR — TO‘LIQ SINOV (2026-10-10)
+=======================================
+1. .env.local va firebase-service-account.json fayllaringizni saqlang.
+2. Ushbu ZIPdagi essential-mastery ichidagi fayllarni loyihangizga almashtiring.
+3. pnpm dev bilan ishga tushiring, http://localhost:3000 da English profilga kiring.
+4. Menudan IELTS / CEFR ni oching. To‘liq variantlar odatda yoqilgan.
+5. IELTS yoki CEFR / Multilevel tanlang. “To‘liq sinovni boshlash · 4 ko‘nikma”
+   Listening → Reading → Writing → Speaking ketma-ketligini boshlaydi.
+6. Listening: ketma-ket eshitish tugmasini bosing. Savollarni o‘qishga 30 soniya
+   beriladi. IELTS 4 qism / 40 savol / 32 daqiqa, har qism 1 marta;
+   Multilevel 6 qism / 35 savol / 45 daqiqa, har qism 2 marta.
+   IELTSda 30 daqiqa bo‘lim va 2 daqiqa yakuniy tekshirishga mo‘ljallangan;
+   audio mualliflik matnidan tayyorlanadi, yozuvning aniq davomiyligi farq qiladi.
+   Uzun audio endi kesilmaydi: barcha matn bo‘laklari ketma-ket aytiladi.
+   AI ovozi mavjud bo‘lmasa, eshitilmagan qism bajarilgan deb sanalmaydi.
+7. Reading: IELTS 3 matn / 40 savol / 60 daqiqa; Multilevel 5 qism /
+   35 savol / 60 daqiqa. Qism tugmalari bilan oldinga-orqaga o‘ting.
+8. Writing: IELTS Task 1 va Task 2, jami 60 daqiqa; Multilevel 50 so‘zli xat,
+   120–150 so‘zli xat va 180–200 so‘zli yozma ish, jami 60 daqiqa.
+9. Speaking: “Boshlash” va mikrofonga ruxsat. Savol ovozli beriladi,
+   tayyorgarlik va javob vaqti avtomatik. Vaqt tugaganda mikrofon to‘xtaydi,
+   javob alohida saqlanadi va keyingi savol boshlanadi. IELTS 3 qism;
+   Multilevel 1.1 (30/30/30s), 1.2 (45/30/30s), 2 va 3 (60s tayyorgarlik,
+   120s javob). Savol-javob rasm va diagrammalari ham mavjud.
+10. Writing va Speakingni o‘qituvchi o‘z o‘quvchilari natijalaridan baholaydi.
+    Ovozlar “Javobni eshitish” orqali ochiladi. Bahoga izoh yoziladi.
+11. Har bo‘lim balli ko‘rinadi. IELTS bandi taxminiy; Multilevel mashq balli
+    75 lik shkalada. To‘rt bo‘lim tugab, Writing va Speaking baholanganda
+    umumiy mashq balli chiqadi. Baho mavjud bo‘lmasa “O‘qituvchi baholaydi” turadi.
+12. Qoralama avtomatik saqlanadi. Testdan chiqib kirish taymerni yangilamaydi.
+    Sahifani yopish yoki boshqa menyuga o‘tish joriy ovoz yozishni to‘xtatadi;
+    oldin tugatilgan Speaking javoblari saqlanadi. Yuborish xatosidagi tayyor
+    ovoz shu qurilmada saqlanadi va davom ettirishda qayta yuboriladi.
+
+Bu paketda har bir imtihon uchun bittadan to‘liq mualliflik mock varianti bor.
+Qisqa eski mashqlar va eski natijalar ham saqlangan (To‘liq variantlar belgisini
+olib tashlab ko‘rishingiz mumkin). Rasmiy namuna va avvalgi materiallar havolalari
+alohida. Yangi variantlarni asl rasmiy imtihonda ishlatilgan qog‘oz deb aytmang.
+Listening sun’iy ovozda; real imtihonning ko‘p ovozli yozuviga aynan teng emas.
+Speaking savollari belgilangan: haqiqiy IELTS imtihonchisi kabi suhbatga mos yangi
+savol tuzmaydi. Multilevelning rasmiy Rasch kalibrlashi bu mashqda qo‘llanmaydi;
+75 lik mashq balli rasmiy CEFR sertifikat darajasini bermaydi.
+
+Tekshiruv: API ruxsatlar, 150 obyektiv javob kaliti, qism sonlari va vaqtlar,
+uzun audio bo‘laklari, ketma-ket Speaking yozuvlari, shaxsiy audio ruxsatlari,
+ball va umumiy natija, 10 stil va telefon ko‘rinishi, TypeScript, production
+build sinovdan o‘tkaziladi. Brauzer testi sinov mikrofonidan foydalangan.
+O‘zingizning Gemini/Firebase sozlamalaringizni quyidagicha tekshiring:
+- Haqiqiy ovoz bilan Listeningning bir qismini oxirigacha eshiting;
+- Speakingda mikrofon yozib, o‘qituvchi profilida javobni qayta eshiting;
+- Baho qo‘ygach o‘quvchida ball va xabarnoma ko‘rinishini tekshiring.
+
+YANGI: MARKAZ TESTLARI, 14 KUN VA SERTIFIKAT
+- IELTS / CEFR > To'liq sinovni boshlash: 4 ko'nikma bir sessiyada bajariladi.
+- Har bir imtihon turi uchun yangi to'liq sinov 14 kunda bir marta. Cheklov
+  Firebase'da saqlanadi; boshqa qurilma yoki test varianti uni chetlab o'tmaydi.
+- Boshlangan sinovni natijalardan yoki Davom ettirish tugmasidan davom ettiring.
+  Qisqa mashqlar uchun 14 kunlik cheklov qo'yilmagan.
+- Writing va Speakingni o'qituvchi baholagach to'liq natijada Norasmiy sertifikat
+  PDF tugmasi chiqadi. Sertifikat rasmiy IELTS yoki CEFR hujjati emas.
+- Teacher / Administrator / Owner: IELTS / CEFR > Markaz testini qo'shish.
+  Namuna matni, savol va javoblarni 4 bo'lim bo'yicha almashtiring, nom yozing,
+  tekshirib Shu markazga chop etish tugmasini bosing. Admin test qo'sha olmaydi.
+- O'quvchi Test varianti ro'yxatida faqat o'z markazining testlarini ko'radi.
+- Arxivlash eski natijalarni o'chirmaydi. Boshlangan variant davom ettiriladi;
+  arxivlangan variantdan yangi sessiya boshlanmaydi. Tuzatish uchun yangi
+  variant chop eting. Matnli listeninglar tanlangan sun'iy ovozda o'qiladi.
+- Yangilashda .env.local va Firebase kalit faylini saqlab qoling.
